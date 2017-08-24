@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style type="text/css">
+body,
+ul,
+h2,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    background: #000;
+}
+
+
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1000px;
+    height: 689px;
+    background: url("imgs/1/bg.jpg") no-repeat;
+    margin: -350px auto auto -500px;
+}
+
+.wrap {
+    position: relative;
+    width: 660px;
+    height: 296px;
+    background-color: #fff;
+    margin-top: 163px;
+    margin-left: 119px;
+    padding: 32px 50px;
+}
+
+.main {
+    height: 100%;
+    border-top: 2px solid #e7788d;
+    font-family: "Microsoft YaHei";
+}
+
+.main h2 {
+    height: 46px;
+    padding-left: 32px;
+    font-size: 16px;
+    line-height: 46px;
+    color: #e7788d;
+    background: url(./imgs/1/ico6.png) no-repeat left;
+}
+
+.main .items {
+    height: 145px;
+    margin-top: 5px;
+    border-bottom: 1px dashed #e5e5e5;
+    overflow: hidden;
+}
+
+.main .item {
+    width: 100px;
+    height: 145px;
+    float: left;
+    font-size: 14px;
+    padding-top: 107px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center 22px;
+    position: relative;
+    margin-right: 40px;
+}
+
+
+.main .ico1 {
+    background-image: url(./imgs/1/ico1.png);
+}
+
+.main .ico2 {
+    background-image: url(./imgs/1/ico2.png);
+    background-position: center 18px;
+}
+
+.main .ico3 {
+    background-image: url(./imgs/1/ico3.png);
+}
+
+.main .ico4 {
+    background-image: url(./imgs/1/ico4.png);
+}
+
+.main .ico5 {
+    background-image: url(./imgs/1/ico5.png);
+}
+
+.main .item:after {
+    content: "";
+    position: absolute;
+    width: 98px;
+    height: 98px;
+    border: 1px solid #e5e5e5;
+    top: 0;
+    left: 0;
+    font-size: 0px;
+}
+
+.main .item:last-child{
+	 margin-right:0;
+}
+
+.main .item:hover:after {
+    display: block;
+}
+
+.main .item:hover {
+    font-weight: bold;
+}
+
+.main .businesses a {
+    color: #3a3a3a;
+    text-decoration: none;
+    display: block;
+    float: left;
+    width: 92px;
+    position: relative;
+}
+
+.main .businesses .width103{
+	width: 103px;
+}
+
+.main .business {
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    text-align: center;
+
+}
+
+.main .businesses a:after {
+    content: "";
+    display: inline-block;
+    margin: 0 16px;
+    width: 1px;
+    background: #d3903a;
+    height: 14px;
+    position: absolute;
+    bottom: 9px;
+  }
+
+.main .business a:last-child:after {
+    display: none;
+}
+
+.main .businesses .b1 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.main .business .title {
+    background: #e7788d;
+    color: #fff;
+    width: 100px;
+    margin-left: 3px;
+    margin-right: 13px;
+    float: left;
+}
+.main .business .more{
+	float: right;
+	width: 50px;
+} 
+
+
+</style>
+
+<body>
+    <div class="bg">
+        <div class="wrap">
+            <div class="main">
+                <h2>全球通业务+</h2>
+                <ul class="items clearfix">
+                    <li class="item ico1">信息管家</li>
+                    <li class="item ico2">无线音乐专区</li>
+                    <li class="item ico3">手机证券</li>
+                    <li class="item ico4">飞信</li>
+                    <li class="item ico5">短信回执</li>
+                </ul>
+                <div class="businesses">
+                    <div class="business b1 clearfix"><span class="title">基本业务</span><a href="#">国际漫游</a><a href="#">国际长途</a><a href="#">国内长途</a><a href="#" class="width103">国内漫游</a><a href="#">本地通话</a><a href="#" class="more">更多>></a></div>
+                    <div class="business"><span href="#" class="title">新业务</span><a href="#">手机阅读</a><a href="#">手机支付</a><a href="#">139邮箱</a><a href="#" class="width103">MO手机上网</a><a href="#">视频会议</a><a href="#" class="more">更多>></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

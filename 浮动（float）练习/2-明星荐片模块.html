@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!--
+			1、必须用浮动布局（对浮动的知识点进行一个检验）
+			2、必须清浮动
+			3、结构，标签语义化
+			4、思考：扩展性，以后维护起来更方便。
+		-->
+</head>
+<style type="text/css">
+body,
+ul,
+h2,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    background: #000;
+}
+
+
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1000px;
+    height: 550px;
+    background: url("imgs/2/bg.jpg") no-repeat;
+    margin: -225px auto auto -500px;
+}
+
+.wrap {
+    position: absolute;
+    width: 852px;
+    height: 450px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    font-family: "宋体";
+}
+
+.wrap a {
+    text-decoration: none;
+    display: block;
+    color: #000000;
+    font-size: 14px;
+}
+
+
+.col {
+    width: 349px;
+    height: 420px;
+    float: left;
+    padding: 30px 30px 0px 32px;
+}
+
+.col1 {
+    margin-right: 30px;
+    background-color: #fff;
+}
+
+.title {
+    height: 36px;
+    line-height: 36px;
+    font-size: 16px;
+    color: #fff;
+    background: #e7788d;
+    padding-left: 25px;
+}
+
+.info {
+    margin-top: 20px;
+    height: 130px;
+    background: #f4f4f4;
+}
+
+.info .photo_wrap {
+    width: 128px;
+    height: 128px;
+    padding: 1px;
+}
+
+.info .photo_con {
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.info .photo {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+}
+
+.col1 .info .disc {
+    width: 209px;
+    height: 130px;
+    padding-left: 10px;
+}
+
+.info .disc_title {
+    font-size: 16px;
+    line-height: 41px;
+    color: #000000;
+    font-weight: normal;
+}
+
+.info .disc_detail {
+    font-size: 14px;
+    line-height: 26px;
+    color: #6a6a6a;
+    margin-top: -1px;
+}
+
+.info .photo_wrap,
+.info .disc {
+    float: left;
+}
+
+.articles {
+    padding-top: 15px;
+}
+
+.article {
+    height: 39px;
+    line-height: 39px;
+    padding-left: 12px;
+    background: url(imgs/2/dot.png) no-repeat left;
+    border-bottom: 1px dashed #e5e5e5;
+}
+.article:last-child{
+	 border-bottom: none;
+}
+
+.article .atitle {
+    float: left;
+    font-size: 14px;
+    color: #000000;
+}
+
+.article .from {
+    float: right;
+    margin-right: 8px;
+    color: #cdcdcd;
+}
+
+.col2{
+	background: #595959;
+}
+.col2 .title{
+	background: none;
+	color: #e7788d;
+	position: relative;
+}
+.col2 .title:after{
+   content: "";
+   display: block;
+   position: absolute;
+   width: 6px;
+   height: 24px;
+   background: #e7788d;
+   top: 6px;
+   left: 0;
+}
+
+.col2 .info,.col2 .photo_con{
+	background: #353535;
+}
+.col2 .disc_title{
+	color: #d9d9d9;
+}
+.col2 .disc_detail{
+	color: #7d7d7d;
+}
+
+.col2 .atitle{
+	color: #dddddd;
+}
+.col2 .from{
+	color: #7f7f7f;
+}
+</style>
+
+<body>
+    <div class="bg">
+        <div class="wrap clearfix">
+            <div class="col col1">
+                <div class="title">
+                    明星推荐
+                </div>
+                <div class="info clearfix">
+                    <div class="photo_wrap">
+                        <div class="photo_con">
+                            <img src="imgs/2/photo1.jpg" alt="" class="photo">
+                        </div>
+                    </div>
+                    <div class="disc">
+                        <h2 class="disc_title">周秀娜荐片：让子弹飞</h2>
+                        <p class="disc_detail">
+                            主演：胡歌/刘涛/王凯/黄维德
+                            <br/> 类型：剧情/古装/励志
+                            <br/> 点评：我最近最喜欢的就是这...
+                        </p>
+                    </div>
+                </div>
+                <ul class="articles clearfix">
+                    <li class="article"><a href="#" class="atitle">《巴别塔》：好的故事引人深思</a><a href="#" class="from">阿朵</a></li>
+                    <li class="article"><a href="#" class="atitle">《洛杉矶之战》：外星人那么弱智？</a><a href="#" class="from">丁子峻</a></li>
+                    <li class="article"><a href="#" class="atitle">《让子弹飞》：美文是我的偶像</a><a href="#" class="from">周秀娜</a></li>
+                    <li class="article"><a href="#" class="atitle">《剑雨》：武侠里也可以有爱情</a><a href="#" class="from">叶念琛</a></li>
+                    <li class="article"><a href="#" class="atitle">《春风沉醉的夜晚》：非常真实</a><a href="#" class="from">如小果</a></li>
+                </ul>
+            </div>
+            <div class="col col2">
+                <div class="title">
+                    明星推荐
+                </div>
+                <div class="info clearfix">
+                    <div class="photo_wrap">
+                        <div class="photo_con">
+                            <img src="imgs/2/photo1.jpg" alt="" class="photo">
+                        </div>
+                    </div>
+                    <div class="disc">
+                        <h2 class="disc_title">周秀娜荐片：让子弹飞</h2>
+                        <p class="disc_detail">
+                            主演：胡歌/刘涛/王凯/黄维德
+                            <br/> 类型：剧情/古装/励志
+                            <br/> 点评：我最近最喜欢的就是这...
+                        </p>
+                    </div>
+                </div>
+                <ul class="articles clearfix">
+                    <li class="article"><a href="#" class="atitle">《巴别塔》：好的故事引人深思</a><a href="#" class="from">阿朵</a></li>
+                    <li class="article"><a href="#" class="atitle">《洛杉矶之战》：外星人那么弱智？</a><a href="#" class="from">丁子峻</a></li>
+                    <li class="article"><a href="#" class="atitle">《让子弹飞》：美文是我的偶像</a><a href="#" class="from">周秀娜</a></li>
+                    <li class="article"><a href="#" class="atitle">《剑雨》：武侠里也可以有爱情</a><a href="#" class="from">叶念琛</a></li>
+                    <li class="article"><a href="#" class="atitle">《春风沉醉的夜晚》：非常真实</a><a href="#" class="from">如小果</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

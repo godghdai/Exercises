@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!--
+            1、必须用浮动布局（对浮动的知识点进行一个检验）
+            2、必须清浮动
+            3、结构，标签语义化
+            4、思考：扩展性，以后维护起来更方便。
+        -->
+</head>
+<style type="text/css">
+body,
+ul,
+h2,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-weight: normal;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    background: #000;
+}
+
+
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1000px;
+    height: 607px;
+    background: #ffffff;
+    margin: -304px auto auto -500px;
+}
+
+.wrap {
+    position: absolute;
+    width: 747px;
+    height: 507px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    font-family: "宋体";
+}
+
+.m_title {
+    height: 85px;
+    background: url(imgs/3/t_bg.PNG) repeat-x top;
+}
+
+.m_title h2 {
+    line-height: 85px;
+    font-size: 20px;
+    padding-left: 57px;
+    background: url(imgs/3/ico.png) no-repeat 30px 31px;
+}
+
+.main {
+    width: 686px;
+    height: 421px;
+    padding: 0 32px;
+    margin-top: 1px;
+}
+
+.subjects {
+    height: 180px;
+    margin-bottom: 40px;
+}
+
+.subject {
+    width: 315px;
+    float: left;
+}
+
+.subject .photo {
+    width: 128px;
+    height: 178px;
+    margin-right: 19px;
+    border: 1px solid #bfbfbf;
+    float: left;
+}
+
+.subject .detail {
+    width: 166px;
+    float: left;
+}
+
+.subject .detail .title {
+    font-size: 16px;
+    color: #06b1da;
+    height: 16px;
+    line-height: 16px;
+    margin-bottom: 12px;
+}
+
+.subject .detail .info {
+    font-size: 14px;
+    color: #6a6a6a;
+    line-height: 26px;
+    margin-bottom: 18px;
+}
+
+.subject .buttons .buy,
+.subject .buttons .pre {
+    width: 66px;
+    height: 26px;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
+}
+
+.subject .buttons .buy {
+    margin-right: 10px;
+    color: #ffffff;
+    border: 2px solid #06b1da;
+    background: url(imgs/3/bt_bg.PNG) repeat-x top;
+    position: relative;
+}
+
+.subject .buttons .buy:after {
+    content: "";
+    display: block;
+    width: 66px;
+    height: 26px;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    border: 1px solid #6bd2eb;
+}
+
+.subject .buttons .pre {
+    color: #06b1da;
+    border: 2px solid #06b1da;
+    background: #ffffff;
+}
+
+.subject:first-child {
+    margin-right: 56px;
+}
+
+.s_item{
+    float: left;
+    margin-right: 55px;
+}
+
+.s_item .photo{
+     width: 128px;
+    height: 88px;
+    border: 1px solid #bfbfbf;
+}
+
+.s_item:last-child {
+    margin-right: 0;
+}
+.s_item .title{
+    font-size: 16px;
+    color: #06b1da;
+    height: 23px;
+    line-height: 23px;
+    margin-top: 9px;
+}
+.s_item .info{
+   font-size: 14px;
+   color: #6a6a6a; 
+   line-height: 26px;
+}
+</style>
+
+<body>
+    <div class="bg">
+        <div class="wrap">
+            <div class="m_title">
+                <h2>本周主打</h2>
+            </div>
+            <div class="main">
+                <div class="subjects clearfix">
+                    <div class="subject clearfix">
+                        <img class="photo" src="imgs/3/p1.jpg" alt="" />
+                        <div class="detail">
+                            <h2 class="title">妙用性格</h2>
+                            <p class="info">讲师：张勤
+                                <br/>技术：共12集全
+                                <br/>类型：生活
+                                <br/>性格无时无刻不在左右...</p>
+                        </div>
+                        <div class="buttons">
+                            <a class="buy">购买</a><a class="pre">预览</a>
+                        </div>
+                    </div>
+                    <div class="subject clearfix">
+                        <img class="photo" src="imgs/3/p2.jpg" alt="" />
+                        <div class="detail">
+                            <h2 class="title">妙用性格</h2>
+                            <p class="info">讲师：张勤
+                                <br/>技术：共12集全
+                                <br/>类型：生活
+                                <br/>性格无时无刻不在左右...</p>
+                        </div>
+                        <div class="buttons">
+                            <a class="buy">购买</a><a class="pre">预览</a>
+                        </div>
+                    </div>
+                </div>
+                <ul class="s_list">
+                    <li class="s_item">
+                        <img class="photo" src="imgs/3/p3.jpg" alt="" />
+                        <h2 class="title">妙用性格</h2>
+                        <p class="info">讲师：张勤
+                            <br/>技术：共12集全
+                        </p>
+                    </li>
+                     <li class="s_item">
+                        <img class="photo" src="imgs/3/p4.jpg" alt="" />
+                        <h2 class="title">妙用性格</h2>
+                        <p class="info">讲师：张勤
+                            <br/>技术：共12集全
+                        </p>
+                    </li>
+                     <li class="s_item">
+                        <img class="photo" src="imgs/3/p5.jpg" alt="" />
+                        <h2 class="title">妙用性格</h2>
+                        <p class="info">讲师：张勤
+                            <br/>技术：共12集全
+                        </p>
+                    </li>
+                     <li class="s_item">
+                        <img class="photo" src="imgs/3/p6.jpg" alt="" />
+                        <h2 class="title">妙用性格</h2>
+                        <p class="info">讲师：张勤
+                            <br/>技术：共12集全
+                        </p>
+                    </li>
+                 </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

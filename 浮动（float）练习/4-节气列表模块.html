@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!--
+            1、必须用浮动布局（对浮动的知识点进行一个检验）
+            2、必须清浮动
+            3、结构，标签语义化
+            4、思考：扩展性，以后维护起来更方便。
+        -->
+</head>
+<style type="text/css">
+body,
+ul,
+h2,
+h3 p {
+    margin: 0;
+    padding: 0;
+}
+
+h2,
+h3 {
+    font-weight: normal;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    background: #000;
+}
+
+
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1250px;
+    height: 1000px;
+    background: #ffffff;
+    margin: -500px auto auto -625px;
+    background: url("imgs/4/bg.gif") no-repeat;
+}
+
+.wrap {
+    position: absolute;
+    width: 1021px;
+    height: 755px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    font-family: "微软雅黑";
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.column {
+    width: 462px;
+    height: 755px;
+    background: white;
+    position: relative;
+}
+
+.column1 .col_bg {
+    width: 442px;
+    height: 735px;
+    padding: 10px;
+}
+
+.column1 .col_bg .head {
+    height: 20px;
+    background: url(imgs/4/head.jpg) no-repeat;
+}
+
+.column1 .col_bg .center {
+    height: 715px;
+    background: url(imgs/4/center.png) repeat-y;
+}
+
+.column1 .col_bg .footer {
+    height: 20px;
+    background: url(imgs/4/footer.jpg) no-repeat;
+}
+
+.content {
+    position: absolute;
+    width: 411px;
+    height: 705px;
+    top: 26px;
+    left: 26px;
+}
+
+.head {
+    padding-top: 15px;
+    height: 30px;
+    color: #d35056;
+    line-height: 30px;
+    position: relative;
+  }
+
+ .head .title {
+    font-size: 18px;
+    padding-left: 45px;
+    padding-right: 8px;
+    position: absolute;
+    background: white url(imgs/4/ico1.png) no-repeat 20px center;
+    z-index: 2;
+}
+
+ .head .line {
+    display: block;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    background: #d35056;
+    bottom: 15px;
+    z-index: 1;
+}
+
+.head .more {
+    font-size: 14px;
+    padding-left: 9px;
+    padding-right: 15px;
+    position: absolute;
+    right: 1px;
+    background: white;
+    z-index: 2;
+}
+
+.subhead {
+    height: 39px;
+    font-size: 16px;
+    text-indent: 31px;
+    line-height: 39px;
+    margin: 0px;
+}
+
+.info .photo {
+    width: 120px;
+    height: 170px;
+    border: 4px solid #fff;
+    display: block;
+}
+
+.info .photo_con {
+    float: left;
+    margin-top: 3px;
+    margin-left: 21px;
+    border: 1px solid #b5b5b5;
+}
+
+.info .info_con {
+    float: right;
+    width: 259px;
+}
+
+.info .detal {
+    color: #6a6a6a;
+    font-size: 12px;
+    margin: 0px;
+    margin-left: 13px;
+    margin-right: 27px;
+    line-height: 26px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed #e5e5e5;
+}
+
+.info .list {
+    padding-top: 9px;
+}
+
+.item {
+    font-size: 14px;
+    color: #000;
+    line-height: 32px;
+    background: url(imgs/4/dot.png) no-repeat left center;
+    padding-left: 8px;
+    margin-left: 13px;
+}
+
+.line4pix {
+    margin-top: 11px;
+    height: 2px;
+    border-top: 1px solid #d35056;
+    border-bottom: 1px solid #d35056;
+}
+
+
+.line4pix2 {
+    margin-top: 15px;
+}
+
+
+.head2 {
+    padding-top: 0;
+    height: 58px;
+    line-height: 58px;
+    padding-bottom: 1px;
+}
+
+.head2 .title {
+    background: white url(imgs/4/ico2.png) no-repeat 20px center;
+}
+
+.head2 .line {
+    bottom: 28px;
+}
+
+.head3 .title {
+    background: white url(imgs/4/ico3.png) no-repeat 20px center;
+}
+
+.listmore .list_l {
+    float: left;
+    margin-right: 14px;
+    margin-left: 10px;
+}
+
+.listmore .list_r {
+    float: left;
+}
+
+.listmore .item {
+    padding-left: 15px;
+}
+
+
+.column2 .content {
+    width: 411px;
+    height: 705px;
+    border: 1px solid #d35056;
+
+}
+
+.column2 .head .line{
+    height: 10px;
+    background: url(imgs/4/ico.jpg) repeat-x right;
+    bottom: 25px;
+} 
+
+.column2 .head2 .line{
+    height: 10px;
+    background: url(imgs/4/ico.jpg) repeat-x right;
+    bottom: 25px;
+} 
+
+.column2 .head .title{
+  padding-right: 5px;  
+}
+
+.column2 .head:nth-of-type(1) .line{
+    bottom:10px;
+}
+
+.column2 .head_n_1 .title{
+   background: #fbedee url(imgs/4/ico_1.png) no-repeat 20px center;
+}
+.column2 .content,.column2 .head_n_1 .more,.column2 .head_n_3 .more{
+    background: #fbedee;
+}
+
+.column2 .head_n_3 .title{
+   background: #fbedee url(imgs/4/ico_3.png) no-repeat 20px center;
+}
+
+.column2 .head_n_2 .title{
+   background: white url(imgs/4/ico_2.png) no-repeat 20px center;
+}
+.column2 .head_n_2{
+    background: #fff;
+}
+
+/*
+.column2 .head_n_1,.column2 .head_n_1 .more,.column2 .subhead{
+   background: #fbedee 
+}
+
+
+.column2 .head_n_3,.column2 .head_n_3 .more{
+   background: #fbedee 
+}
+*/
+
+.line4pix_n {
+    margin-top: 12px;
+    height: 1px;
+    background: #d35056;
+    border-bottom: 1px solid #d35056;
+}
+
+.line4pix_n2 {
+    height: 1px;
+    background: #d35056;
+    margin-top: 0;
+}
+
+.column2 .listmore_2{
+    padding-bottom: 16px;
+    background:white;
+} 
+
+
+
+</style>
+
+<body>
+    <div class="bg">
+        <div class="wrap clearfix">
+            <div class="column column1 fl">
+                <div class="content">
+                    <div class="head "><span class="title">精彩专题</span><span class="line"></span><span class="more">更多>></span></div>
+                    <h3 class="subhead">冬季六节气：冬雪雪冬小大寒</h3>
+                    <div class="info clearfix">
+                        <div class="photo_con"><img class="photo" src="imgs/4/p1.jpg" alt="" /></div>
+                        <div class="info_con">
+                            <p class="detal">立冬六日七时游"同理，立春时间加上6天7个时辰，再加上中间的小月数，就是立冬的交节时间。初8辰时十6日7...详细>></p>
+                            <ul class="list">
+                                <li class="item">《巴别塔》：好的故事引人深思</li>
+                                <li class="item">《洛杉矶之战》：外星人那么弱智？</li>
+                                <li class="item">《让子弹飞》：美文是我的偶像</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line4pix"></div>
+                    <div class="head head2"><span class="title">健康自检</span><span class="line"></span><span class="more">更多>></span></div>
+                    <div class="listmore clearfix">
+                        <ul class="list_l">
+                            <li class="item">自测：你是气虚体质吗</li>
+                            <li class="item">起床状态反映你的健康</li>
+                            <li class="item">头发颜色反应有健康问</li>
+                            <li class="item">从指甲判断大病征兆</li>
+                        </ul>
+                        <ul class="list_r">
+                            <li class="item">中医：手脚冰凉怎么回事</li>
+                            <li class="item">从宝宝睡眠看疾病先兆</li>
+                            <li class="item">中医教你辨别感冒类型</li>
+                            <li class="item">中医：手脚冰凉怎么回事</li>
+                        </ul>
+                    </div>
+                    <div class="line4pix line4pix2"></div>
+                    <div class="head head2 head3"><span class="title">就医知识</span><span class="line"></span><span class="more">更多>></span></div>
+                    <div class="listmore clearfix">
+                        <ul class="list_l">
+                            <li class="item">自测：你是气虚体质吗</li>
+                            <li class="item">起床状态反映你的健康</li>
+                            <li class="item">头发颜色反应有健康问</li>
+                            <li class="item">从指甲判断大病征兆</li>
+                        </ul>
+                        <ul class="list_r">
+                            <li class="item">中医：手脚冰凉怎么回事</li>
+                            <li class="item">从宝宝睡眠看疾病先兆</li>
+                            <li class="item">中医教你辨别感冒类型</li>
+                            <li class="item">中医：手脚冰凉怎么回事</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col_bg">
+                    <div class="center">
+                        <div class="head"></div>
+                    </div>
+                    <div class="footer"></div>
+                </div>
+            </div>
+            <div class="column column2 fr">
+                <div class="content">
+                    <div class="head head_n_1"><span class="title">精彩专题</span><span class="line"></span><span class="more">更多>></span></div>
+                    <h3 class="subhead">冬季六节气：冬雪雪冬小大寒</h3>
+                    <div class="info clearfix">
+                        <div class="photo_con"><img class="photo" src="imgs/4/p1.jpg" alt="" /></div>
+                        <div class="info_con">
+                            <p class="detal">立冬六日七时游"同理，立春时间加上6天7个时辰，再加上中间的小月数，就是立冬的交节时间。初8辰时十6日7...详细>></p>
+                            <ul class="list">
+                                <li class="item">《巴别塔》：好的故事引人深思</li>
+                                <li class="item">《洛杉矶之战》：外星人那么弱智？</li>
+                                <li class="item">《让子弹飞》：美文是我的偶像</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line4pix_n"></div>
+                    <div class="head head2 head_n_2"><span class="title">健康自检</span><span class="line"></span><span class="more">更多>></span></div>
+                    <div class="listmore listmore_2 clearfix">
+                        <ul class="list_l">
+                            <li class="item">自测：你是气虚体质吗</li>
+                            <li class="item">起床状态反映你的健康</li>
+                            <li class="item">头发颜色反应有健康问</li>
+                            <li class="item">从指甲判断大病征兆</li>
+                        </ul>
+                        <ul class="list_r">
+                            <li class="item">中医：手脚冰凉怎么回事</li>
+                            <li class="item">从宝宝睡眠看疾病先兆</li>
+                            <li class="item">中医教你辨别感冒类型</li>
+                            <li class="item">中医：手脚冰凉怎么回事</li>
+                        </ul>
+                    </div>
+                    <div class="line4pix_n2"></div>
+                    <div class="head head2 head3 head_n_3"><span class="title">就医知识</span><span class="line"></span><span class="more">更多>></span></div>
+                    <div class="listmore clearfix">
+                        <ul class="list_l">
+                            <li class="item">自测：你是气虚体质吗</li>
+                            <li class="item">起床状态反映你的健康</li>
+                            <li class="item">头发颜色反应有健康问</li>
+                            <li class="item">从指甲判断大病征兆</li>
+                        </ul>
+                        <ul class="list_r">
+                            <li class="item">中医：手脚冰凉怎么回事</li>
+                            <li class="item">从宝宝睡眠看疾病先兆</li>
+                            <li class="item">中医教你辨别感冒类型</li>
+                            <li class="item">中医：手脚冰凉怎么回事</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

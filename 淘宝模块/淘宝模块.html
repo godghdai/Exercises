@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!--
+            1、合理应用标签，标签语义化
+            2、样式的配合，标签特性的转换
+            3、思考：模块之间的边框如何重合？
+        -->
+</head>
+<style>
+body,
+ul,
+h2,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    background: #f5f5f5;
+}
+
+.wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1189px;
+    height: 365px;
+    background: #e8e8e8;
+    margin-top: -182px;
+    margin-left: -594px;
+}
+
+.item_con {
+    width: 1189px;
+    height: 365px;
+    overflow: hide;
+    background: white;
+    padding: 1px;
+    padding-left: 2px;
+}
+
+.item {
+    padding: 0px 15px 3px 15px;
+    width: 167px;
+    border: 1px solid #e8e8e8;
+    float: left;
+    margin-left: -1px;
+}
+
+.item a {
+    font-size: 12px;
+    font-family: "宋体";
+    text-decoration: none;
+    color: #3c3c3c;
+}
+
+.item h2 {
+    height: 42px;
+    font: 16px/42px "Microsoft YaHei";
+    font-weight: bold;
+    padding-right: 20px;
+    display: inline-block;
+    background: url(./imgs/ico.jpg) no-repeat right center;
+}
+
+.item .baner {
+    height: 150px;
+    background: #f5f5f5;
+}
+
+.item .baner img {
+    width: 169px;
+    height: 100px;
+    display: block;
+}
+
+.item .baner p {
+    margin-top: 7px;
+    line-height: 19px;
+    text-align: center;
+}
+
+.item .baner .title {
+    font-weight: bold;
+}
+
+.item .baner .sub_title {
+    color: #9c9c9c;
+    display: block;
+}
+
+.item .subwrap {
+    overflow: hidden;
+    margin-top: 13px;
+}
+
+.item .sub {
+    width: 180px;
+    overflow: hidden;
+}
+
+.item .sub_item {
+    float: left;
+    margin-right: 9px;
+}
+
+.item .sub_item img {
+    width: 80px;
+    height: 70px;
+    display: block;
+}
+
+.item .sub_item .title {
+    display: block;
+    height: 33px;
+    line-height: 33px;
+    width: 80px;
+    text-align: center;
+}
+
+.item .tags {
+    width: 200px;
+    height: 16px;
+    line-height: 16px;
+}
+
+.item .tags a {
+    display: block;
+    float: left;
+    position: relative;
+    padding-right: 13px;
+}
+
+.item .tags a:after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    background: #e1e1e1;
+    height: 14px;
+    position: absolute;
+    right: 6px;
+}
+
+.item .tags a:last-child:after {
+    display: none;
+}
+
+.item .footer {
+    height: 36px;
+    line-height: 36px;
+}
+
+.item .footer strong {
+    color: #e4e4e4;
+}
+
+.item .footer strong:last-child:after {
+    content: " ";
+}
+
+
+.item .footer span {
+    color: #ff4400;
+    padding: 0 2px;
+}
+
+.item .other {
+    width: 167px;
+    height: 90px;
+    border: 1px solid #eeeeee;
+    position: relative;
+    margin-top: 13px;
+    margin-bottom: 10px;
+}
+
+.item .other .hot {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.item .other .info {
+    text-align: right;
+    width: 80px;
+    height: 91px;
+    position: absolute;
+    top:26px;
+    font-size:14px;
+}
+.item .other .info span{
+ color: #6c6c6c; 
+ font-size:12px;
+}
+
+.item .other .photo {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    left: 88px;
+    top: 11px;
+}
+</style>
+
+<body>
+    <div class="wrap">
+        <ul class="item_con">
+            <li class="item">
+                <h2>众筹</h2>
+                <div class="baner">
+                    <a href="#"><img src="./imgs/baner1.jpg"></img></a>
+                    <p>
+                        <a href="#" class="title">迷你无人机-小到不可思议</a>
+                        <br/>
+                        <a href="#" class="sub_title">年轻人的新玩具</a>
+                    </p>
+                </div>
+                <div class="subwrap">
+                    <div class="sub">
+                        <div class="sub_item">
+                            <a href="#"><img src="./imgs/baner1_s1.jpg"></img></a>
+                            <a href="#" class="title">智能折叠车</a>
+                        </div>
+                        <div class="sub_item">
+                            <a href="#"><img src="./imgs/baner1_s2.jpg"></img></a>
+                            <a href="#" class="title">防水智能插座</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tagswrap">
+                    <div class="tags">
+                        <a href="#">科技控</a><a href="#">创意设计</a><a href="#">最新周边</a>
+                    </div>
+                </div>
+                <div class="footer">
+                    <a href="#"><strong>[</strong><span>明星同款</span><strong>]</strong>头茬冬笋</a>
+                </div>
+            </li>
+            <li class="item">
+                <h2>全球购</h2>
+                <div class="baner">
+                    <a href="#"><img src="./imgs/baner2.jpg"></img></a>
+                    <p>
+                        <a href="#" class="title">预售来啦！可爱宝贝雪地靴</a>
+                        <br/>
+                        <a href="#" class="sub_title">海外最in新款3折起</a>
+                    </p>
+                </div>
+                <div class="subwrap">
+                    <div class="sub">
+                        <div class="sub_item">
+                            <a href="#"><img src="./imgs/baner2_s1.jpg"></img></a>
+                            <a href="#" class="title">糖果雪地靴</a>
+                        </div>
+                        <div class="sub_item">
+                            <a href="#"><img src="./imgs/baner2_s2.jpg"></img></a>
+                            <a href="#" class="title">多色小包</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tagswrap">
+                    <div class="tags">
+                        <a href="#">全球特卖</a><a href="#">美式生活</a><a href="#">逛品牌馆</a>
+                    </div>
+                </div>
+                <div class="footer">
+                    <a href="#"><strong>[</strong><span>奥莱扫贷直播</span><strong>]</strong>官网代拍直送</a>
+                </div>
+            </li>
+            <li class="item">
+                <h2>拍卖会</h2>
+                <div class="baner">
+                    <a href="#"><img src="./imgs/baner3.jpg"></img></a>
+                    <p>
+                        <a href="#" class="title">法院政府资产5折起</a>
+                        <br/>
+                        <a href="#" class="sub_title">投资首选，仅此一天</a>
+                    </p>
+                </div>
+                <div class="subwrap">
+                    <div class="sub">
+                        <div class="sub_item">
+                            <a href="#"><img src="./imgs/baner3_s1.jpg"></img></a>
+                            <a href="#" class="title">特价二手车</a>
+                        </div>
+                        <div class="sub_item">
+                            <a href="#"><img src="./imgs/baner3_s2.jpg"></img></a>
+                            <a href="#" class="title">玉石检漏</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tagswrap">
+                    <div class="tags">
+                        <a href="#">加持佛珠</a><a href="#">老茶特惠</a><a href="#">拍光拉倒</a>
+                    </div>
+                </div>
+                <div class="footer">
+                    <a href="#"><strong>[</strong><span>名表抢拍</span><strong>]</strong>全球名表低价抢拍</a>
+                </div>
+            </li>
+            <li class="item">
+                <h2>天天特价</h2>
+                <div class="baner">
+                    <a href="#"><img src="./imgs/baner4.jpg"></img></a>
+                    <p>
+                        <a href="#" class="title">冬季美包包</a>
+                        <br/>
+                        <a href="#" class="sub_title">冬季流行仅9.9元起</a>
+                    </p>
+                </div>
+                <div class="subwrap">
+                    <div class="sub">
+                        <div class="sub_item">
+                            <a href="#"><img src="./imgs/baner4_s1.jpg"></img></a>
+                            <a href="#" class="title">童装冬上新</a>
+                        </div>
+                        <div class="sub_item">
+                            <a href="#"><img src="./imgs/baner4_s2.jpg"></img></a>
+                            <a href="#" class="title">这样穿显瘦</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tagswrap">
+                    <div class="tags">
+                        <a href="#">时装包包</a><a href="#">每日美食</a><a href="#">萌娃来袭</a>
+                    </div>
+                </div>
+                <div class="footer">
+                    <a href="#"><strong>[</strong><span>美搭套装</span><strong>]</strong>初冬美型拼内在</a>
+                </div>
+            </li>
+            <li class="item">
+                <h2>淘女郎</h2>
+                <div class="baner">
+                    <a href="#"><img src="./imgs/baner5.jpg"></img></a>
+                    <p>
+                        <a href="#" class="title">学生党最爱</a>
+                        <br/>
+                        <a href="#" class="sub_title">韩式清新小可爱</a>
+                    </p>
+                </div>
+                <div class="subwrap">
+                    <div class="sub">
+                        <div class="sub_item">
+                            <a href="#"><img src="./imgs/baner5_s1.jpg"></img></a>
+                            <a href="#" class="title">羊羔毛外套</a>
+                        </div>
+                        <div class="sub_item">
+                            <a href="#"><img src="./imgs/baner5_s2.jpg"></img></a>
+                            <a href="#" class="title">毛衣+裙子</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tagswrap">
+                    <div class="tags">
+                        <a href="#">必败卫衣</a><a href="#">白搭毛衣</a><a href="#">女神大衣</a>
+                    </div>
+                </div>
+                <div class="footer">
+                    <a href="#"><strong>[</strong><span>网红款</span><strong>]</strong>挡风遮寒小棉服</a>
+                </div>
+            </li>
+            <li class="item">
+                <h2>阿里旅行</h2>
+                <div class="baner">
+                    <a href="#"><img src="./imgs/baner6.jpg"></img></a>
+                    <p>
+                        <a href="#" class="title">7999蓝色美人蕉岛</a>
+                        <br/>
+                        <a href="#" class="sub_title">一价全包水屋自由行</a>
+                    </p>
+                </div>
+                <div class="other">
+                    <img class="hot" src="./imgs/hot.png" alt="">
+                    <p class="info">巴厘岛<br/><span>5天4晚2499</span></p>
+                    <img class="photo" src="./imgs/baner6_1.jpg" alt="">
+                </div>
+                <div class="tagswrap">
+                    <div class="tags">
+                        <a href="#">奢华迪拜</a><a href="#">甜蜜巴厘</a><a href="#">寻味广东</a>
+                    </div>
+                </div>
+                <div class="footer">
+                    <a href="#"><strong>[</strong><span>旅游特卖</span><strong>]</strong>蜻蜓客</a>
+                </div>
+            </li>
+        </ul>
+        <div>
+</body>
+
+</html>

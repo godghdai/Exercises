@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!--
+			1、定位的使用
+			2、层级的理解和应用
+			3、导航练习，当hover的时候需要有变化
+			4、相对定位和绝对定位的配合使用
+			5、透明度的配合使用
+		-->
+    <style type="text/css">
+    .clearfix {
+        *zoom: 1;
+    }
+
+    .clearfix:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+
+    body {
+        background: #000;
+    }
+
+    .bg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 800px;
+        height: 604px;
+        background: url(imgs/2/bg.jpg);
+        margin: -302px auto auto -400px;
+    }
+
+    .content {
+        width: 590px;
+        height: 370px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    .content a {
+        display: block;
+        text-align: center;
+        font-family: "宋体";
+        font-size: 16px;
+        color: #e15671;
+        text-decoration: none;
+        float: left;
+        margin-left: -1px;
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+
+    .row_con {
+        height: 170px;
+        position: relative;
+        background: #ffffff;
+    }
+
+    .menu_con1,
+    .menu_con2 {
+        height: 40px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    .menu_con1 {
+        width: 536px;
+        padding-left: 1px;
+    }
+
+    .menu_con2 {
+        width: 550px;
+        padding-left: 2px;
+    }
+
+    .row_space {
+        height: 30px;
+    }
+
+    .item_style1 {
+        height: 38px;
+        border: 1px solid #e7788d;
+        background: #fdf1f4;
+        line-height: 38px;
+    }
+
+    .item_style1_active,
+    .item_style1:hover {
+        background: white;
+        border-top: 3px solid #e7788d;
+        line-height: 34px;
+    }
+
+    .item_style2 {
+        height: 36px;
+        border: 2px solid #fdf1f4;
+        background: #fdf1f4;
+        line-height: 36px;
+    }
+
+    .item_style2:after {
+        content: "";
+        display: block;
+    }
+
+    .content .item_style2 {
+        margin-left: -2px;
+    }
+
+    .item_style2_active,
+    .item_style2:hover {
+        background: white;
+        border: 2px solid #e7788d;
+        height: 36px;
+        position: relative;
+        z-index: 2;
+        height: 38px;
+        color: #000;
+    }
+
+    .menu_con2 .menu {
+        float: left;
+        position: relative;
+        height: 40px;
+    }
+
+    .menu_con2 .menu .line{
+       position: absolute;
+       height: 2px;
+       bottom: 0;
+       background: #e7788d;
+       width: 100%;
+       z-index: 1;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <div class="content">
+            <div class="row_con">
+                <div class="menu_con1 clearfix">
+                    <a href="#" class="item_style1">妙味</a>
+                    <a href="#" class="item_style1">欢迎你</a>
+                    <a href="#" class="item_style1 item_style1_active">妙味课堂</a>
+                    <a href="#" class="item_style1">欢迎大家</a>
+                    <a href="#" class="item_style1">miaov</a>
+                </div>
+            </div>
+            <div class="row_space"></div>
+            <div class="row_con">
+                <div class="menu_con2">
+                    <div class="menu">
+                        <a href="#" class="item_style2 item_style2_active">妙味</a>
+                        <a href="#" class="item_style2">欢迎你</a>
+                        <a href="#" class="item_style2 ">妙味课堂</a>
+                        <a href="#" class="item_style2">欢迎大家</a>
+                        <a href="#" class="item_style2">miaov</a>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!--
+			1、定位的使用
+			2、层级的理解和应用
+			3、导航练习，当hover的时候需要有变化
+			4、相对定位和绝对定位的配合使用
+			5、透明度的配合使用
+		-->
+    <style type="text/css">
+    body {
+        background: #000;
+    }
+
+    .bg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 800px;
+        height: 800px;
+        background: url(imgs/1/bg.jpg);
+        margin: -400px auto auto -400px;
+    }
+
+    .content {
+        width: 590px;
+        height: 572px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background: #ffffff;
+    }
+
+    .content a {
+        display: block;
+        text-align: center;
+        font-family: "宋体";
+        font-size: 16px;
+        color: #e15671;
+        text-decoration: none;
+        height: 38px;
+        line-height: 38px;
+        float: left;
+        margin-left: -1px;
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+
+    .row_con {
+        height: 170px;
+        position: relative;
+    }
+
+    .row_space {
+        height: 30px;
+        background: #bfc4d3;
+    }
+    .item_style1 {
+        border: 1px solid #e7788d;
+        background: #fdf1f4;
+    }
+
+    .item_style2 {
+        border: 1px solid #e7788d;
+        border-bottom: 3px solid #e7788d;
+    }
+
+    .item_style3 {
+        border-bottom: 2px solid #e7788d;
+        border-top: 2px solid #fff;
+        position: relative;
+    }
+
+    .item_style3:after {
+        content: "";
+        display: block;
+        height: 20px;
+        width: 1px;
+        right: 0;
+        top: 10px;
+        background: #fae4e8;
+        position: absolute;
+    }
+
+    .item_style3:last-child:after {
+        display: none;
+    }
+
+    .item_con {
+    	height: 42px;
+    	width: 542px;
+    	position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    .item_con a:hover,
+    .item_con .active,
+    .item_con a:hover:after,
+    .item_con .active:after {
+        background: #e7788d;
+        color: #f9e2e6;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <div class="content">
+            <div class="row_con">
+                <div class="item_con">
+                    <a href="#" class="item_style1">妙味</a>
+                    <a href="#" class="item_style1">欢迎你</a>
+                    <a href="#" class="item_style1 active">妙味课堂</a>
+                    <a href="#" class="item_style1">欢迎大家</a>
+                    <a href="#" class="item_style1">miaov</a>
+                </div>
+            </div>
+            <div class="row_space"></div>
+            <div class="row_con">
+                <div class="item_con">
+                    <a href="#" class="item_style2">妙味</a>
+                    <a href="#" class="item_style2">欢迎你</a>
+                    <a href="#" class="item_style2 active">妙味课堂</a>
+                    <a href="#" class="item_style2">欢迎大家</a>
+                    <a href="#" class="item_style2">miaov</a>
+                </div>
+            </div>
+            <div class="row_space"></div>
+            <div class="row_con">
+                <div class="item_con">
+                    <a href="#" class="item_style3 active">妙味</a>
+                    <a href="#" class="item_style3">欢迎你</a>
+                    <a href="#" class="item_style3">妙味课堂</a>
+                    <a href="#" class="item_style3">欢迎大家</a>
+                    <a href="#" class="item_style3">miaov</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

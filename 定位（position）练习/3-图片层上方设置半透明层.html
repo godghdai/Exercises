@@ -1,16 +1,233 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-		<!--
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!--
 			1、定位的使用
 			2、层级的理解和应用
 			3、导航练习，当hover的时候需要有变化
 			4、相对定位和绝对定位的配合使用
 			5、透明度的配合使用
 		-->
-	</head>
-	<body>
-	</body>
+    <style type="text/css">
+    .clearfix {
+        *zoom: 1;
+    }
+
+    .clearfix:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    body,
+    ul,
+    h3,
+    p {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background: #000;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .bg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 572px;
+        height: 336px;
+        background: url(imgs/3/bg.jpg);
+        margin: -221px auto auto -338px;
+        padding-top: 106px;
+        padding-left: 105px;
+    }
+
+    .content {
+        width: 453px;
+        height: 230px;
+    }
+
+    .item1 {
+        width: 140px;
+        height: 190px;
+        float: left;
+        background: #fff;
+        padding: 20px;
+    }
+
+    .item2 {
+        width: 200px;
+        height: 190px;
+        float: right;
+        background: #fff;
+        padding: 20px;
+    }
+
+    .banner {
+        height: 140px;
+        background: #3d2d7e;
+        position: relative;
+    }
+
+    .banner_bg {
+        height: 133px;
+        background: url(imgs/3/bg2.png) repeat-x;
+        filter: alpha(opacity=20);
+        opacity: 0.2;
+    }
+
+    .banner .photo {
+        position: absolute;
+        top: 21px;
+        left: 21px;
+        width: 98px;
+        height: 79px;
+    }
+
+    .banner .title_bg {
+        position: absolute;
+        bottom: 0;
+        background: #000;
+        filter: alpha(opacity=40);
+        opacity: 0.4;
+        width: 100%;
+        height: 24px;
+    }
+
+    .banner .title {
+        position: absolute;
+        bottom: 0;
+        font-family: "宋体";
+        font-size: 14px;
+        font-weight: normal;
+        text-indent: 8px;
+        color: #ffffff;
+        line-height: 24px;
+        width: 100%;
+        height: 24px;
+    }
+
+    .banner .h_ico {
+        position: absolute;
+        display: block;
+        bottom: 4px;
+        right: 4px;
+        width: 16px;
+        height: 16px;
+        background: url(imgs/3/ico7.png) no-repeat center;
+    }
+
+    .banner .tool_ico {
+        position: absolute;
+        display: block;
+        top: 2px;
+        right: 2px;
+        width: 14px;
+        height: 14px;
+        background: url(imgs/3/ico6.png) no-repeat center;
+    }
+
+    .sub_title {
+        height: 33px;
+        font-family: "宋体";
+        font-size: 14px;
+        color: #000;
+        line-height: 33px;
+    }
+
+    .info {
+        width: 141px;
+        height: 18px;
+    }
+
+    .info .play,
+    .info .comment {
+        font-family: "微软雅黑";
+        font-size: 12px;
+        color: #6f6f6f;
+        height: 100%;
+        display: block;
+        line-height: 18px;
+    }
+
+    .info .play {
+        float: left;
+        padding-left: 16px;
+        background: url(imgs/3/ico3.png) no-repeat left center;
+    }
+
+    .info .comment {
+        float: right;
+        padding-left: 20px;
+        background: url(imgs/3/ico4.png) no-repeat left center;
+    }
+
+    .item2 .banner {
+        background: none;
+    }
+
+    .item2 .banner_bg {
+        background: #e7788d;
+        height: 100%;
+        filter: alpha(opacity=1);
+        opacity: 1;
+    }
+
+    .item2 .banner .photo {
+        position: absolute;
+        top: 20px;
+        left: 60px;
+        width: 98px;
+        height: 79px;
+    }
+
+    .item2 .banner .title_bg {
+        background: #fff;
+        filter: alpha(opacity=80);
+        opacity: 0.8;
+    }
+
+    .item2 .banner .title {
+        color: #000;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <div class="content clearfix">
+            <div class="item1">
+                <div class="banner">
+                    <div class="banner_bg"></div>
+                    <img class="photo" src="imgs/3/ico.png" alt="" />
+                    <div class="title_bg"></div>
+                    <h3 class="title">妙味云课堂</h3>
+                    <span class="h_ico"></span>
+                    <span class="tool_ico"></span>
+                </div>
+                <div class="sub_title">妙味云课堂在线</div>
+                <div class="info"><span class="play">627,400</span><span class="comment">627</span></div>
+            </div>
+            <div class="item2">
+                <div class="banner">
+                    <div class="banner_bg"></div>
+                    <img class="photo" src="imgs/3/ico2.png" alt="" />
+                    <div class="title_bg"></div>
+                    <h3 class="title">妙味云课堂</h3>
+                    <span class="h_ico"></span>
+                    <span class="tool_ico"></span>
+                </div>
+                <div class="sub_title">妙味云课堂在线</div>
+                <div class="info"><span class="play">627,400</span><span class="comment">627</span></div>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>

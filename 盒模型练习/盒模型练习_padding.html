@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!--
+            1、两个线框图都得做
+            2、利用margin完成
+            3、利用padding完成
+            4、混合使用margin和padding同时完成
+            
+            注意：
+                不管是结构还是样式的编码
+                从外往里（从大往小）进行编码
+        -->
+    <style type="text/css">
+    body {
+        margin: 0;
+    }
+
+    .container {
+        width: 700px;
+        margin: 0 auto;
+    }
+
+    .abox1 {
+        border: none;
+        background: #e56d76;
+        width: 420px;
+        height: 420px;
+        padding: 90px 140px;
+    }
+
+    .abox2 {
+        background: #e56b75;
+        border: 3px dashed #fff;
+        width: 350px;
+        height: 350px;
+        padding: 32px;
+    }
+
+    .abox3 {
+        background: #ea8891;
+        border: 2px solid #fff;
+        width: 280px;
+        height: 280px;
+        padding: 33px;
+    }
+
+    .abox4 {
+        background: #fdad5f;
+        border: 2px dotted #fff;
+        width: 216px;
+        height: 216px;
+        padding: 30px;
+    }
+
+    .abox5 {
+        background: #faec4d;
+        border: 1px dashed #fff;
+        width: 200px;
+        height: 200px;
+        padding: 7px;
+    }
+
+    .abox6 {
+        background: #bfc649;
+        border: 1px dashed #fff;
+        width: 112px;
+        height: 112px;
+        padding: 43px;
+    }
+
+    .abox7 {
+        background: #e56d76;
+        border: 2px solid #fff;
+        width: 113px;
+        height: 113px;
+    }
+
+
+    .bbox1 {
+        height: 418px;
+        width: 420px;
+        padding: 92px 140px;
+        background: #3c3b4b;
+    }
+
+    .bbox2 {
+        height: 350px;
+        width: 350px;
+        border: 5px solid #f38db9;
+        padding: 30px;
+        background: #3c3b4b;
+    }
+
+    .bbox3 {
+        height: 280px;
+        width: 280px;
+        border: 3px dotted #bae1fd;
+        padding: 32px;
+        background: #c5acdb;
+    }
+
+    .bbox4 {
+        height: 216px;
+        width: 216px;
+        border: 2px dashed #ffffff;
+        padding: 30px;
+        background: #9dc4f5;
+    }
+
+    .bbox5 {
+        height: 200px;
+        width: 200px;
+        border: 1px dashed #ffffff;
+        padding: 7px;
+        background: #b9e0fe;
+    }
+
+    .bbox6 {
+        height: 112px;
+        width: 112px;
+        border: 1px dashed #ffffff;
+        padding: 43px;
+        background: #b7b3e5;
+    }
+
+    .bbox7 {
+        height: 113px;
+        width: 113px;
+        border: 2px dashed #ffffff;
+        background: #bae1fd;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="abox1">
+            <div class="abox2">
+                <div class="abox3">
+                    <div class="abox4">
+                        <div class="abox5">
+                            <div class="abox6">
+                                <div class="abox7">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bbox1">
+            <div class="bbox2">
+                <div class="bbox3">
+                    <div class="bbox4">
+                        <div class="bbox5">
+                            <div class="bbox6">
+                                <div class="bbox7"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

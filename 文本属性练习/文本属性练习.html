@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!--
+			1、模块、单词间距、文字行高要与设计图统一
+			2、思考题：每一行的前方粉色带三角的区域该如何实现?
+		-->
+    <style>
+    .con {
+        font: 16px/40px "宋体";
+        word-spacing: 35px;
+        margin: 0 auto;
+        width: 352px;
+        height: 390px;
+        background: #c6cad7;
+    }
+    .con div{
+    	background: #fefafb;
+    	height: 40px;
+    	margin-bottom: 10px;
+    }
+    .con .bg{
+    	width: 80px;
+    	background: #fceef1;
+    	margin-right: 25px;
+    	display: inline-block;
+    	position: relative;
+    }
+    
+    .con .bg:after{
+       content: "";
+       display: block;
+       position: absolute;
+       top:13px;
+       right: -14px;
+       width: 0;
+       height: 0;
+       border: 7px solid #fefafb;
+       border-left:7px solid #fceef1;
+
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="con">
+        <div><span class="bg">装修设计</span>全包 半包 设计</div>
+        <div><span class="bg">家装建材</span>吊灯 马桶 地板</div>
+        <div><span class="bg">全屋定制</span>衣柜 橱柜 门</div>
+        <div><span class="bg">住宅家具</span>沙发 床 桌椅</div>
+        <div><span class="bg">家纺订品</span>四件套 被 枕头</div>
+        <div><span class="bg">家饰布艺</span>摆件 挂画 窗帘</div>
+        <div><span class="bg">生活家居</span>收纳 拖鞋</div>
+        <div><span class="bg">居家必备</span>汤锅 碗盘 雨伞</div>
+    </div>
+</body>
+
+</html>

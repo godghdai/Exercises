@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style type="text/css">
+.con {
+    width: 600px;
+    height: 600px;
+    background: #FBFFFD;
+    border: 1px solid #E6CAFF;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.item {
+    border: 1px solid #fff;
+    position: absolute;
+    text-align: center;
+    color: #999;
+}
+
+.buttons {
+    position: absolute;
+    top: -30px;
+    left: -1px;
+}
+
+.buttons input {
+    height: 29px;
+    margin-right: 5px;
+}
+</style>
+<script>
+(function(factory, window, document) {
+
+    var Tools = {
+        getArrowArray: function(size, position) {
+            var mid = Math.floor(size / 2);
+            var arrows = [];
+            for (var row = 0; row < size; row++) {
+                arrows.push([]);
+                for (var col = 0; col < size; col++)
+                    arrows[row].push(0);
+            }
+            var startRow = mid;
+            var startCol = 0;
+            var direction = ["left-top", "left-bottom", "right-top", "right-bottom"].filter(function(item) {
+                return new RegExp(position).test(item);
+            });
+
+            for (var count = 0; count < direction.length; count++) {
+                switch (direction[count]) {
+                    case "left-top":
+                    case "left-bottom":
+                        startRow = mid;
+                        startCol = 0;
+                        break;
+                    case "right-top":
+                    case "right-bottom":
+                        startRow = mid;
+                        startCol = size - 1;
+                        break;
+                }
+                for (var start = 0; start <= mid; start++) {
+                    arrows[startRow][startCol] = 1;
+                    switch (direction[count]) {
+                        case "left-top":
+                            startCol++;
+                            startRow--;
+                            break;
+                        case "left-bottom":
+                            startCol++;
+                            startRow++;
+                            break;
+                        case "right-top":
+                            startCol--;
+                            startRow--;
+                            break;
+                        case "right-bottom":
+                            startCol--;
+                            startRow++;
+                            break;
+                    }
+                }
+
+            }
+            return arrows;
+        },
+        "getRandomColor": function() {
+            var color = ["#BE77FF", "#FF2D2D", "#53FF53", "#B766AD"];
+            var bgColor = color[Math.floor(Math.random() * color.length)];
+            var arrowColor = color.slice().filter(function(item) {
+                return item != bgColor;
+            });
+            return {
+                bgColor: bgColor,
+                arrowColor: arrowColor[Math.floor(Math.random() * arrowColor.length)]
+            };
+        },
+        "$": function(id) {
+            return document.getElementById(id);
+        },
+        "$$": function(className, parent) {
+            return (parent || document).getElementsByClassName(className);
+        }
+    };
+
+    window.onload = function() {
+        factory && factory(document, Tools);
+    }
+
+})(function(document, tools) {
+
+    var space = 5;
+    var size = 55;
+
+    var container = tools.$("con");
+    var button = tools.$("button");
+    var totalWidth = container.clientWidth;
+    var width = (totalWidth - space * (size + 1)) / size;
+    var arrowArray = tools.getArrowArray(size, "left||right");
+    var color = tools.getRandomColor();
+
+    var div = null;
+    for (var row = 0; row < size; row++) {
+        for (var col = 0; col < size; col++) {
+            div = document.createElement("div");
+            div.innerHTML = row * size + col;
+            div.className = "item";
+            div.row = row;
+            div.col = col;
+            div.style.width = width + "px";
+            div.style.height = width + "px";
+            div.style.left = space + col * (space + width) + "px";
+            div.style.top = space + row * (space + width) + "px";
+            div.style.backgroundColor = arrowArray[row][col] ? color.arrowColor : color.bgColor;
+            div.style.fontSize = Math.ceil(width / 3) + "px";
+            div.style.lineHeight = width + "px";
+            container.appendChild(div);
+        }
+    }
+
+    button.onclick = function() {
+        var arrowArray = tools.getArrowArray(size, ["left", "top", "right", "bottom"][(this.arrowIndex || (this.arrowIndex = 0)) % 4]);
+        var items = tools.$$("item");
+        var item = null;
+        for (var i = 0; i < items.length; i++) {
+            item = items[i];
+            item.style.backgroundColor = arrowArray[item.row][item.col] ? color.arrowColor : color.bgColor;
+        }
+        this.arrowIndex++;
+    }
+
+}, window, document)
+
+
+function TimeLine(interval) {
+    if (!(this instanceof TimeLine)) return new TimeLine(interval);
+    this.interval = interval || 1000 / 60;
+    this.timer = null;
+    this.last = null;
+    this.pass = 0;
+    this.listeners = [];
+}
+TimeLine.prototype.start = function() {
+    var self = this;
+    this.timer = setInterval(function() {
+        var now = Date.now();
+        if (self.last) {
+            var dur = now - self.last;
+            self.pass += dur;
+            for (var i = 0; i < self.listeners.length; i++) {
+                self.listeners[i].onEnterFrame(self, dur, self.pass, self.listeners[i]);
+            }
+        }
+        self.last = now;
+    }, this.interval)
+}
+TimeLine.prototype.stop = function() {
+    clearInterval(this.timer);
+    return this;
+}
+TimeLine.prototype.addListener = function(listener) {
+    if ("onEnterFrame" in listener)
+        this.listeners.push(listener);
+    return this;
+}
+
+var obj = {
+    "onEnterFrame": function(timeline, pass) {
+        if (pass > 2000) return; //timeline.stop();
+        console.log(pass);
+    }
+}
+var obj2 = {
+    "onEnterFrame": function(timeline, pass) {
+        if (pass > 3000) timeline.stop();
+        console.log(pass + "obj2");
+    }
+}
+
+var STATUS_SIN = 0,
+    STATUS_CIRCLE = 1,
+    current_status = STATUS_SIN;
+
+setTimeout(function() {
+
+    document.getElementById("buttonSin").onclick = function() {
+        current_status = STATUS_SIN;
+    }
+    document.getElementById("buttoncircle").onclick = function() {
+        current_status = STATUS_CIRCLE;
+    }
+
+
+    var size = 55;
+    var lineNum = Math.floor(size / 2);
+    var items = document.getElementsByClassName("item");
+    var item = null;
+    var timeline = TimeLine();
+    for (var i = lineNum * size; i < (lineNum + 1) * size + size; i++) {
+        item = items[i];
+        item.style.backgroundColor = "black";
+        item.style.zIndex = 999;
+        item.startTime = (i - lineNum * size) * 100;
+        item.sourseTop = item.offsetTop;
+        item.sourse = item.offsetTop;
+        item.index = (i - lineNum * size);
+        item.time = 0;
+        var a = 300,
+            b = 300,
+            r = 200;
+
+
+        item.onEnterFrame = function(timeline, dur, pass, item) {
+            //if (pass < item.startTime) return;
+            // var now = Date.now();
+
+            //if (item.sourseTop < 100 || item.sourseTop > item.sourse) {
+            // item.dur = -1 * item.dur;
+            // }
+            var hudu, X, Y, ddd;
+            switch (current_status) {
+                case STATUS_CIRCLE:
+                    hudu = (2 * Math.PI / 360) * (item.index * 360 / 15 + item.time);
+                    X = a + Math.sin(hudu) * r;
+                    Y = b - Math.cos(hudu) * r
+                    break;
+                case STATUS_SIN:
+                    hudu = 2 * Math.PI / size * item.index + 3 * Math.PI + item.time / (2 * Math.PI);
+                    ddd = 2 * Math.PI / size * item.index;
+                    X = ddd * 600 / (2 * Math.PI);
+                    Y = (Math.sin(hudu) + 1) * 563 / 2;
+                    break;
+                default:
+                    // statements_def
+                    break;
+            }
+
+            /*
+
+             
+            var hudu = (2 * Math.PI / 360)*(item.index *360/15+item.time)-Math.PI;
+            //var X=(hudu)*80;
+            var X= (2 * Math.PI / 360)*(item.index *360/15)*80;
+            var Y= Math.sin(hudu)*300+300;
+  */
+
+
+            /*
+            var hudu=2*Math.PI/size*item.index+ 3*Math.PI+item.time/(2*Math.PI);
+            var ddd=2*Math.PI/size*item.index;
+            var X=ddd*600/(2*Math.PI);
+            var Y= (Math.sin(hudu)+1)*563/2;
+          */
+
+
+
+
+            //item.sourseTop -= item.dur;
+            //item.style.top = item.sourseTop + "px";
+            //item.style.left = item.sourseTop - 1 * item.dur + "px";
+            item.style.top = Y + "px";
+            item.style.left = X + "px";
+            item.dur = 0;
+            item.time += 0.2;
+        }
+        timeline.addListener(item);
+    }
+    timeline.start();
+}, 1000)
+</script>
+
+<body>
+    <div id="con" class="con">
+        <div class="buttons">
+            <input id="button" type="button" value="改变V方向" />
+            <input id="buttonSin" type="button" value="正弦运动" />
+            <input id="buttoncircle" type="button" value="圆行运动" />
+        </div>
+    </div>
+</body>
+
+</html>

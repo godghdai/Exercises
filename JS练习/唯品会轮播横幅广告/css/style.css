@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+.banner-bg {
+    width: 100%;
+    height: 500px;
+    background: url(../imgs/bg_banner3.jpg) no-repeat center top;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.banner-wrap {
+    width: 1146px;
+    height: 443px;
+    padding: 12px 12px 0 12px;
+    margin: 0 auto;
+    background: #fff;
+    background: rgba(255, 255, 255, .86);
+    box-shadow: 0 1px 3px rgba(167, 167, 167, .4);
+}
+
+.banner-con {
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-con .item-con {
+    width: 1146px;
+    height: 400px;
+}
+
+.banner-con .item-con img {
+    width: 1146px;
+    height: 400px;
+    display: block;
+}
+
+
+.banner-con .item-con .item-base {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.banner-con .item-con .item-focus {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.banner-con .buttons {
+    position: absolute;
+    margin-top: -33px;
+    z-index: 3;
+    width: 33px;
+    height: 66px;
+    color: #fff;
+    background: #ccc;
+    background: rgba(0, 0, 0, .2);
+    border-radius: 2px;
+    text-align: center;
+    line-height: 66px;
+    cursor: pointer;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.banner-con .button-left {
+    top: 50%;
+    left: -33px;
+}
+
+.banner-con .button-right {
+    top: 50%;
+    right: -33px;
+}
+
+
+.banner-con:hover .button-left {
+    left: 0;
+}
+
+.banner-con:hover .button-right {
+    right: 0;
+}
+
+.banner-con .button-left:hover {
+    background: rgba(0, 0, 0, .8);
+}
+
+.banner-con .button-right:hover {
+    background: rgba(0, 0, 0, .8);
+}
+
+
+.footer-con {
+    height: 43px;
+    line-height: 43px;
+    position: relative;
+}
+
+.footer-con .footer-item {
+    float: left;
+    width: 20%;
+    text-align: center;
+    position: relative;
+    color: #333;
+    height: 40px;
+    font: 12px/40px 'microsoft Yahei';
+}
+
+.footer-con .footer-item:after {
+    content: "|";
+    position: absolute;
+    right: 0;
+    font-family: tohama;
+    font-size: 10px;
+    margin-left: 10px;
+    color: #e8e8e8;
+}
+
+.footer-con .last_item:after {
+    display: none;
+}
+
+.footer-con .footer-line {
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    left: 0;
+    background-color: #e6057d;
+    width: 20%;
+    -webkit-transition: left 0.8s ease;
+    -o-transition: left 0.8s ease;
+    transition: left 0.8s ease;
+}

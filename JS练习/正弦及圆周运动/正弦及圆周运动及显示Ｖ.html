@@ -227,7 +227,8 @@ setTimeout(function() {
     var timeline = TimeLine();
     for (var i = lineNum * size; i < (lineNum + 1) * size + size; i++) {
         item = items[i];
-        item.style.backgroundColor = "black";
+
+        item.style.background = "black";
         item.style.zIndex = 999;
         item.startTime = (i - lineNum * size) * 100;
         item.sourseTop = item.offsetTop;

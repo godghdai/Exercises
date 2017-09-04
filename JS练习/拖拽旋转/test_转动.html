@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+body {
+    margin: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.wrap {
+    width: 496px;
+    height: 496px;
+    margin: 100px auto;
+    overflow: hidden;
+}
+
+.main {
+    border-radius: 50%;
+    background: url(test.jpg) no-repeat center;
+    border: 2px solid #666;
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    line-height: 496px;
+    text-align: center;
+    font-size: 50px;
+    /* transition: all 0.2s;*/
+}
+
+.center_r {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    font-size: 12px;
+    color: #fff;
+    line-height: 20px;
+    text-align: center;
+}
+</style>
+<script>
+window.onload = function() {
+    var main = document.getElementsByClassName("main")[0];
+
+
+    var r = main.offsetWidth / 2;
+    var r_x = main.offsetLeft + r;
+    var r_y = main.offsetTop + r;
+
+    // var r_div = document.createElement("div");
+    // r_div.className = "center_r";
+    // r_div.style.top = r_y - 4 + 'px';
+    // r_div.style.left = r_x - 4 + 'px';
+    // document.body.appendChild(r_div);
+
+    var radian, min_x, min_y, min_div;
+    r -= 20;
+    for (var i = 0; i < 60; i++) {
+        radian = 2 * Math.PI - Math.PI / 180 * (i * 6);
+        min_x = Math.sin(radian) * r + r_x;
+        min_y = Math.cos(radian) * r + r_y;
+
+        min_div = document.createElement("div");
+        min_div.className = "center_r";
+        min_div.innerHTML = i;
+        min_div.style.top = min_y - 10 + 'px';
+        min_div.style.left = min_x - 10 + 'px';
+        document.body.appendChild(min_div);
+    }
+
+    var down_x, down_y, down_rad, move_x, move_y, move_rad, pre_deg = 0;
+    main.onmousedown = function(ev) {
+        var event = ev || window.event;
+        down_x = event.clientX;
+        down_y = event.clientY;
+        down_rad = Math.atan2(down_y - r_y, down_x - r_x);
+        down_rad -= pre_deg;
+        document.onmousemove = function(ev) {
+            var event = ev || window.event;
+            move_x = event.clientX;
+            move_y = event.clientY;
+            move_rad = Math.atan2(move_y - r_y, move_x - r_x) - down_rad;
+            main.style.transform = "rotate(" + move_rad * 180 / Math.PI + "deg)";
+            pre_deg = move_rad;
+        }
+
+    }
+
+
+    main.onmouseout = main.onmouseup = function() {
+        clearInterval(main.timer);
+        var endDeg = pre_deg + 100;
+        var speed = (endDeg - pre_deg) * 0.2;
+        document.onmousemove = null;
+        main.timer = setInterval(function() {
+            speed *= 0.99;
+            if (speed == 0) clearInterval(main.timer);
+            main.style.transform = "rotate(" + pre_deg * 180 / Math.PI + "deg)";
+            pre_deg += Math.PI / 180 * speed;
+        }, 16)
+
+    }
+
+
+    var str = "123456789";
+    var mod = str.length % 3,
+        result = [];
+    if (mod > 0) result.push(str.substring(0, mod));
+    for (var i = mod; i < str.length; i += 3) {
+        result.push(str.substring(i, i + 3));
+    }
+    console.log(result.join(","));
+
+
+
+}
+</script>
+
+<body>
+    <div class="wrap">
+        <div class="main">
+            测试文字
+        </div>
+    </div>
+</body>
+
+</html>

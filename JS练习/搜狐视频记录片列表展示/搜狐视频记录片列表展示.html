@@ -1,0 +1,253 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>无标题文档</title>
+    <style>
+    ul,
+    li,
+    h3,
+    p {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    h3 {
+        font-weight: normal;
+    }
+
+    .clearfix:after {
+        content: "";
+        display: block;
+        clear: both;
+        height: 0;
+        width: 0;
+    }
+
+    .wrap {
+        width: 268px;
+        height: 396px;
+        background: #dee7e7;
+        margin: 0 auto;
+        font-family: "宋体";
+        font-size: 12px;
+    }
+
+    .con {
+        width: 256px;
+        height: 100%;
+        padding: 0px 6px;
+        overflow: hidden;
+    }
+
+    .main_title {
+        float: left;
+        font-size: 17px;
+        color: #183952;
+        font-weight: bold;
+        height: 38px;
+        line-height: 38px;
+        text-indent: 13px;
+    }
+
+    .tab_head_con {
+        width: 100%;
+        height: 38px;
+        border-bottom: 1px solid #94bdd6;
+    }
+
+    .tab_head {
+        float: right;
+        margin-top: 12px;
+    }
+
+    .tab_head li {
+        float: left;
+        height: 25px;
+        color: #185273;
+        line-height: 26px;
+        border: 1px solid #94bdd6;
+        border-bottom: none;
+        padding: 0 5px;
+        margin-left: -1px;
+    }
+
+    .tab_head .active {
+        color: #000000;
+        background: #ffffff;
+        font-weight: bold;
+        height: 26px;
+    }
+
+    .tab_content {
+        position: relative;
+    }
+
+    .tab_content .list li {
+        color: #393131;
+        height: 27px;
+        border-bottom: 1px dashed #fff;
+        line-height: 27px;
+        position: relative;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .tab_content .list span {
+        width: 18px;
+        height: 14px;
+        line-height: 14px;
+        background: #29739c;
+        font-size: 14px;
+        font-weight: bold;
+        color: #fff;
+        text-align: center;
+        display: inline-block;
+        margin-left: 8px;
+        margin-right: 12px;
+    }
+
+    .tab_content p {
+        line-height: 26px;
+        text-align: right;
+    }
+
+    .tab_content .list .active {
+        height: 80px;
+    }
+
+    .tab_content .list .active span {
+        position: absolute;
+        left: 0;
+        top: 8px;
+        z-index: 22;
+    }
+
+    .detail {
+        height: 64px;
+        width: 214px;
+        background: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 8px;
+        padding-left: 35px;
+    }
+
+    .detail .img_con {
+        float: left;
+        width: 84px;
+        height: 100%;
+        border: 1px solid #94bdd6;
+    }
+
+    .detail .info_con {
+        float: left;
+        width: 120px;
+        height: 100%;
+        padding-left: 8px;
+        position: relative;
+    }
+
+    .detail .info_con .info {
+        line-height: 18px;
+        font-size: 12px;
+        text-align: left;
+        color: #185273;
+    }
+
+    .detail .info_con .play {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding: 5px;
+        background: #21638c;
+        border-radius: 3px;
+        color: #fff;
+    }
+
+    .detail .photo {
+        width: 80px;
+        height: 60px;
+        border: 2px solid #fff;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="con">
+            <div class="tab">
+                <div class="tab_head_con clearfix">
+                    <h3 class="main_title">观看排行榜</h3>
+                    <ul class="tab_head">
+                        <li class="active">每日</li>
+                        <li>每周</li>
+                        <li>全部</li>
+                    </ul>
+                </div>
+                <ul class="tab_content">
+                    <li class="tab_page">
+                        <ul class="list">
+                            <li class="active"><span>1</span>解密：关于地球与人类的一千零一问</li>
+                            <li><span>2</span>经典传奇：探索全世界大历史事件</li>
+                            <li><span>3</span>眼界：厄瓜多尔:中国渔船破坏人类遗</li>
+                            <li><span>4</span>解密：房企转型瞄准"现金牛" 恒大进</li>
+                            <li><span>5</span>人大常委会任免安全部、民政部部长</li>
+                            <li><span>6</span>朝鲜先富起来的人生活极度奢靡</li>
+                            <li><span>7</span>人大常委会任免安全部、民政部部长</li>
+                            <li><span>8</span>老汉在自造“睡眠机”内睡觉突遇停电被困</li>
+                            <li><span>9</span>应该找什么样的旅伴一起旅游最开心?</li>
+                            <li><span>10</span>九寨沟地震半月后：旅游业遭重创 旺季结束</li>
+                        </ul>
+                        <p>更多&rsaquo;&rsaquo;
+                            <p/>
+                    </li>
+                    <li class="tab_page"></li>
+                    <li class="tab_page"></li>
+                    <div class="detail">
+                        <div class="img_con"><img class="photo" src="imgs/1.jpg" alt=""></div>
+                        <div class="info_con">
+                            <p class="info">深度解密传奇事件人物，探索未知、...</p>
+                            <span class="play">播放</span>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+window.onload = function() {
+    var tab_page = document.getElementsByClassName("tab_page")[0];
+    var page_items = tab_page.getElementsByTagName("li");
+    var detail = document.getElementsByClassName("detail")[0];
+    for (var i = 0; i < page_items.length; i++) {
+        page_items[i].index = i;
+        page_items[i].onmouseover = function() {
+            tab_page.getElementsByClassName("active")[0].classList.remove("active");
+            this.classList.add("active");
+            detail.getElementsByClassName("photo")[0].setAttribute("src", "imgs/" + (this.index + 1) + ".jpg");
+            detail.style.top = this.offsetTop + "px";
+        }
+    }
+
+    var tab_head = document.getElementsByClassName("tab_head")[0];
+    var tabtitles = tab_head.getElementsByTagName("li");
+    for (var i = 0; i < tabtitles.length; i++) {
+        tabtitles[i].onclick = function() {
+            tab_head.getElementsByClassName("active")[0].classList.remove("active");
+            this.classList.add("active");
+        }
+    }
+
+};
+</script>
+
+</html>

@@ -55,8 +55,8 @@
                 var dis_x = event.pageX - (module.offsetLeft + con_left);
                 var dis_y = event.pageY - (module.offsetTop + con_top);
 
-                module_width = module.offsetWidth;
-                module_height = module.offsetHeight;
+                mod_width = module.offsetWidth;
+                mod_height = module.offsetHeight;
                 document.onmousemove = function(event) {
                     var event = event || window.event;
 

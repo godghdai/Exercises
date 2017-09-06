@@ -1,1 +1,1 @@
-![Alt text](./record.gif)
+![Alt text](./GIF.gif)

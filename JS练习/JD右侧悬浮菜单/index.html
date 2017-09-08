@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="css/main.css" rel="stylesheet">
+    <script src="js/lib/require.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <div class="toolbar hide">
+        <div class="tab">
+            <ul class="tab_head">
+                <li class="item_con"><i class="ico ico_vip"></i><span class="tip">京东会员</span><i class="ico ico_dot"></i></li>
+                <li class="item_con"><i class="ico ico_cart"></i><span class="tip">购物车</span><span class="sup">6</span></li>
+                <li class="item_con"><i class="ico ico_follow"></i><span class="tip">我的关注</span></li>
+                <li class="item_con"><i class="ico ico_history"></i><span class="tip">我的足迹</span></li>
+                <li class="item_con"><i class="ico ico_message"></i><span class="tip">我的消息</span></li>
+                <li class="item_con"><i class="ico ico_support"></i><span class="tip">咨询JIMI</span></li>
+            </ul>
+            <div class="tab_con">
+                <div class="panel vip_panel" data-index="0">
+                    <h3 class="head"><i class="ico_vip"></i>京东会员<i class="ico_close"></i></h3>
+                    <div class="vip_panel_info">
+                        <div class="user">
+                            <img class="photo" src="./imgs/vip/photo.jpg" alt="">
+                            <div class="other_con">
+                                <h3 class="name">godghdai</h3>
+                                <div class="ico_con"><i class="ico_level"></i><i class="ico_plus"></i></div>
+                            </div>
+                        </div>
+                        <div class="sign">
+                            <a class="button first" href="javascript:void">会员签到领京豆</a>
+                            <a class="button" href="javascript:void">金融会员签到</a>
+                        </div>
+                        <ul class="detail">
+                            <li class="item">
+                                <a href="javascript:void">
+                                    <p>728
+                                        <br/><span>京豆</span></p>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="javascript:void">
+                                    <p>0
+                                        <br/><span>优惠券</span></p>
+                                </a>
+                            </li>
+                            <li class="item last_item">
+                                <a href="javascript:void">
+                                    <p>0.00
+                                        <br/><span>钢镚</span></p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="vip_panel_message">
+                        <a href="javascript:void"><i class="ico_gif"></i>本月专享礼包已送到，点击领取吧</a>
+                        <i class="ico_close"></i>
+                    </div>
+                    <div class="vip_panel_plus">
+                        <div class="sub_head"><span class="title">会员PLUS</span>
+                            <div class="line"></div>
+                        </div>
+                        <ul class="sub_detail clearfix">
+                            <li class="item"><a href="javascript:void"><span class="ico_con"><span class="ico ico_feedback"></span></span><p>购物回馈</p></a></li>
+                            <li class="item"><a href="javascript:void"><span class="ico_con"><span class="ico ico_free"></span></span><p>自营免运费</p></a></li>
+                            <li class="item"><a href="javascript:void"><span class="ico_con"><span class="ico ico_ebook"></span></span><p>畅读电子书</p></a></li>
+                        </ul>
+                    </div>
+                    <div class="vip_panel_finance">
+                        <div class="sub_head"><span class="title">金融会员</span>
+                            <div class="line"></div>
+                        </div>
+                        <ul class="sub_detail clearfix">
+                            <li class="item"><a href="javascript:void"><span class="ico_con"><span class="ico ico_credit"></span></span></i><p>小白信用
+                            <br/><span class="number">93.5</span></p></a></li>
+                            <li class="item"><a href="javascript:void"><span class="ico_con"><span class="ico ico_money"></span></span></i><p>金币<br/><span class="number">0</span></p></a></li>
+                            <li class="item"><a href="javascript:void"><span class="ico_con"><span class="ico ico_card"></span></span></i><p>金融卡券<br/><span class="number">0</span></p></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel cart_panel" data-index="1">
+                    <h3 class="head"><i class="ico_cart"></i>购物车<i class="ico_close"></i></h3>
+                    <ul>
+                        <li class="cart_panel_order">
+                            <h3 class="promo">购满100元，即可享受满减优惠<i class="ico_promo">满减<span class="ico_arrow"></span></i></h3>
+                            <div class="product">
+                                <div class="product_con">
+                                    <div class="product_photo_con"><img class="product_photo" src="./imgs/cart/1.jpg" alt="" /></div>
+                                    <h3 class="product_title">软件开发视频大讲堂：Linux C从入门到精通（附光盘1张）</h3>
+                                    <p class="product_price"><strong>¥55.00</strong>×1</p>
+                                    <a class="product_delete" href="#">删除</a>
+                                </div>
+                                <div class="other"></div>
+                            </div>
+                            <div class="product">
+                                <div class="product_con">
+                                    <div class="product_photo_con"><img class="product_photo" src="./imgs/cart/2.jpg" alt="" /></div>
+                                    <h3 class="product_title">【京东配送】蒂森特 EN-EL15 D810A/D7200/D7500尼康单反相机电池</h3>
+                                    <p class="product_price"><strong>¥78.00</strong>×1</p>
+                                    <a class="product_delete" href="#">删除</a>
+                                </div>
+                                <div class="other"></div>
+                            </div>
+                        </li>
+                        <li class="cart_panel_order">
+                            <h3 class="promo">已购满30元，您可领赠品<i class="ico_promo">满减<span class="ico_arrow"></span></i></h3>
+                            <div class="product">
+                                <div class="product_con">
+                                    <div class="product_photo_con"><img class="product_photo" src="./imgs/cart/3.jpg" alt="" /></div>
+                                    <h3 class="product_title">跟老男孩学Linux运维：Web集群实战</h3>
+                                    <p class="product_price"><strong>¥68.80</strong>×1</p>
+                                    <a class="product_delete" href="#">删除</a>
+                                </div>
+                                <div class="other"></div>
+                            </div>
+                            <div class="product">
+                                <div class="product_con">
+                                    <div class="product_photo_con"><img class="product_photo" src="./imgs/cart/4.jpg" alt="" /></div>
+                                    <h3 class="product_title">嵌入式Linux与物联网软件开发 C语言内核深度解析</h3>
+                                    <p class="product_price"><strong>¥68.80</strong>×1</p>
+                                    <a class="product_delete" href="#">删除</a>
+                                </div>
+                                <div class="other"></div>
+                            </div>
+                        </li>
+                        <li class="cart_panel_order">
+                            <h3 class="promo">购满88元，即可享受满减优惠<i class="ico_promo">满减<span class="ico_arrow"></span></i></h3>
+                            <div class="product">
+                                <div class="product_con">
+                                    <div class="product_photo_con"><img class="product_photo" src="./imgs/cart/5.jpg" alt="" /></div>
+                                    <h3 class="product_title">Linux集群和自动化运维</h3>
+                                    <p class="product_price"><strong>¥55.00</strong>×1</p>
+                                    <a class="product_delete" href="#">删除</a>
+                                </div>
+                                <div class="other"></div>
+                            </div>
+                            <div class="product">
+                                <div class="product_con">
+                                    <div class="product_photo_con"><img class="product_photo" src="./imgs/cart/1.jpg" alt="" /></div>
+                                    <h3 class="product_title">软件开发视频大讲堂：Linux C从入门到精通（附光盘1张）</h3>
+                                    <p class="product_price"><strong>¥55.00</strong>×1</p>
+                                    <a class="product_delete" href="#">删除</a>
+                                </div>
+                                <div class="other"></div>
+                            </div>
+                            <div class="product">
+                                <div class="product_con">
+                                    <div class="product_photo_con"><img class="product_photo" src="./imgs/cart/4.jpg" alt="" /></div>
+                                    <h3 class="product_title">嵌入式Linux与物联网软件开发 C语言内核深度解析</h3>
+                                    <p class="product_price"><strong>¥68.80</strong>×1</p>
+                                    <a class="product_delete" href="#">删除</a>
+                                </div>
+                                <div class="other"></div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="footer">
+                        <div class="total"><strong class="sum">7</strong>件商品</div>
+                        <div class="sum">共计：<strong class="total">￥192.90</strong></div>
+                        <a class="gocart" href="javascript:void 0" target="_blank">去购物车结算</a>
+                    </div>
+                </div>
+                <div class="panel follow_panel" data-index="2">
+                    <h3 class="head"><i class="ico_follow"></i>我的关注<i class="ico_close"></i></h3>
+                    <div class="follow_tab">
+                        <ul class="follow_tab_head">
+                            <li class="tab_title active">商品<span class="line"></span></li>
+                            <li class="tab_title">店铺<span class="line"></span></li>
+                            <li class="tab_title">活动</li>
+                        </ul>
+                        <div class="follow_tab_content">
+                            <div class="content_wrap clearfix">
+                                <div class="follow_product_con">
+                                    <ul class="clearfix">
+                                        <li class="product">
+                                            <div class="photo_con">
+                                                <a href="#" target="_blank"><img class="photo" src="./imgs/follow/1.jpg" alt=""/></a>
+                                                <a href="#" class="button_add" target="_blank">加入购物车</a>
+                                                <a href="#" class="ico_delete" target="_blank"></a>
+                                            </div>
+                                            <a href="#" class="price" target="_blank">￥62.40<span class="ico_price">降</span></a>
+                                        </li>
+                                        <li class="product">
+                                            <div class="photo_con">
+                                                <a href="#" target="_blank"><img class="photo" src="./imgs/follow/2.jpg" alt=""/></a>
+                                                <a href="#" class="button_add" target="_blank">加入购物车</a>
+                                                <a href="#" class="ico_delete" target="_blank"></a>
+                                            </div>
+                                            <a href="#" class="price" target="_blank">￥62.40<span class="ico_price">降</span></a>
+                                        </li>
+                                        <li class="product">
+                                            <div class="photo_con">
+                                                <a href="#" target="_blank"><img class="photo" src="./imgs/follow/3.jpg" alt=""/></a>
+                                                <a href="#" class="button_add" target="_blank">加入购物车</a>
+                                                <a href="#" class="ico_delete" target="_blank"></a>
+                                            </div>
+                                            <a href="#" class="price" target="_blank">￥62.40<span class="ico_price">降</span></a>
+                                        </li>
+                                        <li class="product">
+                                            <div class="photo_con">
+                                                <a href="#" target="_blank"><img class="photo" src="./imgs/follow/4.jpg" alt=""/></a>
+                                                <a href="#" class="button_add" target="_blank">加入购物车</a>
+                                                <a href="#" class="ico_delete" target="_blank"></a>
+                                            </div>
+                                            <a href="#" class="price" target="_blank">￥62.40<span class="ico_price">降</span></a>
+                                        </li>
+                                        <li class="product">
+                                            <div class="photo_con">
+                                                <a href="#" target="_blank"><img class="photo" src="./imgs/follow/5.jpg" alt=""/></a>
+                                                <a href="#" class="button_add" target="_blank">加入购物车</a>
+                                                <a href="#" class="ico_delete" target="_blank"></a>
+                                            </div>
+                                            <a href="#" class="price" target="_blank">￥62.40<span class="ico_price">降</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="follow_shop_con">
+                                    <ul>
+                                        <li class="shop_item">
+                                            <div class="shop_logo"> <a href="#" target="_blank"></a> <img class=" " src="./imgs/follow/21.jpg"> </div>
+                                            <div class="shop_info">
+                                                <div class="shop_name">
+                                                    <a target="_blank" href="#">天虹电脑官方旗舰店</a>
+                                                </div>
+                                                <a href="#" class="shop_button" target="_blank">进入店铺 &gt;</a>
+                                            </div>
+                                        </li>
+                                        <li class="shop_item">
+                                            <div class="shop_logo"> <a href="#" target="_blank"></a> <img class=" " src="./imgs/follow/22.jpg"> </div>
+                                            <div class="shop_info">
+                                                <div class="shop_name">
+                                                    <a target="_blank" href="#">HESUNSE旗舰店</a>
+                                                </div>
+                                                <a href="#" class="shop_button" target="_blank">进入店铺 &gt;</a>
+                                            </div>
+                                        </li>
+                                        <li class="shop_item">
+                                            <div class="shop_logo"> <a href="#" target="_blank"></a> <img class=" " src="./imgs/follow/23.jpg"> </div>
+                                            <div class="shop_info">
+                                                <div class="shop_name">
+                                                    <a target="_blank" href="#">视贝科技官方旗舰店</a>
+                                                </div>
+                                                <a href="#" class="shop_button" target="_blank">进入店铺 &gt;</a>
+                                            </div>
+                                        </li>
+                                        <li class="shop_item">
+                                            <div class="shop_logo"> <a href="#" target="_blank"></a> <img class=" " src="./imgs/follow/24.jpg"> </div>
+                                            <div class="shop_info">
+                                                <div class="shop_name">
+                                                    <a target="_blank" href="#">视贝科技官方旗舰店</a>
+                                                </div>
+                                                <a href="#" class="shop_button" target="_blank">进入店铺 &gt;</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="follow_act_con">
+                                    <a href="#" class="bottom_more" target="_blank">更多关注活动 &gt;&gt;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

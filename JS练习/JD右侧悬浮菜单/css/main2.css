@@ -49,9 +49,6 @@ a {
     border-left: 6px solid #7a6e6e;
     background: black;
     font-family: "微软雅黑";
-     -webkit-transition: right .3s ease-in-out 0s;
-    -moz-transition: right .3s ease-in-out 0s;
-    transition: right .3s ease-in-out 0s;
 }
 
 .toolbar .tab {
@@ -167,9 +164,6 @@ a {
     -webkit-border-radius: 3px 0 0 3px;
     -moz-border-radius: 3px 0 0 3px;
     border-radius: 3px 0 0 3px;
-    -webkit-transition: left .3s ease-in-out .1s;
-    -moz-transition: left .3s ease-in-out .1s;
-    transition: left .3s ease-in-out .1s;
 }
 
 .toolbar .tab_head .item_con:hover .ico {
@@ -177,7 +171,7 @@ a {
 }
 
 .toolbar .tab_head .item_con:hover .tip {
-    left: -72px;
+   /* left: -72px;*/
     background-color: #c81623;
 }
 
@@ -913,116 +907,10 @@ a {
     top:15px;
     left: 0;
     width: 830px;
-    -webkit-transition: left .3s ease-out 0s;
-    -moz-transition: left .3s ease-out 0s;
-    transition: left .3s ease-out 0s;
+
 }
 .follow_product_con,.follow_shop_con,.follow_act_con{
     float: left;
     width: 270px;
 } 
-@-webkit-keyframes toolbar-scaleIn {
-    from {
-        opacity: .7;
-        -webkit-transform: translateX(270px);
-        -moz-transform: translateX(270px);
-        transform: translateX(270px)
-    }
-    to {
-        -webkit-transform: translateX(0px);
-        -moz-transform: translateX(0px);
-        transform: translateX(0px)
-    }
-}
-
-@-ms-keyframes toolbar-scaleIn {
-    from {
-        opacity: .7;
-        -webkit-transform: translateX(270px);
-        -moz-transform: translateX(270px);
-        transform: translateX(270px)
-    }
-    to {
-        -webkit-transform: translateX(0px);
-        -moz-transform: translateX(0px);
-        transform: translateX(0px)
-    }
-}
-
-@-moz-keyframes toolbar-scaleIn {
-    from {
-        opacity: .7;
-        -webkit-transform: translateX(270px);
-        -moz-transform: translateX(270px);
-        transform: translateX(270px)
-    }
-    to {
-        -webkit-transform: translateX(0px);
-        -moz-transform: translateX(0px);
-        transform: translateX(0px)
-    }
-}
-
-@keyframes toolbar-scaleIn {
-    from {
-        opacity: .7;
-        -webkit-transform: translateX(270px);
-        -moz-transform: translateX(270px);
-        transform: translateX(270px)
-    }
-    to {
-        -webkit-transform: translateX(0px);
-        -moz-transform: translateX(0px);
-        transform: translateX(0px)
-    }
-}
-
-@-webkit-keyframes toolbar-scaleOut {
-    to {
-        opacity: .5;
-        -webkit-transform: scale(0.7) translateX(270px);
-        -moz-transform: scale(0.7) translateX(270px);
-        transform: scale(0.7) translateX(270px)
-    }
-}
-
-@-ms-keyframes toolbar-scaleOut {
-    to {
-        opacity: .5;
-        -webkit-transform: scale(0.7) translateX(270px);
-        -moz-transform: scale(0.7) translateX(270px);
-        transform: scale(0.7) translateX(270px)
-    }
-}
-
-@-moz-keyframes toolbar-scaleOut {
-    to {
-        opacity: .5;
-        -webkit-transform: scale(0.7) translateX(270px);
-        -moz-transform: scale(0.7) translateX(270px);
-        transform: scale(0.7) translateX(270px)
-    }
-}
-
-@keyframes toolbar-scaleOut {
-    to {
-        opacity: .5;
-        -webkit-transform: scale(0.7) translateX(270px);
-        -moz-transform: scale(0.7) translateX(270px);
-        transform: scale(0.7) translateX(270px)
-    }
-}
-
-.toolbar-animate-in {
-    -webkit-animation: toolbar-scaleIn .35s ease-in-out;
-    -moz-animation: toolbar-scaleIn .35s ease-in-out;
-    animation: toolbar-scaleIn .35s ease-in-out
-}
-
-.toolbar-animate-out {
-     -webkit-animation:toolbar-scaleOut .35s ease-in; 
-    -moz-animation: toolbar-scaleOut .35s ease-in;
-     animation:toolbar-scaleOut .35s ease-in; 
-}
-
 

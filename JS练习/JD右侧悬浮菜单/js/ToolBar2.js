@@ -1,8 +1,8 @@
-define(['jquery',"FollowPanel"], function($,followPanel) {
+define(['jquery','FollowPanel2','Animate'], function($,followPanel,Animate) {
     var STATUS_OPEN = true,
         STATUS_CLOSED = false,
         defaultConfig = {
-            "status": STATUS_OPEN,
+            "status": STATUS_CLOSED,
             "el": ".toolbar"
         },
         SHOW_ZINDEX = 5,
@@ -14,7 +14,7 @@ define(['jquery',"FollowPanel"], function($,followPanel) {
         this.status = config["status"];
         this.el = null;
         this.ico_buttons == null;
-        this.cur_index = 2;
+        this.cur_index = 0;
         this.panels = null;
     }
     ToolBar.prototype.init = function() {
@@ -41,8 +41,7 @@ define(['jquery',"FollowPanel"], function($,followPanel) {
         this.bindEvent();
     };
     ToolBar.prototype.switchPanel = function(next_index) {
-        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',
-            panels = this.panels,
+        var panels = this.panels,
             cur_index = this.cur_index;
         if (next_index > panels.length - 1) {
             console.log("没有实现");
@@ -51,16 +50,12 @@ define(['jquery',"FollowPanel"], function($,followPanel) {
         var cur_panel = $(panels[cur_index]);
         var next_panel = $(panels[next_index]);
         cur_panel.css("zIndex", HIDE_ZINDEX);
-        cur_panel.addClass('toolbar-animate-out').one(animationEnd, function() {
-            $(this).removeClass("toolbar-animate-out");
-            $(this).hide();
-
+        Animate(cur_panel,{left:270},300,function(){
+            cur_panel.hide();
         });
         next_panel.css("zIndex", SHOW_ZINDEX);
         next_panel.show();
-        next_panel.addClass('toolbar-animate-in').one(animationEnd, function() {
-            $(this).removeClass("toolbar-animate-in");
-        });
+        Animate(next_panel,{left:0},300);
         this.cur_index = next_index;
     }
     ToolBar.prototype.changeStatus = function(status) {
@@ -69,6 +64,7 @@ define(['jquery',"FollowPanel"], function($,followPanel) {
         if (el.is(":hidden")) el.show();
         this.status = status;
     }
+
     ToolBar.prototype.bindEvent = function() {
         var self = this;
         this.ico_buttons.click(function() {
@@ -90,6 +86,14 @@ define(['jquery',"FollowPanel"], function($,followPanel) {
 
         this.el.find(".panel .head .ico_close").click(function() {
             self.changeStatus(STATUS_CLOSED);
+        });
+
+        this.ico_buttons.mouseover(function(event) {
+            Animate($(this).find('.tip'),{left:-71},200);
+        });
+
+        this.ico_buttons.mouseout(function(event) {
+            Animate($(this).find('.tip'),{left:0},200);
         });
 
     };

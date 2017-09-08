@@ -19,7 +19,7 @@ define(['jquery', 'Tween'], function($, TWEEN) {
         }
 
         function update() {
-            target.css({ left: _from.left });
+            target.css(_from);
             //target.style.top = _from.y + 'px';
             //console.log(_from.left)
         }

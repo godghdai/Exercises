@@ -1,4 +1,4 @@
-define(['jquery','FollowPanel2','Animate'], function($,followPanel,Animate) {
+define(['jquery', 'FollowPanel2', 'Animate'], function($, followPanel, Animate) {
     var STATUS_OPEN = true,
         STATUS_CLOSED = false,
         defaultConfig = {
@@ -50,17 +50,26 @@ define(['jquery','FollowPanel2','Animate'], function($,followPanel,Animate) {
         var cur_panel = $(panels[cur_index]);
         var next_panel = $(panels[next_index]);
         cur_panel.css("zIndex", HIDE_ZINDEX);
-        Animate(cur_panel,{left:270},300,function(){
+        cur_panel.css("left", 0);
+        Animate(cur_panel, { left: 270 }, 300, function() {
             cur_panel.hide();
         });
+        next_panel.css("left", 270);
         next_panel.css("zIndex", SHOW_ZINDEX);
         next_panel.show();
-        Animate(next_panel,{left:0},300);
+        Animate(next_panel, { left: 0 }, 300);
         this.cur_index = next_index;
     }
     ToolBar.prototype.changeStatus = function(status) {
         var el = this.el;
-        el.css("right", status == STATUS_CLOSED ? -270 : 0);
+        //el.css("right", status == STATUS_CLOSED ? -270 : 0);
+        if (status == STATUS_CLOSED) {
+            Animate(el, { right: -270 }, 300);
+        }else {
+            Animate(el, { right:0 }, 300);
+        }
+
+
         if (el.is(":hidden")) el.show();
         this.status = status;
     }
@@ -89,11 +98,11 @@ define(['jquery','FollowPanel2','Animate'], function($,followPanel,Animate) {
         });
 
         this.ico_buttons.mouseover(function(event) {
-            Animate($(this).find('.tip'),{left:-71},200);
+            Animate($(this).find('.tip'), { left: -71 }, 200);
         });
 
         this.ico_buttons.mouseout(function(event) {
-            Animate($(this).find('.tip'),{left:0},200);
+            Animate($(this).find('.tip'), { left: 0 }, 200);
         });
 
     };

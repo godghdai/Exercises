@@ -1,7 +1,7 @@
-﻿function Clock(id, opition) {
+function Clock(id, opition) {
     if (!(this instanceof Clock)) return new Clock(id, opition)
     this.wrap = document.getElementById(id);
-    this.img_cons = null;
+    this.img_cons = [];
     this.step_tick = 0;
     this.step_run = 0;
     this._width = (opition || {}).width || 122;
@@ -14,6 +14,25 @@ Clock.prototype.init = function() {
     this.createUI();
 }
 Clock.isInitCss = false;
+Clock.getElementsByClassName = function(searchClass, node, tag) {
+    if (document.getElementsByClassName) {
+        return (node || document).getElementsByClassName(searchClass)
+    } else {
+        node = node || document;
+        tag = tag || '*';
+        var returnElements = [];
+        var els = (tag === "*" && node.all) ? node.all : node.getElementsByTagName(tag);
+        var i = els.length;
+        searchClass = searchClass.replace(/\-/g, "\\-");
+        var pattern = new RegExp("(^|\\s)" + searchClass + "(\\s|$)");
+        while (--i >= 0) {
+            if (pattern.test(els[i].className)) {
+                returnElements.unshift(els[i]);
+            }
+        }
+        return returnElements;
+    }
+}
 Clock.prototype.createCSS = function() {
     if (!Clock.isInitCss) {
         var css = [];
@@ -38,7 +57,8 @@ Clock.prototype.createWrap = function() {
     div.className = "god_clock";
     div.innerHTML = "<ul class='clock_con'></ul>";
     this.wrap.appendChild(div);
-    this.con = this.wrap.getElementsByClassName("clock_con")[0];
+    //this.con = this.wrap.getElementsByClassName("clock_con")[0];
+    this.con = Clock.getElementsByClassName("clock_con", this.wrap)[0];
 };
 Clock.prototype.createUI = function() {
     function createImg(num) {
@@ -72,14 +92,16 @@ Clock.prototype.createUI = function() {
         con.appendChild(li);
     }
     con.style.width = this._width * 8 + "px";
-    this.img_cons = this.wrap.getElementsByClassName("img_con");
-
-    var columns = this.wrap.getElementsByClassName("column");
+    //this.img_cons = this.wrap.getElementsByClassName("img_con");
+    this.img_cons = Clock.getElementsByClassName("img_con", this.wrap);
+    //var columns = this.wrap.getElementsByClassName("column");
+    var columns = Clock.getElementsByClassName("column", this.wrap);
     for (var i = 0; i < columns.length; i++) {
         columns[i].style.width = this._width + "px";
         columns[i].style.height = this._height + "px";
     }
-    var nums = this.wrap.getElementsByClassName("num");
+    //var nums = this.wrap.getElementsByClassName("num");
+    var nums = Clock.getElementsByClassName("num", this.wrap);
     for (var i = 0; i < nums.length; i++) {
         nums[i].style.width = this._width + "px";
         nums[i].style.height = this._height + "px";
@@ -91,12 +113,13 @@ Clock.prototype.start = function() {
         now = null;
 
     function tick(time) {
-        self.run();
+
         now = self.now();
         if (last != now) {
             self.changeStatus(now);
             last = now;
         }
+        self.run();
         self.requestAnimationFrame(tick);
     }
     self.requestAnimationFrame(tick);
@@ -104,7 +127,7 @@ Clock.prototype.start = function() {
 }
 Clock.prototype.run = function() {
     var icon = null;
-    if (this.step_tick > 44) {
+    if (this.step_tick > 29) {
         icon = this.img_cons[2];
         icon.style.top = (icon.offsetTop == -this._height ? 0 : -this._height) + "px";
         icon = this.img_cons[5];
@@ -150,6 +173,7 @@ Clock.prototype.changeStatus = function(now) {
         if (i % 3 == 2)
             continue;
         icon.setAttribute("data-cur", nowArray[i]);
+
     }
 }
 Clock.prototype.requestAnimationFrame = function(callback) {
@@ -183,6 +207,27 @@ Clock.prototype.leftPad = function(num) {
 
 window.onload = function() {
     Clock("clock").start();
-    Clock("clock2", { width: 50, height: 70 }).start();
+    Clock("clock2", { width: 50, height: 80 }).start();
 }
 
+/*
+function inherit(child, parent) {
+    var F = function() {};
+    F.prototype = parent.prototype;
+    child.prototype = new F();
+    child.prototype.constructor = child;
+}
+
+function deepCopy(p, c) {　　　　
+    var c = c || {};　　　　
+    for (var i in p) {
+        if (typeof p[i] === 'object') {
+            c[i] = (p[i].constructor === Array) ? [] : {};　　　　　　　　
+            deepCopy(p[i], c[i]);
+        } else {
+            c[i] = p[i];
+        }
+    }
+    return c;
+}
+*/

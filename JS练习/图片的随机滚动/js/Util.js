@@ -1,21 +1,6 @@
 define(function() {
     var _id = 0;
 
-    function forEach(array, iteratee) {
-        for (var i = 0; i < array.length; i++) {
-            iteratee(array[i], i, array);
-        }
-        return array;
-    }
-
-    function map(array, iteratee) {
-        var result = [];
-        for (var i = 0; i < array.length; i++) {
-            result.push(iteratee(array[i], i, array));
-        }
-        return result;
-    }
-
     function random(max, min) {
         return Math.floor(Math.random() * (max - min + 1) + min);
     }
@@ -45,6 +30,7 @@ define(function() {
         F.prototype = parent.prototype;
         child.prototype = new F();
         child.prototype.constructor = child;
+        child.super_=parent;
     }
 
     function deepCopy(p, c) {　　　　
@@ -59,9 +45,8 @@ define(function() {
         }
         return c;
     }
+
     return {
-        "forEach": forEach,
-        "map": map,
         "random": random,
         "inherit": inherit,
         "deepCopy": deepCopy,

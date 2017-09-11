@@ -3,7 +3,7 @@ define(["Util"], function(Util) {
         STATUS_START_RUN = 1,
         STATUS_WAIT = -1;
 
-    function AdvertItem(data) {
+    function AdvertItem(data,option) {
         this.id = 0;
         this.dom = null;
         this.data = data || [];
@@ -60,17 +60,17 @@ define(["Util"], function(Util) {
             }
         }
 
-        if (this.step > 30) {
+        if (this.step > 20) {
             this.direction = undefined;
             this.step = 0;
             this.runTask--;
             this.waitTimeOut = Util.random(5000, 1000);
             return;
         }
-        this.dom.style.top = this.from + this.change * this.step /30 + "px";
+        this.dom.style.top = this.from + this.change * this.step /20 + "px";
         this.step++;
     }
-    AdvertItem.prototype.createHtml = function() {
+    AdvertItem.prototype.getInnerHTML = function() {
         this.id = Util.newId("AdvertItem");
         var copyData = this.data.concat();
         //开头元素复制到最后一个
@@ -81,7 +81,7 @@ define(["Util"], function(Util) {
         }
         return '<div class="con">' +
             '<div class="wrap" id="' + this.id + '">' +
-            Util.map(copyData, function(item, index) {
+            copyData.map(function(item, index) {
                 return '<a href="#"><img src="' + item.name + '" alt=""/></a>';
             }).join('') +
             '</div>' +

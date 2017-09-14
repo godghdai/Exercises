@@ -5,7 +5,7 @@ require.config({
         "jquery": "lib/jquery-1.12.4"
     }　　
 });
-requirejs(['jquery', 'ToolBar2'], function($, ToolBar2) {
+requirejs(['jquery', 'ToolBar2',"Polyfill"], function($, ToolBar2,polyfill) {
     $(function() {
         ToolBar2().init();
     });

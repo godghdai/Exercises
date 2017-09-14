@@ -4,7 +4,7 @@ require.config({
         "jquery": "lib/jquery-3.2.1"
     }　　
 });
-requirejs(['jquery','ToolBar'], function($,ToolBar ) {
+requirejs(['jquery','ToolBar',"Polyfill"], function($,ToolBar ) {
      $(function() {
      	ToolBar().init();
      });

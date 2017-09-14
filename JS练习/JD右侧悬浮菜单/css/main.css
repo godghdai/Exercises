@@ -16,10 +16,12 @@ ul {
 }
 
 a {
-    text-decoration-line: none;
+    text-decoration: none;
     color: #333;
 }
-
+img{
+ border:0;
+}
 .clearfix {
     *zoom: 1;
 }

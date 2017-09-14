@@ -3,6 +3,7 @@
 * 记录成长点滴，进步每一天。
 ------------
 #### 更新日志
+- 2017-09-14 13:12:23 [当当图片放大效果](https://github.com/godghdai/Exercises/tree/master/JS%E7%BB%83%E4%B9%A0/%E5%BD%93%E5%BD%93%E5%9B%BE%E7%89%87%E6%94%BE%E5%A4%A7%E6%95%88%E6%9E%9C)
 - 2017-09-11 23:12:11 [图片的随机滚动](https://github.com/godghdai/Exercises/tree/master/JS%E7%BB%83%E4%B9%A0/%E5%9B%BE%E7%89%87%E7%9A%84%E9%9A%8F%E6%9C%BA%E6%BB%9A%E5%8A%A8)
 - 2017-09-09 18:30:27 [时间倒计时](https://github.com/godghdai/Exercises/tree/master/JS%E7%BB%83%E4%B9%A0/%E6%97%B6%E9%97%B4%E5%80%92%E8%AE%A1%E6%97%B6)
 - 2017-09-08 11:28:16 [JD右侧悬浮菜单CSS3,JS)](https://github.com/godghdai/Exercises/tree/master/JS%E7%BB%83%E4%B9%A0/JD%E5%8F%B3%E4%BE%A7%E6%82%AC%E6%B5%AE%E8%8F%9C%E5%8D%95)

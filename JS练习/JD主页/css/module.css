@@ -1,0 +1,432 @@
+/*话费 机票 酒店 游戏 模块*/
+.module {
+    width: 190px;
+    height: 185px;
+    background: #fff;
+    margin-bottom: 10px;
+}
+
+.module .head {
+    position: relative;
+    height: 15px;
+}
+
+.module .head .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    text-align: center;
+}
+
+.module .tab_content {
+    position: relative;
+}
+
+.module .tab_title a {
+    float: left;
+    display: block;
+    line-height: 16px;
+    color: #666;
+    white-space: nowrap;
+    height: 21px;
+}
+
+.module .tab_title .active {
+    color: #fff;
+    background: url(../imgs/tool_tab_title.png) center 0 no-repeat;
+}
+
+.module .info {
+    color: #e01222;
+    font-size: 12px;
+    font-family: Arial, Verdana, 宋体;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.module .button {
+    height: 25px;
+    line-height: 25px;
+    width: 85px;
+    background: #e01222;
+    color: #fff;
+    text-align: center;
+    border: none;
+}
+
+.module .link {
+    font-size: 12px;
+    color: #527cdb;
+    font-family: Arial, Verdana, 宋体;
+}
+
+.module .col {
+    float: left;
+    width: 190px;
+    position: relative;
+}
+
+.module .ad_con {
+    height: 119px;
+}
+
+.module .ad_con a {
+    float: left;
+    display: block;
+    width: 79px;
+    height: 119px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.module .ad_con img {
+    width: 79px;
+    height: 119px;
+}
+
+
+
+/*话费*/
+.module_telephone_fare .tab_title {
+    padding-left: 8px;
+}
+
+.module_telephone_fare .tab_title a {
+    padding-left: 2px;
+    padding-right: 3px;
+    margin-right: 6px;
+}
+
+.module_telephone_fare .row {
+    padding-left: 16px;
+    font-size: 0;
+    margin-top: 10px;
+}
+
+
+.module_telephone_fare .con_wrap {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 570px;
+}
+
+.module_telephone_fare label {
+    padding-right: 6px;
+    line-height: 22px;
+    font-size: 12px;
+}
+
+.module_telephone_fare .telephone {
+    width: 83px;
+    height: 20px;
+    line-height: 20px;
+    color: #999;
+    border: 1px solid #e7e7e7;
+    font-size: 12px;
+    padding: 0 4px;
+    margin: 0;
+}
+
+.module_telephone_fare .info {
+    color: #e01222;
+    font-size: 12px;
+    font-family: Arial, Verdana, 宋体;
+}
+
+.module_telephone_fare .button {
+    height: 25px;
+    line-height: 25px;
+    width: 85px;
+    background: #e01222;
+    color: #fff;
+    text-align: center;
+    border: none;
+}
+
+.module_telephone_fare .link {
+    font-size: 12px;
+    color: #527cdb;
+    font-family: Arial, Verdana, 宋体;
+}
+
+.module_telephone_fare select {
+    color: inherit;
+    height: 22px;
+    border: 1px solid #ccc;
+    font-family: \5b8b\4f53;
+    letter-spacing: -1px;
+    margin-right: 5px;
+}
+
+.module_telephone_fare .ico_hot {
+    display: inline-block;
+    width: 34px;
+    height: 14px;
+    vertical-align: -3px;
+    margin-right: 3px;
+    background: url(../imgs/iframe-hot.png) 0 center no-repeat;
+}
+
+.module_telephone_fare .mt5 {
+    margin-top: 5px;
+}
+
+
+/*机票*/
+.module_plane_ticket .tab_title {
+    padding-left: 5px;
+}
+
+.module_plane_ticket .tab_title a {
+    padding-left: 2px;
+    padding-right: 3px;
+}
+
+.module_plane_ticket .con_wrap {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 570px;
+}
+
+.module_plane_ticket .row {
+    padding-left: 10px;
+    margin-bottom: 5px;
+}
+
+.module_plane_ticket .mb9 {
+    margin-bottom: 9px;
+}
+
+.module_plane_ticket .input {
+    width: 75px;
+    padding: 0;
+    padding-left: 53px;
+    height: 21px;
+    border: 1px solid #cccccc;
+}
+
+.module_plane_ticket .first {
+    padding-left: 8px;
+    margin-bottom: 5px;
+}
+
+.module_plane_ticket .first input,
+.module_plane_ticket .first label {
+    vertical-align: middle;
+}
+
+/* WebKit browsers
+ Mozilla Firefox 4 to 18
+ Mozilla Firefox 19+
+ Internet Explorer 10+*/
+
+.module_plane_ticket .input::-webkit-input-placeholder {
+    color: rgb(170, 170, 170);
+}
+
+.module_plane_ticket .input:-moz-placeholder {
+    color: rgb(170, 170, 170);
+}
+
+.module_plane_ticket .input::-moz-placeholder {
+    color: rgb(170, 170, 170);
+}
+
+.module_plane_ticket .input:-ms-input-placeholder {
+    color: rgb(170, 170, 170);
+}
+
+.module_plane_ticket .input2 {
+    width: 54px;
+    padding-left: 47px;
+}
+
+.module_plane_ticket .inputwrap {
+    position: relative;
+}
+
+.module_plane_ticket .title {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    display: block;
+    width: 40px;
+    height: 21px;
+    line-height: 21px;
+    text-align: center;
+    background: #f5f5f5;
+    color: #999;
+}
+
+.module_plane_ticket .button {
+    width: 70px;
+}
+
+
+.module_plane_ticket .ico_change {
+    position: absolute;
+    right: 28px;
+    top: 40px;
+    width: 16px;
+    height: 16px;
+    background: url(../imgs/tool/change-city-new.jpg) no-repeat 0 0;
+    cursor: pointer;
+}
+
+
+
+/*酒店*/
+.module_hotel .tab_title {
+    padding-left: 10px;
+    margin-bottom: 5px;
+}
+
+.module_hotel .tab_title .title1 {
+    text-align: center;
+    width: 85px;
+    margin-right: 5px;
+}
+
+.module_hotel .tab_title .title2 {
+    text-align: center;
+    width: 80px;
+}
+
+.module_hotel .row {
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+.module_hotel .input {
+    width: 95px;
+    padding: 0;
+    padding-left: 73px;
+    height: 21px;
+    border: 1px solid #cccccc;
+}
+
+.module_hotel .input3 {
+    width: 168px;
+    padding: 0;
+    height: 21px;
+    border: 1px solid #cccccc;
+    text-align: center;
+}
+
+.module_hotel .title {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    display: block;
+    width: 62px;
+    height: 21px;
+    line-height: 21px;
+    text-align: center;
+    background: #f5f5f5;
+    color: #999;
+}
+
+.module_hotel .con_wrap {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 380px;
+}
+
+
+.module_hotel .input::-webkit-input-placeholder {
+    color: rgb(170, 170, 170);
+}
+
+.module_hotel .input:-moz-placeholder {
+    color: rgb(170, 170, 170);
+}
+
+.module_hotel .input::-moz-placeholder {
+    color: rgb(170, 170, 170);
+}
+
+.module_hotel .input:-ms-input-placeholder {
+    color: rgb(170, 170, 170);
+}
+
+.module_hotel .inputwrap {
+    position: relative;
+}
+
+/*游戏*/
+.module_game .tab_title {
+    padding-left: 10px;
+}
+
+.module_game .tab_title .title {
+    padding: 0px 10px;
+    line-height: 18px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.module_game .con_wrap {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 570px;
+}
+
+.module_game .input {
+    width: 103px;
+    height: 21px;
+    line-height: 21px;
+    padding: 0;
+    padding-left: 44px;
+    padding-right: 18px;
+    border: 1px solid #cccccc;
+    background: url(../imgs/tool/select-icon.png) no-repeat 155px center;
+}
+
+.module_game .tab_content .title {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 32px;
+    height: 21px;
+    padding: 0;
+    background: #f5f5f5;
+    color: #999;
+    line-height: 21px;
+    padding-left: 8px;
+}
+
+.module_game .tab_content .row {
+    position: relative;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.module_game .inputwrap {
+    position: relative;
+}
+
+.module_game select {
+    color: inherit;
+    height: 22px;
+    border: 1px solid #ccc;
+    font-family: \5b8b\4f53;
+    letter-spacing: -1px;
+    margin-right: 5px;
+}
+
+.module_game .vm input,
+.module_game .vm label {
+    vertical-align: middle;
+}
+
+.module_game .mtb15 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}

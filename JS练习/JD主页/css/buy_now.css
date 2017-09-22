@@ -30,6 +30,7 @@
     color: #fdffff;
     font-family: fzzhengheis-el-gbregular;
     font-size: 26px;
+    font-weight: 400;
     line-height: 55px;
     height: 55px;
 }
@@ -157,17 +158,17 @@
     height: 225px;
     padding: 0 14px 0 15px;
     border-right: 1px solid #e7e7e7;
+    position: relative;
 }
 
 .buy_now .product .photo_con {
-    position: relative;
-    text-align: center;
+     text-align: center;
 }
 
 .buy_now .product .photo {
     width: 130px;
     height: 130px;
-    margin: 17px 0;
+    margin: 17px 20px;
     -webkit-transition: -webkit-transform .4s ease;
     transition: -webkit-transform .4s ease;
     -moz-transition: transform .4s ease, -moz-transform .4s ease;
@@ -223,7 +224,7 @@
 .buy_now .product .tag_con {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 15px;
     text-align: center;
     background-image: url(../imgs/sprite_index@1x.png);
     background-position: -54px -40px;
@@ -253,7 +254,7 @@
 
 .buy_now .product .shadow {
     position: absolute;
-    left: 0;
+    left: 15px;
     top: 130px;
     text-align: center;
     background-image: url(../imgs/sprite_index@1x.png);

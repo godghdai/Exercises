@@ -1,0 +1,443 @@
+/*发现好货 会买专辑 排行榜 领券中心 觅me*/
+
+.main_module_head {
+    position: relative;
+    height: 55px;
+    overflow: hidden;
+}
+
+.main_module_head .arrow {
+    position: absolute;
+    left: -4px;
+    top: -4px;
+    background-image: url(../imgs/sprite_index@1x.png);
+    -moz-background-size: 218px 188px;
+    background-size: 218px 188px;
+    background-repeat: no-repeat;
+    width: 28px;
+    height: 28px;
+}
+
+.main_module_head .bg_arrow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 19px solid #f6f6f6;
+    border-right: 19px solid transparent;
+}
+
+.main_module_head .title {
+    float: left;
+    color: #fdffff;
+    font-family: fzzhengheis-el-gbregular;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 55px;
+    height: 55px;
+    margin-left: 30px;
+}
+
+.main_module_head .ico_arrow {
+    display: block;
+    width: 15px;
+    height: 16px;
+    background-image: url(../imgs/sprite_index@1x.png);
+    background-position: -154px -40px;
+    background-size: 218px 188px;
+    background-repeat: no-repeat;
+}
+
+.main_module_head .sub_title {
+    float: right;
+    margin-top: 23px;
+    display: block;
+    line-height: 16px;
+    margin-right: 20px;
+}
+
+.main_module_head .sub_title .info {
+    float: left;
+    font-size: 14px;
+    margin-right: 5px;
+    color: #fff;
+}
+
+.main_module_head .sub_title .ico_arrow {
+    float: left;
+}
+
+
+
+
+
+
+/*发现好货 会买专辑 排行榜*/
+
+.find_tobuy_top_panel {
+    margin-top: 30px;
+    height: 444px;
+}
+
+.find_tobuy_top_panel .col {
+    float: left;
+    width: 390px;
+    height: 100%;
+    margin-right: 10px;
+    background: #fff;
+}
+
+.find_tobuy_top_panel .last {
+    margin-right: 0;
+}
+
+
+.module_find .main_module_head {
+    background: #4998a1;
+    background-image: -webkit-linear-gradient(left, #4998a1, #2e828b);
+    background-image: -moz-linear-gradient(left, #4998a1, #2e828b);
+    background-image: linear-gradient(90deg, #4998a1, #2e828b);
+}
+
+.module_find .main_module_head .arrow {
+    background-position: -190px -96px;
+}
+
+.module_find .product_wrap {
+    padding-left: 10px;
+    padding-top: 10px;
+    width: 370px;
+    height: 360px;
+    overflow: hidden;
+}
+
+.module_find .product_con {
+    width: 372px;
+}
+
+.module_find .product {
+    display: block;
+    float: left;
+    position: relative;
+    width: 185px;
+    height: 120px;
+    border-right: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.module_find .product:hover .photo {
+    -webkit-transform: translateX(-5px);
+    -moz-transform: translateX(-5px);
+    -ms-transform: translateX(-5px);
+    transform: translateX(-5px);
+}
+
+.module_find .product .photo {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    width: 80px;
+    height: 80px;
+    -webkit-transition: -webkit-transform .4s ease-out;
+    transition: -webkit-transform .4s ease-out;
+    -moz-transition: transform .4s ease-out, -moz-transform .4s ease-out;
+    transition: transform .4s ease-out;
+    transition: transform .4s ease-out, -webkit-transform .4s ease-out, -moz-transform .4s ease-out;
+}
+
+.module_find .product .title {
+    line-height: 21px;
+    font-size: 14px;
+    color: #4998a1;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    width: 80px;
+    word-wrap: break-word;
+}
+
+
+
+
+.module_tobuy {
+    position: relative;
+}
+
+.module_tobuy .main_module_head {
+    background: #76488e;
+    background-image: -webkit-linear-gradient(left, #76488e, #662d72);
+    background-image: -moz-linear-gradient(left, #76488e, #662d72);
+    background-image: linear-gradient(90deg, #76488e, #662d72);
+}
+
+.module_tobuy .main_module_head .arrow {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    display: block;
+    background: url(../imgs/sup_hd_dec@1x.png) no-repeat;
+    left: -4px;
+    top: -4px;
+}
+
+.module_tobuy .baners_con {
+    width: 350px;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+.module_tobuy .baner {
+    width: 371px;
+    height: 334px;
+    overflow: hidden;
+}
+
+.module_tobuy .products .photo {
+    float: left;
+    width: 110px;
+    height: 110px;
+    margin-right: 10px;
+}
+
+.module_tobuy .baner .title {
+    font-size: 14px;
+    font-weight: normal;
+    color: #666;
+    height: 46px;
+    line-height: 46px;
+}
+
+.module_tobuy .line_con {
+    padding-left: 10px;
+    padding-top: 18px;
+    padding-bottom: 3px: height: 1px;
+}
+
+.module_tobuy .line_con .line {
+    width: 320px;
+    height: 1px;
+    background: #eeeeee;
+}
+
+.module_tobuy .circle_con {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    line-height: 10px;
+    text-align: center;
+}
+
+.module_tobuy .circle_con .circle {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin: 0 7px;
+    background: #c8c8c8;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.module_tobuy .circle_con .active {
+    background: #e01222;
+}
+
+.module_tobuy .buttons {
+    width: 100;
+    height: 100;
+}
+
+.module_tobuy .buttons .button {
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    margin-top: -25px;
+    height: 50px;
+    line-height: 50px;
+    color: #797173;
+    text-align: center;
+    background: #f3f2f3;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.module_tobuy .buttons .prev {
+    left: 0;
+}
+
+.module_tobuy .buttons .next {
+    right: 0;
+}
+
+
+.module_top .main_module_head .arrow {
+    background-position: -190px 0;
+}
+
+.module_top .main_module_head {
+    background: #e77005;
+    background-image: -webkit-linear-gradient(left, #e77005, #e45d04);
+    background-image: -moz-linear-gradient(left, #e77005, #e45d04);
+    background-image: linear-gradient(90deg, #e77005, #e45d04);
+}
+
+.module_top .head {
+    position: relative;
+    padding: 6px 0;
+}
+
+.module_top .head .title {
+    float: left;
+    font-size: 14px;
+    height: 18px;
+    line-height: 18px;
+    width: 77px;
+    border-right: 1px solid #d2d1d1;
+    text-align: center;
+}
+
+.module_top .head .last {
+    border-right: none;
+}
+
+.module_top .head .bg_line {
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    width: 370px;
+    height: 1px;
+    background: #e7e7e7;
+}
+
+.module_top .head .line {
+    position: absolute;
+    top: 29px;
+    left: 10px;
+    width: 58px;
+    height: 2px;
+    background: #f10214;
+}
+.module_top .baner_con{
+    padding-top: 10px;
+    padding-left:10px; 
+    width: 368px;
+    height: 332px;
+    overflow: hidden;
+}
+.module_top .baner{
+    width: 369px;
+    height: 334px;
+}
+.module_top .product_wrap {
+    float: left;
+    width: 100px;
+    height: 142px;
+    padding: 12px 11px;
+    border-right: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+    cursor: pointer;
+}
+
+.module_top .product{
+    position: relative;
+    display: block;
+}
+.module_top .product .photo {
+    width: 100px;
+    height: 100px;
+}
+
+.module_top .product .title {
+    margin-top: 10px;
+    height: 32px;
+    text-align: center;
+    line-height: 16px;
+    overflow: hidden;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.module_top .product .num {
+    display: block;
+    position: absolute;
+    left:0;
+    top:0;
+    background-image: url(../imgs/sprite_index@1x.png);
+    -moz-background-size: 218px 188px;
+    background-size: 218px 188px;
+    background-repeat: no-repeat;
+    background-position: -100px -100px;
+    width: 30px;
+    height: 40px;
+    color: #fff;
+    line-height: 35px;
+    text-align: center;
+    font-size: 22px;
+}
+.module_top .product .num1 {
+  background-position: -104px -40px;
+}
+.module_top .product .num2 {
+  background-position: -50px -100px;
+}
+.module_top .product .num3 {
+  background-position: 0 -100px;
+}
+
+
+/*领券中心 觅me*/
+
+.conpon_me_panel {
+    margin-top: 30px;
+    height: 270px;
+    margin-bottom: 30px;
+}
+
+.conpon_me_panel .arrow {
+    position: absolute;
+    left: -4px;
+    top: -4px;
+    background-image: url(../imgs/sprite_sprite_coupon@1x.png);
+    -moz-background-size: 76px 60px;
+    background-size: 76px 60px;
+    background-repeat: no-repeat;
+    width: 28px;
+    height: 28px;
+}
+
+.conpon_me_panel .col {
+    float: left;
+    height: 100%;
+    background: #fff;
+}
+
+.conpon_me_panel .module_conpon {
+    width: 790px;
+    margin-right: 10px;
+}
+
+.conpon_me_panel .module_conpon .main_module_head {
+    background: #f03118;
+    background: -webkit-linear-gradient(left, #f03118, #e62910);
+    background: -moz-linear-gradient(left, #f03118, #e62910);
+    background: linear-gradient(90deg, #f03118, #e62910);
+}
+
+.conpon_me_panel .module_conpon .main_module_head .arrow {
+    background-position: 0 0;
+}
+
+.conpon_me_panel .module_me {
+    width: 390px;
+}
+
+.conpon_me_panel .module_me .main_module_head {
+    background: #4f629f;
+    background: -webkit-linear-gradient(left, #4f629f, #5b5c95);
+    background: -moz-linear-gradient(left, #4f629f, #5b5c95);
+    background: linear-gradient(90deg, #4f629f, #5b5c95);
+}
+
+.conpon_me_panel .module_me .main_module_head .arrow {
+    background-position: -48px 0;
+}

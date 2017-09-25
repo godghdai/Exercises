@@ -1,0 +1,371 @@
+/* 享品质*/
+.enjoy_panel {
+    height: 530px;
+    width: 1185px;
+    margin-bottom: 30px;
+} 
+
+.enjoy_panel .left_con {
+    float: left;
+    width: 785px;
+    height: 100%;
+}
+
+.enjoy_panel .lbaner {
+    float: left;
+    position: relative;
+    width: 385px;
+    height: 170px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background: yellow;
+    overflow: hidden;
+}
+
+.enjoy_panel .lbaner:hover .photo,
+.enjoy_panel .rbaner:hover .photo {
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    transform: translateX(-10px);
+}
+
+
+.enjoy_panel .lbaner .photo {
+    display: block;
+    width: 400px;
+    height: 170px;
+    -webkit-transition: -webkit-transform .3s ease-in;
+    transition: -webkit-transform .3s ease-in;
+    -moz-transition: transform .3s ease-in, -moz-transform .3s ease-in;
+    transition: transform .3s ease-in;
+    transition: transform .3s ease-in, -webkit-transform .3s ease-in, -moz-transform .3s ease-in;
+}
+
+
+.enjoy_panel .left_con .mr0w390 {
+    margin-right: 0;
+    width: 390px;
+}
+
+.enjoy_panel .left_con .mb0 {
+    margin-bottom: 0px;
+}
+
+.enjoy_panel .right_con {
+    float: right;
+    width: 390px;
+    height: 100%;
+}
+
+.enjoy_panel .right_con .mr10 {
+    margin-right: 10px;
+}
+
+.enjoy_panel .rbaner {
+    float: left;
+    position: relative;
+    width: 190px;
+    height: 170px;
+    overflow: hidden;
+}
+
+.enjoy_panel .rbaner .photo {
+    display: block;
+    width: 200px;
+    height: 170px;
+    -webkit-transition: -webkit-transform .3s ease-in;
+    transition: -webkit-transform .3s ease-in;
+    -moz-transition: transform .3s ease-in, -moz-transform .3s ease-in;
+    transition: transform .3s ease-in;
+    transition: transform .3s ease-in, -webkit-transform .3s ease-in, -moz-transform .3s ease-in;
+}
+
+
+
+.enjoy_panel .right_con .info {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 70px;
+    width: 100px;
+    color: #fff;
+    opacity: .9;
+    padding-top: 10px;
+    padding-left: 45px;
+    padding-right: 45px;
+}
+
+.enjoy_panel .right_con .info .title {
+    font-size: 16px;
+    overflow: hidden;
+    height: 30px;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    font-size: 20px;
+    line-height: 34px;
+    text-align: center;
+    font-family: fzzhengheis-el-gbregular;
+    font-weight: 400;
+}
+
+.enjoy_panel .right_con .info .desc {
+    overflow: hidden;
+    margin-top: 8px;
+    height: 32px;
+    line-height: 16px;
+    text-align: center;
+}
+
+.enjoy_panel .left_con .info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 125px;
+    color: #fff;
+    opacity: .9;
+    padding-top: 45px;
+    padding-left: 15px;
+    padding-right: 20px;
+    /* -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;*/
+}
+
+.enjoy_panel .bg {
+    background: #73bc90;
+}
+
+.enjoy_panel .bg2 {
+    background: #DBCF6E;
+}
+
+.enjoy_panel .bg3 {
+    background: #534b5d;
+}
+
+.enjoy_panel .bg4 {
+    background: #3b838c;
+}
+
+.enjoy_panel .bg5 {
+    background: #d58717;
+}
+
+.enjoy_panel .bg6 {
+    background: #7e5944;
+}
+
+.enjoy_panel .bg7 {
+    background: #a93931;
+}
+
+.enjoy_panel .bg8 {
+    background: #642663;
+}
+
+
+.enjoy_panel .left_con .info .title {
+    font-size: 22px;
+    overflow: hidden;
+    height: 40px;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    font-family: fzzhengheis-el-gbregular;
+    font-weight: 400;
+}
+
+.enjoy_panel .left_con .info .desc {
+    overflow: hidden;
+    margin-top: 8px;
+    height: 32px;
+    line-height: 16px;
+}
+
+
+.enjoy_panel .video_panel {
+    position: relative;
+    overflow: hidden;
+    width: 390px;
+    height: 350px;
+    margin-bottom: 10px;
+}
+
+
+.enjoy_panel .video_panel .head {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    height: 38px;
+    width: 100%;
+    background: rgba(0, 0, 0, .57);
+    +background: #3a3c3c;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    z-index: 2;
+}
+
+.enjoy_panel .video_panel .head .title {
+    padding-left: 24px;
+    /* text-indent: 24px;*/
+    line-height: 38px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.enjoy_panel .video_panel .head .more {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    line-height: 16px;
+    height: 16px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.enjoy_panel .video_panel .photo {
+    height: 350px;
+    margin-left: -58px;
+}
+
+.enjoy_panel .video_panel .mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .37;
+    filter: alpha(opacity=37);
+
+}
+
+.enjoy_panel .video_panel .ico_play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -33px 0 0 -33px;
+    /* ie6偏移 */
+    +margin-left:-43px;
+    display: block;
+    width: 65px;
+    height: 65px;
+    background-image: url(../imgs/sprite_entrylive@1x.png);
+    background-position: 0 -105px;
+    -moz-background-size: 237px 170px;
+    background-size: 237px 170px;
+    background-repeat: no-repeat;
+}
+
+
+.enjoy_panel .video_panel .head .ico_arrow {
+    display: inline-block;
+    vertical-align: -3px;
+    +vertical-align: 0;
+    /*margin-left: 10px;*/
+    background-image: url(../imgs/sprite_entrylive@1x.png);
+    background-position: -205px -128px;
+    -moz-background-size: 237px 170px;
+    background-size: 237px 170px;
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 16px;
+}
+.enjoy_panel .video_panel .head .more span{
+    padding-right: 10px;
+}
+
+.enjoy_panel .video_panel .video {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.enjoy_panel .video_panel .vinfo {
+    position: absolute;
+    top: 261px;
+    left: 0;
+    color: #fff;
+    width: 100%;
+}
+
+.enjoy_panel .video_panel .vinfo .title {
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+}
+
+.enjoy_panel .video_panel .vinfo .ico_tv {
+    display: inline-block;
+    position: relative;
+    top:5px;
+    +top:2px;
+    background-image: url(../imgs/sprite_entrylive@1x.png);
+    background-position: -205px -52px;
+    -moz-background-size: 237px 170px;
+    background-size: 237px 170px;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+}
+
+
+.enjoy_panel .video_panel .vinfo .desc {
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+}
+
+
+.enjoy_panel .video_panel .buttons .button {
+    position: absolute;
+    top: 145px;
+    background: #2d2d2d;
+    background: rgba(0,0,0,.42);
+    width: 20px;
+    height: 48px;
+    line-height: 48px;
+    color: #fff;
+    text-align: center;
+}
+
+.enjoy_panel .video_panel .buttons .prev{
+    left:0;
+}
+
+.enjoy_panel .video_panel .buttons .next{
+    right:0;
+}
+
+.enjoy_panel .video_panel .circle_con{
+    position: absolute;
+    top:326px;
+    left:0;
+    font-size: 0; 
+    height: 8px;
+    line-height: 8px;
+    width: 100%;
+    text-align: center;
+    +overflow: hidden;    
+}
+
+.enjoy_panel .video_panel .circle_con .circle{
+    display: inline-block;
+   /* 兼容ie6 ie7*/
+    *display: inline;
+    *zoom:1;
+    margin-right: 8px;
+    background: #fff;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+.enjoy_panel .video_panel .circle_con .active{
+   background: #fd3131;  
+}

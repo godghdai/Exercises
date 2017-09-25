@@ -22,10 +22,13 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 0;
+    width: 0; 
     height: 0;
     border-top: 19px solid #f6f6f6;
     border-right: 19px solid transparent;
+    /*ie6 transparent 失效 */
+    +border-right: 19px solid dashed;
+    +font-size: 0;
 }
 
 .main_module_head .title {
@@ -55,6 +58,8 @@
     display: block;
     line-height: 16px;
     margin-right: 20px;
+    /*ie6 float right margin-right后双边距bug*/
+    +display: inline;
 }
 
 .main_module_head .sub_title .info {
@@ -67,6 +72,9 @@
 .main_module_head .sub_title .ico_arrow {
     float: left;
 }
+
+
+
 
 
 
@@ -107,12 +115,16 @@
 .module_find .product_wrap {
     padding-left: 10px;
     padding-top: 10px;
-    width: 370px;
-    height: 360px;
+    width: 371px;
+    height: 362px;
+    position: relative;
     overflow: hidden;
 }
 
 .module_find .product_con {
+    position: absolute;
+    left:10px;
+    top:10px;
     width: 372px;
 }
 
@@ -188,7 +200,7 @@
 }
 
 .module_tobuy .baner {
-    width: 371px;
+    width: 370px;
     height: 334px;
     overflow: hidden;
 }
@@ -217,6 +229,7 @@
 .module_tobuy .line_con .line {
     width: 320px;
     height: 1px;
+    *overflow: hidden;
     background: #eeeeee;
 }
 
@@ -224,12 +237,20 @@
     position: absolute;
     bottom: 15px;
     width: 100%;
-    line-height: 10px;
+    /*清除 inline-block 3px*/
+    font-size: 0; 
+    /*ie6 10像素过高*/
+    +overflow: hidden;
+    height: 10px;
     text-align: center;
 }
 
 .module_tobuy .circle_con .circle {
     display: inline-block;
+    /*兼容ie7*/
+    *zoom: 1;
+    *display: inline;
+    _font-size: 0;
     width: 8px;
     height: 8px;
     margin: 0 7px;
@@ -298,6 +319,8 @@
 
 .module_top .head .last {
     border-right: none;
+    /*ie6 border-right: none 还有边框*/
+    +width: 75px;
 }
 
 .module_top .head .bg_line {
@@ -315,19 +338,24 @@
     left: 10px;
     width: 58px;
     height: 2px;
+    /*ie6 1像素大于1像素*/
+    +overflow: hidden;
     background: #f10214;
 }
-.module_top .baner_con{
+
+.module_top .baner_con {
     padding-top: 10px;
-    padding-left:10px; 
+    padding-left: 10px;
     width: 368px;
     height: 332px;
     overflow: hidden;
 }
-.module_top .baner{
+
+.module_top .baner {
     width: 369px;
     height: 334px;
 }
+
 .module_top .product_wrap {
     float: left;
     width: 100px;
@@ -338,10 +366,11 @@
     cursor: pointer;
 }
 
-.module_top .product{
+.module_top .product {
     position: relative;
     display: block;
 }
+
 .module_top .product .photo {
     width: 100px;
     height: 100px;
@@ -360,8 +389,8 @@
 .module_top .product .num {
     display: block;
     position: absolute;
-    left:0;
-    top:0;
+    left: 0;
+    top: 0;
     background-image: url(../imgs/sprite_index@1x.png);
     -moz-background-size: 218px 188px;
     background-size: 218px 188px;
@@ -374,15 +403,21 @@
     text-align: center;
     font-size: 22px;
 }
+
 .module_top .product .num1 {
-  background-position: -104px -40px;
+    background-position: -104px -40px;
 }
+
 .module_top .product .num2 {
-  background-position: -50px -100px;
+    background-position: -50px -100px;
 }
+
 .module_top .product .num3 {
-  background-position: 0 -100px;
+    background-position: 0 -100px;
 }
+
+
+
 
 
 /*领券中心 觅me*/
@@ -427,7 +462,106 @@
     background-position: 0 0;
 }
 
+.conpon_me_panel .module_conpon .conpon_con {
+    padding: 10px 0;
+}
+
+.conpon_me_panel .module_conpon .conpon {
+    float: left;
+    display: block;
+    position: relative;
+    padding-left: 15px;
+    width: 182px;
+    height: 195px;
+    border-right: 1px solid #e7e7e7;
+}
+
+.conpon_me_panel .module_conpon .last {
+    padding-left: 12px;
+    border-right: none;
+}
+
+.conpon_me_panel .module_conpon .content {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 100px;
+    height: 177px;
+    border-top: 3px solid #e93524;
+    background: #ffffff;
+    z-index: 2;
+}
+
+.conpon_me_panel .module_conpon .other {
+    overflow: hidden;
+    padding: 15px 10px;
+    width: 80px;
+    height: 36px;
+    background: #e7e7e7 url(data:image/jpg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABBAAD/4QN3aHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjYtYzA2NyA3OS4xNTc3NDcsIDIwMTUvMDMvMzAtMjM6NDA6NDIgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6ZjU4MGVkZWUtODkyMy0zNTQyLTlmNGYtMDY0MjZmNjQ0ZTI2IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkY0MTVFMjc0NzEwQzExRTY4OUM1REJENTBFRjc3NTA0IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkY0MTVFMjczNzEwQzExRTY4OUM1REJENTBFRjc3NTA0IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE1IChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkVBQkEyNjA3NzhENTExRTZBODUzOUE4RjdBOUQ0NTM0IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkVBQkEyNjA4NzhENTExRTZBODUzOUE4RjdBOUQ0NTM0Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+/+4ADkFkb2JlAGTAAAAAAf/bAIQABQQEBAQEBQQEBQcFBAUHCQcFBQcJCggICQgICg0KCwsLCwoNDAwMDQwMDA8PEREPDxcWFhYXGRkZGRkZGRkZGQEGBgYKCQoUDQ0UFhEOERYZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZ/8AAEQgAAwAIAwERAAIRAQMRAf/EAFMAAQAAAAAAAAAAAAAAAAAAAAgBAQAAAAAAAAAAAAAAAAAAAAAQAAAFBQAAAAAAAAAAAAAAAAARMVECIaEyAxURAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AFzpPmzySTJWzgP/2Q==) repeat-x 0 0;
+    +background: #e7e7e7 url(../imgs/base64/v.png) repeat-x;
+    color: #666;
+}
+
+.conpon_me_panel .module_conpon .more {
+    overflow: hidden;
+    width: 100%;
+    height: 26px;
+    background: #e93524;
+    line-height: 26px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+    color: #fff;
+}
+
+
+.conpon_me_panel .module_conpon .photo {
+    position: absolute;
+    right: 15px;
+    top: 25px;
+    width: 140px;
+    height: 140px;
+    -webkit-transition: -webkit-transform .5s;
+    transition: -webkit-transform .5s;
+    -moz-transition: transform .5s, -moz-transform .5s;
+    transition: transform .5s;
+    transition: transform .5s, -webkit-transform .5s, -moz-transform .5s;
+}
+
+.conpon_me_panel .module_conpon .conpon:hover .photo {
+    -webkit-transform: translateX(15px);
+    -moz-transform: translateX(15px);
+    -ms-transform: translateX(15px);
+    transform: translateX(15px);
+}
+
+
+.conpon_me_panel .module_conpon .price {
+    margin-top: 7px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 34px;
+    font-weight: 700;
+    color: #f10214;
+}
+
+.conpon_me_panel .module_conpon .price i {
+    margin-right: 3px;
+    font-family: arial;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.conpon_me_panel .module_conpon .detail {
+    overflow: hidden;
+    margin: 3px;
+    height: 36px;
+    line-height: 18px;
+    color: #e93524;
+}
+
 .conpon_me_panel .module_me {
+    position: relative;
     width: 390px;
 }
 
@@ -440,4 +574,139 @@
 
 .conpon_me_panel .module_me .main_module_head .arrow {
     background-position: -48px 0;
+}
+
+.conpon_me_panel .module_me .baner_con {
+    padding: 25px 30px;
+    width: 330px;
+    height: 140px;
+}
+
+.conpon_me_panel .module_me .baner {
+    display: block;
+}
+
+.conpon_me_panel .module_me .photo {
+    float: left;
+    width: 200px;
+    height: 140px;
+}
+
+
+.conpon_me_panel .module_me .baner .info {
+  float: right;
+  width: 122px;
+}
+
+.conpon_me_panel .module_me .info .title {
+    word-break: break-all;
+    overflow: hidden;
+    text-align: justify;
+    color: #333;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.conpon_me_panel .module_me .info .title {
+    word-break: break-all;
+    overflow: hidden;
+    text-align: justify;
+    color: #333;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    max-height: 72px;
+}
+
+.conpon_me_panel .module_me .info .desc {
+    word-break: break-all;
+    overflow: hidden;
+    color: #999;
+    text-align: justify;
+    font-size: 12px;
+    margin-top: 6px;
+    line-height: 18px;
+    max-height: 36px;
+}
+
+.conpon_me_panel .module_me .info .desc i {
+    color: #4f629f;
+}
+
+.conpon_me_panel .module_me .info .look_num {
+    display: block;
+    color: #999;
+}
+
+.conpon_me_panel .module_me .info .num {
+    float: left;
+}
+
+.conpon_me_panel .module_me .info .ico_eye {
+    float: left;
+    display: block;
+    margin-top: 3px;
+    margin-right: 6px;
+    background-image: url(../imgs/sprite_sprite_coupon@1x.png);
+    background-position: 0 -48px;
+    -moz-background-size: 76px 60px;
+    background-size: 76px 60px;
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 14px;
+    line-height: 14px;
+    font-size: 12px;
+    -moz-background-size: cover;
+}
+
+.conpon_me_panel .module_me .circle_con{
+    text-align: center;
+    line-height: 8px;
+    font-size: 0;
+    /*ie6 8像素过高*/
+    +overflow: hidden;
+    height: 8px;
+}
+.conpon_me_panel .module_me .circle {
+    display: inline-block;
+    /*IE67*/
+    *zoom:1;
+    *display: inline;
+    width: 8px;
+    height: 8px;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background: #c7c7c7;
+    margin-left:  5px;
+    margin-right:  5px;
+
+}
+.conpon_me_panel .module_me .circle_con .active{
+    background: #e21222;
+}
+
+/*.conpon_me_panel .module_me .buttons{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+}*/
+
+.conpon_me_panel .module_me .button{
+    position: absolute;
+    display: block;
+    background: #dddddd;
+    top: 125px;
+    width: 20px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+.conpon_me_panel .module_me .prev{
+    left:0;
+}
+.conpon_me_panel .module_me .next{
+    right: 0;
 }

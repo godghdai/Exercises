@@ -7,7 +7,7 @@
 
 .buy_now .head {
     position: relative;
-    /*	overflow: hidden;*/
+    overflow: hidden;
     height: 55px;
     padding-left: 30px;
     padding-right: 21px;
@@ -120,6 +120,8 @@
     display: block;
     width: 4px;
     height: 4px;
+    /*+overflow: hidden;*/
+    +font-size: 0px;
     -moz-border-radius: 100%;
     border-radius: 100%;
     background-color: #440106;
@@ -272,6 +274,8 @@
     width: 180px;
     height: 100%;
     margin: 0 10px 0 0;
+    /*ie6 float right margin-right后双边距bug*/
+    +display: inline;
 }
 
 .buy_now .baner_con {
@@ -299,6 +303,8 @@ img {
     position: absolute;
     width: 100%;
     height: 10px;
+    /*ie6 10像素过高*/
+    +overflow: hidden;
     bottom: 15px;
     z-index: 2;
     font-size: 0;
@@ -307,6 +313,9 @@ img {
 
 .buy_now .baner_wrap .circle {
     display: inline-block;
+    /*兼容ie7*/
+    *zoom: 1;
+    *display: inline;
     width: 10px;
     height: 10px;
     -moz-border-radius: 5px;

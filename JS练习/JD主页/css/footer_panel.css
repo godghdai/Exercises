@@ -1,0 +1,173 @@
+
+
+.footer_panel {
+    margin-top: 30px;
+    height: 500px;
+    width: 100%;
+    background: #eaeaea;
+}
+
+.footer_panel .head {
+    height: 42px;
+    padding: 30px 0;
+    border-bottom: 1px solid #dedede;
+}
+
+
+.footer_panel .head_con .item {
+    float: left;
+    height: 42px;
+    width: 261px;
+    padding-left: 36px;
+}
+
+
+.footer_panel .head_con .ico {
+    float: left;
+    display: block;
+    margin-right: 10px;
+    width: 36px;
+    height: 42px;
+    background: url(../imgs/ico_service.png) no-repeat;
+}
+
+.footer_panel .head_con .ico1 {
+    background-position: 0 0;
+}
+
+.footer_panel .head_con .ico2 {
+    background-position: 0 -43px;
+}
+
+.footer_panel .head_con .ico3 {
+    background-position: 0 -86px;
+}
+
+.footer_panel .head_con .ico4 {
+    background-position: 0 -129px;
+}
+
+.footer_panel .head_con .title {
+    float: left;
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    color: #444;
+    line-height: 42px;
+    width: 180px;
+    height: 42px;
+}
+
+.footer_panel .shortcut_con {
+    height: 185px;
+    padding-top: 15px;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.footer_panel .shortcut_con .col {
+    float: left;
+    width: 16.6%;
+    height: 100%;
+}
+
+.footer_panel .shortcut_con .title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 32px;
+}
+
+.footer_panel .shortcut_con .shortcut {
+    display: block;
+    line-height: 22px;
+}
+
+.footer_panel .shortcut_con .map_bg {
+    width: 100%;
+    height: 150px;
+    background: url(../imgs/ico_footer.png) no-repeat;
+}
+
+.footer_panel .shortcut_con .map_bg .title {
+    text-align: center;
+}
+
+.footer_panel .shortcut_con .map_bg .desc {
+    padding: 0 10px;
+    line-height: 18px;
+    margin-top: 10px;
+}
+
+.footer_panel .shortcut_con .map_bg .more {
+    text-align: right;
+}
+
+.footer_panel .links_con {
+    margin-top: 8px;
+    line-height: 35px;
+    height: 35px;
+    font-size: 0;
+    text-align: center;
+}
+
+.footer_panel .links_con a,
+.footer_panel .links_con i {
+    font-size: 12px;
+}
+
+.footer_panel .links_con .sp,
+.footer_panel .copyright .sp {
+    margin: 0 10px;
+    color: #ccc;
+}
+
+.footer_panel .copyright p,
+.footer_panel .copyright a {
+    text-align: center;
+    color: #999999;
+    line-height: 22px;
+    height: 22px;
+}
+
+.footer_panel .copyright .license {
+    margin-left: 15px;
+}
+
+.footer_panel .copyright .icos_con {
+    height: 32px;
+    margin-top: 10px;
+}
+
+.footer_panel .copyright .ico {
+    display: inline-block;
+    margin: 0 3px;
+    width: 103px;
+    height: 32px;
+    overflow: hidden;
+    background-image: url(../imgs/ico_footer.png);
+    background-repeat: no-repeat;
+    line-height: 200px;
+}
+
+.footer_panel .copyright .ico1 {
+    background-position: 0 -151px;
+}
+
+.footer_panel .copyright .ico2 {
+     background-position: -104px -151px;
+}
+
+.footer_panel .copyright .ico3 {
+    background-position: 0 -184px;
+}
+
+.footer_panel .copyright .ico4 {
+    background-position: -104px -184px;
+}
+
+.footer_panel .copyright .ico5 {
+   background-position: 0 -217px;
+}
+
+.footer_panel .copyright .ico6 {
+    background-position: -104px -217px;
+}

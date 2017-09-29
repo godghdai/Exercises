@@ -30,7 +30,7 @@ define(function() {
         F.prototype = parent.prototype;
         child.prototype = new F();
         child.prototype.constructor = child;
-        child.super_ = parent;
+        child.parent = parent;
     }
 
     function deepCopy(p, c) {　　　　

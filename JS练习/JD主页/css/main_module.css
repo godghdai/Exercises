@@ -194,12 +194,17 @@
 }
 
 .module_tobuy .baners_con {
+    position: relative;
     width: 350px;
+    height: 334px;
     padding-top: 10px;
     padding-left: 20px;
 }
 
 .module_tobuy .baner {
+    position: absolute;
+    top:10px;
+    left:20px;
     width: 370px;
     height: 334px;
     overflow: hidden;
@@ -263,11 +268,6 @@
     background: #e01222;
 }
 
-.module_tobuy .buttons {
-    width: 100;
-    height: 100;
-}
-
 .module_tobuy .buttons .button {
     position: absolute;
     top: 50%;
@@ -315,12 +315,14 @@
     width: 77px;
     border-right: 1px solid #d2d1d1;
     text-align: center;
+    +background: #fff;
 }
 
 .module_top .head .last {
     border-right: none;
     /*ie6 border-right: none 还有边框*/
-    +width: 75px;
+   /* +width: 75px;*/
+   /*border-right: 0;*/
 }
 
 .module_top .head .bg_line {
@@ -577,12 +579,18 @@
 }
 
 .conpon_me_panel .module_me .baner_con {
+    position: relative;
     padding: 25px 30px;
     width: 330px;
     height: 140px;
 }
 
 .conpon_me_panel .module_me .baner {
+    position: absolute;
+    left:30px;
+    top:25px;
+    width: 330px;
+    height: 140px;
     display: block;
 }
 
@@ -607,7 +615,9 @@
     font-size: 14px;
     line-height: 18px;
 }
-
+.conpon_me_panel .module_me .info_con{
+    height: 122px;
+}
 .conpon_me_panel .module_me .info .title {
     word-break: break-all;
     overflow: hidden;
@@ -616,7 +626,6 @@
     font-weight: 700;
     font-size: 14px;
     line-height: 18px;
-    max-height: 72px;
 }
 
 .conpon_me_panel .module_me .info .desc {
@@ -627,7 +636,6 @@
     font-size: 12px;
     margin-top: 6px;
     line-height: 18px;
-    max-height: 36px;
 }
 
 .conpon_me_panel .module_me .info .desc i {

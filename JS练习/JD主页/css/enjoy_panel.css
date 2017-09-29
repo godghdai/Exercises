@@ -207,7 +207,7 @@
     background: rgba(0, 0, 0, .57);
     +background: #3a3c3c;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
-    z-index: 2;
+    z-index: 9;
 }
 
 .enjoy_panel .video_panel .head .title {
@@ -281,7 +281,9 @@
 }
 
 .enjoy_panel .video_panel .video {
-    position: relative;
+    position: absolute;
+    left:0;
+    right: 0;
     width: 100%;
     height: 100%;
 }
@@ -333,6 +335,7 @@
     line-height: 48px;
     color: #fff;
     text-align: center;
+    z-index: 9;
 }
 
 .enjoy_panel .video_panel .buttons .prev{
@@ -352,7 +355,8 @@
     line-height: 8px;
     width: 100%;
     text-align: center;
-    +overflow: hidden;    
+    +overflow: hidden;
+    z-index: 9;
 }
 
 .enjoy_panel .video_panel .circle_con .circle{

@@ -18,6 +18,8 @@
 <script src="./js/DD_belatedPNG_0.0.8a.js" mce_src="DD_belatedPNG_0.0.8a.js"></script>
 <script type="text/javascript">DD_belatedPNG.fix('*');</script>
 <![endif]-->
+<script src="./js/require.js"></script>
+<script src="./js/index.js"></script>
 
 <body>
     <div id="top_menu">
@@ -382,7 +384,7 @@
             </ul>
         </div>
         <div class="content fl">
-            <div class="banner">
+            <div class="banner" id="main_banner">
                 <ul class="banner_con">
                     <li class="item hide"><a href="#" target="_blank"><img src="./imgs/banner/b1.jpg" alt=""></a></li>
                     <li class="item hide"><a href="#" target="_blank"><img src="./imgs/banner/b2.jpg" alt=""></a></li>
@@ -880,7 +882,7 @@
             <i class="ico_clock"></i>
             <h3 class="title">京东秒杀</h3>
             <a class="sub_title" href="#"><span class="info">总有你想不到的低价</span><i class="ico_arrow"></i></a>
-            <div class="time">
+            <div class="time" id="countDown">
                 <span class="info">当前场次</span>
                 <div class="con">
                     <span class="num">04</span>
@@ -899,9 +901,9 @@
                         <div class="photo_con">
                             <div class="tag_con"><span class="tag">量贩装</span></div>
                             <a class="link" href="#" target="_blank">
-			        	<img class="photo" src="./imgs/buy/2.jpg" alt="【京东超市】新希望 香蕉牛奶饮品200ml*12盒（新老包装交替发货）"/>
-			        	<p class="title">【京东超市】新希望 香蕉牛奶饮品200ml*12盒（新老包装交替发货）</p>
-        			</a>
+                        <img class="photo" src="./imgs/buy/2.jpg" alt="【京东超市】新希望 香蕉牛奶饮品200ml*12盒（新老包装交替发货）"/>
+                        <p class="title">【京东超市】新希望 香蕉牛奶饮品200ml*12盒（新老包装交替发货）</p>
+                    </a>
                             <span class="shadow"></span>
                         </div>
                         <p class="price_con">
@@ -912,9 +914,9 @@
                     <li class="product">
                         <div class="photo_con">
                             <a class="link" href="#" target="_blank">
-			        	<img class="photo" src="./imgs/buy/3.jpg" alt="自然堂（CHANDO）凝时鲜颜洁水乳套装（洁面霜+冰肌水"/>
-			        	<p class="title">自然堂（CHANDO）凝时鲜颜洁水乳套装（洁面霜+冰肌水</p>
-        			</a>
+                        <img class="photo" src="./imgs/buy/3.jpg" alt="自然堂（CHANDO）凝时鲜颜洁水乳套装（洁面霜+冰肌水"/>
+                        <p class="title">自然堂（CHANDO）凝时鲜颜洁水乳套装（洁面霜+冰肌水</p>
+                    </a>
                             <span class="shadow"></span>
                         </div>
                         <p class="price_con">
@@ -925,9 +927,9 @@
                     <li class="product">
                         <div class="photo_con">
                             <a class="link" href="#" target="_blank">
-			        	<img class="photo" src="./imgs/buy/4.jpg" alt="联想(Lenovo)拯救者R720 15.6英寸游戏笔记本电脑(i7-7700HQ 8G 1T+256G SSD GTX1050Ti 4G IPS 黑)"/>
-			        	<p class="title">联想(Lenovo)拯救者R720 15.6英寸游戏笔记本电脑(i7-7700HQ 8G 1T+256G SSD GTX1050Ti 4G IPS 黑)</p>
-        			</a>
+                        <img class="photo" src="./imgs/buy/4.jpg" alt="联想(Lenovo)拯救者R720 15.6英寸游戏笔记本电脑(i7-7700HQ 8G 1T+256G SSD GTX1050Ti 4G IPS 黑)"/>
+                        <p class="title">联想(Lenovo)拯救者R720 15.6英寸游戏笔记本电脑(i7-7700HQ 8G 1T+256G SSD GTX1050Ti 4G IPS 黑)</p>
+                    </a>
                             <span class="shadow"></span>
                         </div>
                         <p class="price_con">
@@ -938,9 +940,9 @@
                     <li class="product">
                         <div class="photo_con">
                             <a class="link" href="#" target="_blank">
-			        	<img class="photo" src="./imgs/buy/1.jpg" alt="长虹（CHANGHONG）65U3C 65英寸双64位4K超高清HDR智能平板液晶电视（浅棕银）"/>
-			        	<p class="title">长虹（CHANGHONG）65U3C 65英寸双64位4K超高清HDR智能平板液晶电视（浅棕银）</p>
-        			</a>
+                        <img class="photo" src="./imgs/buy/1.jpg" alt="长虹（CHANGHONG）65U3C 65英寸双64位4K超高清HDR智能平板液晶电视（浅棕银）"/>
+                        <p class="title">长虹（CHANGHONG）65U3C 65英寸双64位4K超高清HDR智能平板液晶电视（浅棕银）</p>
+                    </a>
                             <span class="shadow"></span>
                         </div>
                         <p class="price_con">
@@ -951,9 +953,9 @@
                     <li class="product">
                         <div class="photo_con">
                             <a class="link" href="#" target="_blank">
-			        	<img class="photo" src="./imgs/buy/3.jpg" alt="自然堂（CHANDO）凝时鲜颜洁水乳套装（洁面霜+冰肌水"/>
-			        	<p class="title">自然堂（CHANDO）凝时鲜颜洁水乳套装（洁面霜+冰肌水</p>
-        			</a>
+                        <img class="photo" src="./imgs/buy/3.jpg" alt="自然堂（CHANDO）凝时鲜颜洁水乳套装（洁面霜+冰肌水"/>
+                        <p class="title">自然堂（CHANDO）凝时鲜颜洁水乳套装（洁面霜+冰肌水</p>
+                    </a>
                             <span class="shadow"></span>
                         </div>
                         <p class="price_con">
@@ -964,9 +966,9 @@
                     <li class="product">
                         <div class="photo_con">
                             <a class="link" href="#" target="_blank">
-			        	<img class="photo" src="./imgs/buy/4.jpg" alt="联想(Lenovo)拯救者R720 15.6英寸游戏笔记本电脑(i7-7700HQ 8G 1T+256G SSD GTX1050Ti 4G IPS 黑)"/>
-			        	<p class="title">联想(Lenovo)拯救者R720 15.6英寸游戏笔记本电脑(i7-7700HQ 8G 1T+256G SSD GTX1050Ti 4G IPS 黑)</p>
-        			</a>
+                        <img class="photo" src="./imgs/buy/4.jpg" alt="联想(Lenovo)拯救者R720 15.6英寸游戏笔记本电脑(i7-7700HQ 8G 1T+256G SSD GTX1050Ti 4G IPS 黑)"/>
+                        <p class="title">联想(Lenovo)拯救者R720 15.6英寸游戏笔记本电脑(i7-7700HQ 8G 1T+256G SSD GTX1050Ti 4G IPS 黑)</p>
+                    </a>
                             <span class="shadow"></span>
                         </div>
                         <p class="price_con">
@@ -980,10 +982,10 @@
                     <a href="javascript:void(0)" class="control next"><i class="iconfont"></i></a>
                 </div>
             </div>
-            <div class="baner_wrap">
+            <div class="baner_wrap" id="buy_now_banner">
                 <ul class="baner_con">
-                    <li class="baner"><a href="#" target="_blank" class=""><img src="./imgs/buy/11.jpg"  alt="" title="" ></a></li>
-                    <li class="baner"><a href="#" target="_blank" class=""><img src="./imgs/buy/22.png"  alt="" title="" ></a></li>
+                    <li class="item"><a href="#" target="_blank" class=""><img src="./imgs/buy/11.jpg"  alt="" title="" ></a></li>
+                    <li class="item"><a href="#" target="_blank" class=""><img src="./imgs/buy/22.png"  alt="" title="" ></a></li>
                 </ul>
                 <ul class="circle_con">
                     <li class="circle active"></li>
@@ -1036,37 +1038,81 @@
                 <h3 class="title">会买专辑</h3>
                 <a class="sub_title" href="#"><span class="info">甄选优质好物</span><i class="ico_arrow"></i></a>
             </div>
-            <div class="baners_con">
-                <div class="baner">
-                    <a href="#" class="item">
-                        <h3 class="title">保守男如何蜕变？用红色数码瞬间奔放</h3>
-                        <div class="products clearfix">
-                            <img class="photo" src="./imgs/mod/11.jpg" alt="">
-                            <img class="photo" src="./imgs/mod/12.jpg" alt="">
-                            <img class="photo" src="./imgs/mod/13.jpg" alt="">
+            <div class="banner_wrap" id="module_tobuy_banner">
+                <div class="baners_con">
+                    <div class="baner">
+                        <a href="#" class="item">
+                            <h3 class="title">保守男如何蜕变？用红色数码瞬间奔放</h3>
+                            <div class="products clearfix">
+                                <img class="photo" src="./imgs/mod/11.jpg" alt="">
+                                <img class="photo" src="./imgs/mod/12.jpg" alt="">
+                                <img class="photo" src="./imgs/mod/13.jpg" alt="">
+                            </div>
+                        </a>
+                        <div class="line_con">
+                            <div class="line"></div>
                         </div>
-                    </a>
-                    <div class="line_con">
-                        <div class="line"></div>
+                        <a href="#" class="item">
+                            <h3 class="title">旅拍上镜显胖？试试超显瘦的收腰连衣裙</h3>
+                            <div class="products clearfix">
+                                <img class="photo" src="./imgs/mod/21.jpg" alt="">
+                                <img class="photo" src="./imgs/mod/22.jpg" alt="">
+                                <img class="photo" src="./imgs/mod/23.jpg" alt="">
+                            </div>
+                        </a>
                     </div>
-                    <a href="#" class="item">
-                        <h3 class="title">旅拍上镜显胖？试试超显瘦的收腰连衣裙</h3>
-                        <div class="products clearfix">
-                            <img class="photo" src="./imgs/mod/21.jpg" alt="">
-                            <img class="photo" src="./imgs/mod/22.jpg" alt="">
-                            <img class="photo" src="./imgs/mod/23.jpg" alt="">
+                    <div class="baner">
+                        <a href="#" class="item">
+                            <h3 class="title">开启新婚生活，品质家电不可少</h3>
+                            <div class="products clearfix">
+                                <img class="photo" src="./imgs/mod/31.jpg" alt="">
+                                <img class="photo" src="./imgs/mod/32.jpg" alt="">
+                                <img class="photo" src="./imgs/mod/33.jpg" alt="">
+                            </div>
+                        </a>
+                        <div class="line_con">
+                            <div class="line"></div>
                         </div>
-                    </a>
+                        <a href="#" class="item">
+                            <h3 class="title">爱音乐，或许入耳式耳机更适合你</h3>
+                            <div class="products clearfix">
+                                <img class="photo" src="./imgs/mod/41.jpg" alt="">
+                                <img class="photo" src="./imgs/mod/42.jpg" alt="">
+                                <img class="photo" src="./imgs/mod/43.jpg" alt="">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="baner">
+                        <a href="#" class="item">
+                            <h3 class="title">大学要文娱生活？这些潮品任逍遥</h3>
+                            <div class="products clearfix">
+                                <img class="photo" src="./imgs/mod/61.jpg" alt="">
+                                <img class="photo" src="./imgs/mod/62.jpg" alt="">
+                                <img class="photo" src="./imgs/mod/63.jpg" alt="">
+                            </div>
+                        </a>
+                        <div class="line_con">
+                            <div class="line"></div>
+                        </div>
+                        <a href="#" class="item">
+                            <h3 class="title">初入职场，酷黑系手机更显质感</h3>
+                            <div class="products clearfix">
+                                <img class="photo" src="./imgs/mod/71.jpg" alt="">
+                                <img class="photo" src="./imgs/mod/72.jpg" alt="">
+                                <img class="photo" src="./imgs/mod/73.jpg" alt="">
+                            </div>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <ul class="circle_con">
-                <li class="circle"></li>
-                <li class="circle active"></li>
-                <li class="circle"></li>
-            </ul>
-            <div class="buttons">
-                <a class="button prev" href="javascript:;"><i class="iconfont"></i></a>
-                <a class="button next" href="javascript:;"><i class="iconfont"></i></a>
+                <ul class="circle_con">
+                    <li class="circle"></li>
+                    <li class="circle active"></li>
+                    <li class="circle"></li>
+                </ul>
+                <div class="buttons">
+                    <a class="button prev" href="javascript:;"><i class="iconfont"></i></a>
+                    <a class="button next" href="javascript:;"><i class="iconfont"></i></a>
+                </div>
             </div>
         </div>
         <div class="col module_top last">
@@ -1091,45 +1137,45 @@
                 <div class="baner">
                     <div class="product_wrap">
                         <a class="product" href="#" target="_blank">
-		                    <img class="photo" src="./imgs/top/21.jpg" alt="">
-		                    <p class="title">海信（Hisense）LED49EC520UA 49英寸 VIDAA3 14核配置 炫彩4K智能电视(黑色)</p>
-		                    <span class="num num1">1</span>
-                    	</a>
+                            <img class="photo" src="./imgs/top/21.jpg" alt="">
+                            <p class="title">海信（Hisense）LED49EC520UA 49英寸 VIDAA3 14核配置 炫彩4K智能电视(黑色)</p>
+                            <span class="num num1">1</span>
+                        </a>
                     </div>
                     <div class="product_wrap">
                         <a class="product" href="#" target="_blank">
-		                    <img class="photo" src="./imgs/top/22.jpg" alt="">
-		                    <p class="title">海尔（Haier) EG8014HB39GU1 8公斤变频洗烘一体滚筒洗衣机 蒸汽熨防皱烘干 智能APP控制 </p>
-		                    <span class="num num2">2</span>
-                    	</a>
+                            <img class="photo" src="./imgs/top/22.jpg" alt="">
+                            <p class="title">海尔（Haier) EG8014HB39GU1 8公斤变频洗烘一体滚筒洗衣机 蒸汽熨防皱烘干 智能APP控制 </p>
+                            <span class="num num2">2</span>
+                        </a>
                     </div>
                     <div class="product_wrap">
                         <a class="product" href="#" target="_blank">
-		                    <img class="photo" src="./imgs/top/23.jpg" alt="">
-		                    <p class="title">康佳（KONKA）LED39E330C 39英寸 高清窄边液晶平板电视(黑+银)</p>
-		                    <span class="num num3" >3</span>
-                    	</a>
+                            <img class="photo" src="./imgs/top/23.jpg" alt="">
+                            <p class="title">康佳（KONKA）LED39E330C 39英寸 高清窄边液晶平板电视(黑+银)</p>
+                            <span class="num num3" >3</span>
+                        </a>
                     </div>
                     <div class="product_wrap">
                         <a class="product" href="#" target="_blank">
-		                    <img class="photo" src="./imgs/top/24.jpg" alt="">
-		                    <p class="title">海信（Hisense）LED49EC520UA 49英寸 VIDAA3 14核配置 炫彩4K智能电视(黑色)</p>
-		                    <span class="num">4</span>
-                    	</a>
+                            <img class="photo" src="./imgs/top/24.jpg" alt="">
+                            <p class="title">海信（Hisense）LED49EC520UA 49英寸 VIDAA3 14核配置 炫彩4K智能电视(黑色)</p>
+                            <span class="num">4</span>
+                        </a>
                     </div>
                     <div class="product_wrap">
                         <a class="product" href="#" target="_blank">
-		                    <img class="photo" src="./imgs/top/25.jpg" alt="">
-		                    <p class="title">海尔（Haier) EG8014HB39GU1 8公斤变频洗烘一体滚筒洗衣机 蒸汽熨防皱烘干 智能APP控制 </p>
-		                    <span class="num">5</span>
-                    	</a>
+                            <img class="photo" src="./imgs/top/25.jpg" alt="">
+                            <p class="title">海尔（Haier) EG8014HB39GU1 8公斤变频洗烘一体滚筒洗衣机 蒸汽熨防皱烘干 智能APP控制 </p>
+                            <span class="num">5</span>
+                        </a>
                     </div>
                     <div class="product_wrap">
                         <a class="product" href="#" target="_blank">
-		                    <img class="photo" src="./imgs/top/26.jpg" alt="">
-		                    <p class="title">康佳（KONKA）LED39E330C 39英寸 高清窄边液晶平板电视(黑+银)</p>
-		                    <span class="num">6</span>
-                    	</a>
+                            <img class="photo" src="./imgs/top/26.jpg" alt="">
+                            <p class="title">康佳（KONKA）LED39E330C 39英寸 高清窄边液晶平板电视(黑+银)</p>
+                            <span class="num">6</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1190,28 +1236,70 @@
                 <h3 class="title">觅me</h3>
                 <a class="sub_title" href="#"><span class="info">探索生活</span><i class="ico_arrow"></i></a>
             </div>
-            <div class="baner_con">
-                <a class="baner clearfix" href="#">
-            		<img class="photo" src="./imgs/me/1.jpg" alt="">
+            <div class="banner_wrap" id="module_me_banner">
+                <div class="baner_con">
+                    <a class="baner clearfix" href="#">
+                    <img class="photo" src="./imgs/me/1.jpg" alt="">
                     <div class="info">
-                    	<div class="info_con">
-                    		<h3 class="title">女人有没有生过小孩，只看这两个部位就够了，非常准！</h3>
-            			    <p class="desc">女人有没有生过小孩，只...&nbsp;&nbsp;<i>查看原文&gt;</i></p>	
-                    	</div>
-            			<span class="look_num clearfix"><i class="ico_eye"></i><span class="num">99999+人看过</span></span>
+                        <div class="info_con">
+                            <h3 class="title">女人有没有生过小孩，只看这两个部位就够了，非常准！</h3>
+                            <p class="desc">女人有没有生过小孩，只...&nbsp;&nbsp;<i>查看原文&gt;</i></p>   
+                        </div>
+                        <span class="look_num clearfix"><i class="ico_eye"></i><span class="num">99999+人看过</span></span>
                     </div>
-            	</a>
-            </div>
-            <ul class="circle_con">
-                <li class="circle"></li>
-                <li class="circle active"></li>
-                <li class="circle"></li>
-                <li class="circle"></li>
-                <li class="circle"></li>
-            </ul>
-            <div class="buttons">
-                <a class="button prev" href="javascript:;"><i class="iconfont"></i></a>
-                <a class="button next" href="javascript:;"><i class="iconfont"></i></a>
+                  </a>
+                    <a class="baner clearfix hide" href="#">
+                    <img class="photo" src="./imgs/me/5.jpg" alt="">
+                    <div class="info">
+                        <div class="info_con">
+                            <h3 class="title">iPhone7彻底崩盘，价格至冰点价, 比国产还便宜</h3>
+                            <p class="desc">iPhone7彻底崩盘，价格至...&nbsp;&nbsp;<i>查看原文&gt;</i></p>   
+                        </div>
+                        <span class="look_num clearfix"><i class="ico_eye"></i><span class="num">99999+人看过</span></span>
+                    </div>
+                  </a>
+                    <a class="baner clearfix hide" href="#">
+                    <img class="photo" src="./imgs/me/2.jpg" alt="">
+                    <div class="info">
+                        <div class="info_con">
+                            <h3 class="title">婚前婚后，女生内衣裤有哪些变化</h3>
+                            <p class="desc">今天要聊的话题是关于女...&nbsp;&nbsp;<i>查看原文&gt;</i></p>   
+                        </div>
+                        <span class="look_num clearfix"><i class="ico_eye"></i><span class="num">99999+人看过</span></span>
+                    </div>
+                  </a>
+                    <a class="baner clearfix hide" href="#">
+                    <img class="photo" src="./imgs/me/4.jpg" alt="">
+                    <div class="info">
+                        <div class="info_con">
+                            <h3 class="title">在日本情趣酒店走出来的人，都没有弱者</h3>
+                            <p class="desc">在日本情趣酒店走出来的...&nbsp;&nbsp;<i>查看原文&gt;</i></p>   
+                        </div>
+                        <span class="look_num clearfix"><i class="ico_eye"></i><span class="num">99999+人看过</span></span>
+                    </div>
+                  </a>
+                    <a class="baner clearfix hide" href="#">
+                    <img class="photo" src="./imgs/me/3.jpg" alt="">
+                    <div class="info">
+                        <div class="info_con">
+                            <h3 class="title">比iPhone8 S8颜值更高！华为首款全面屏手机曝光</h3>
+                            <p class="desc">比iPhone8 S8颜值更高...&nbsp;&nbsp;<i>查看原文&gt;</i></p>   
+                        </div>
+                        <span class="look_num clearfix"><i class="ico_eye"></i><span class="num">99999+人看过</span></span>
+                    </div>
+                  </a>
+                </div>
+                <ul class="circle_con">
+                    <li class="circle"></li>
+                    <li class="circle active"></li>
+                    <li class="circle"></li>
+                    <li class="circle"></li>
+                    <li class="circle"></li>
+                </ul>
+                <div class="buttons">
+                    <a class="button prev" href="javascript:;"><i class="iconfont"></i></a>
+                    <a class="button next" href="javascript:;"><i class="iconfont"></i></a>
+                </div>
             </div>
         </div>
     </div>
@@ -1231,40 +1319,40 @@
                 <a class="lbaner" href="#">
                  <img class="photo" src="./imgs/enj/3.jpg" alt="">
                  <div class="info bg">
-                 	<h4 class="title">新品首发</h4>
-                 	<p class="desc">三星 C8 免息抢购~</p>
+                    <h4 class="title">新品首发</h4>
+                    <p class="desc">三星 C8 免息抢购~</p>
                  </div>
                 </a>
                 <a class="lbaner mr0w390" href="#">
                  <img class="photo" src="./imgs/enj/2.jpg" alt="">
                  <div class="info bg2">
                     <h4 class="title">会逛</h4>
-                 	<p class="desc">十一出游装备 不只5折</p></div>
+                    <p class="desc">十一出游装备 不只5折</p></div>
                 </a>
                 <a class="lbaner" href="#">
                  <img class="photo" src="./imgs/enj/5.jpg" alt="">
                  <div class="info bg3">
-                 	<h4 class="title">奢侈大牌</h4>
-                 	<p class="desc">尽享品质生活</p>
+                    <h4 class="title">奢侈大牌</h4>
+                    <p class="desc">尽享品质生活</p>
                  </div>
                 </a>
                 <a class="lbaner mr0w390" href="#">
                  <img class="photo" src="./imgs/enj/6.png" alt="">
                  <div class="info bg4">
-                 	<h4 class="title">智能生活</h4>
-                 	<p class="desc">智能潮货 嗨购不停</p></div>
+                    <h4 class="title">智能生活</h4>
+                    <p class="desc">智能潮货 嗨购不停</p></div>
                 </a>
                 <a class="lbaner mb0" href="#">
                  <img class="photo" src="./imgs/enj/4.jpg" alt="">
                  <div class="info bg5">
                     <h4 class="title">京东超市</h4>
-                 	<p class="desc">精选超值好货 天天特价</p></div>
+                    <p class="desc">精选超值好货 天天特价</p></div>
                 </a>
                 <a class="lbaner mr0w390 mb0" href="#">
                  <img class="photo" src="./imgs/enj/1.jpg" alt="">
                  <div class="info bg6">
-                 	<h4 class="title">白条商城</h4>
-                 	<p class="desc">最高12期免息</p></div>
+                    <h4 class="title">白条商城</h4>
+                    <p class="desc">最高12期免息</p></div>
                 </a>
             </div>
             <div class="right_con">
@@ -1273,38 +1361,68 @@
                         <h4 class="title">京东直播</h4>
                         <span class="more"><span>更多</span><i class="ico_arrow"></i></span>
                     </a>
-                    <ul class="video_con">
-                        <li class="video">
-                            <img class="photo" src="./imgs/video/3.jpg" alt="">
-                            <div class="mask"></div>
-                            <i class="ico_play"></i>
-                            <div class="vinfo">
-                                <h4 class="title"><i class="ico_tv"></i>品味中国I中秋金丝皇菊秒杀</h4>
-                                <p class="desc">抽奖送礼品</p>
-                            </div>
-                        </li>
-                    </ul>
-                    <ul class="circle_con">
-                        <li class="circle"></li>
-                        <li class="circle active"></li>
-                        <li class="circle"></li>
-                    </ul>
-                    <div class="buttons">
-                        <a class="button prev" href="javascript:;"><i class="iconfont"></i></a>
-                        <a class="button next" href="javascript:;"><i class="iconfont"></i></a>
+                    <div class="video_banner_wrap" id="video_panel_banner">
+                        <ul class="video_con">
+                            <li class="video">
+                                <img class="photo" src="./imgs/video/3.jpg" alt="">
+                                <div class="mask"></div>
+                                <i class="ico_play"></i>
+                                <div class="vinfo">
+                                    <h4 class="title"><i class="ico_tv"></i>品味中国I中秋金丝皇菊秒杀</h4>
+                                    <p class="desc">抽奖送礼品</p>
+                                </div>
+                            </li>
+                            <li class="video">
+                                <img class="photo" src="./imgs/video/1.jpg" alt="">
+                                <div class="mask"></div>
+                                <i class="ico_play"></i>
+                                <div class="vinfo">
+                                    <h4 class="title"><i class="ico_tv"></i>中秋佳节送佳礼</h4>
+                                    <p class="desc">关注人数达到2000送礼品</p>
+                                </div>
+                            </li>
+                            <li class="video">
+                                <img class="photo" src="./imgs/video/4.jpg" alt="">
+                                <div class="mask"></div>
+                                <i class="ico_play"></i>
+                                <div class="vinfo">
+                                    <h4 class="title"><i class="ico_tv"></i>翡翠手镯特惠放漏</h4>
+                                    <p class="desc">领劵优惠多多</p>
+                                </div>
+                            </li>
+                            <li class="video">
+                                <img class="photo" src="./imgs/video/6.jpg" alt="">
+                                <div class="mask"></div>
+                                <i class="ico_play"></i>
+                                <div class="vinfo">
+                                    <h4 class="title"><i class="ico_tv"></i>买一送四丨美妆用品大促袭来</h4>
+                                    <p class="desc">抽奖送礼品</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="circle_con">
+                            <li class="circle"></li>
+                            <li class="circle active"></li>
+                            <li class="circle"></li>
+                            <li class="circle"></li>
+                        </ul>
+                        <div class="buttons">
+                            <a class="button prev" href="javascript:;"><i class="iconfont"></i></a>
+                            <a class="button next" href="javascript:;"><i class="iconfont"></i></a>
+                        </div>
                     </div>
                 </div>
                 <a class="rbaner mr10" href="#">
                   <img class="photo" src="./imgs/enj/9.jpg" alt="">
                  <div class="info bg7">
-                 	<h4 class="title">设计师推荐</h4>
-                 	<p class="desc">家装节</p></div>
+                    <h4 class="title">设计师推荐</h4>
+                    <p class="desc">家装节</p></div>
                 </a>
                 <a class="rbaner" href="#">
                   <img class="photo" src="./imgs/enj/8.jpg" alt="">
                  <div class="info bg8">
-                 	<h4 class="title">全球尖货</h4>
-                 	<p class="desc">全球自营好货</p></div>
+                    <h4 class="title">全球尖货</h4>
+                    <p class="desc">全球自营好货</p></div>
                 </a>
             </div>
         </div>
@@ -1791,78 +1909,78 @@
     <div class="buy_feature_panel center clearfix">
         <a class="item" href="#">
         <img class="photo" src="./imgs/sp/1.jpg" alt="">
-    	<div class="info_wrap">
-    	    <div class="bg bg1"></div>
-    		<div class="info">
-    		<h4 class="title">司法拍卖</h4>
-    		<p class="desc">法院好货 公开抢拍</p>
-    		</div>
-     	</div>
-    	</a>
+        <div class="info_wrap">
+            <div class="bg bg1"></div>
+            <div class="info">
+            <h4 class="title">司法拍卖</h4>
+            <p class="desc">法院好货 公开抢拍</p>
+            </div>
+        </div>
+        </a>
         <a class="item" href="#">
         <img class="photo" src="./imgs/sp/2.jpg" alt="">
         <div class="info_wrap">
-    	    <div class="bg bg2"></div>
-    		<div class="info">
-    		<h4 class="title">环球时尚</h4>
-    		<p class="desc">环球名品，奢华精选</p>
-    		</div>
-     	</div>
-    	</a>
+            <div class="bg bg2"></div>
+            <div class="info">
+            <h4 class="title">环球时尚</h4>
+            <p class="desc">环球名品，奢华精选</p>
+            </div>
+        </div>
+        </a>
         <a class="item" href="#">   
         <img class="photo" src="./imgs/sp/3.jpg" alt="">
-    	<div class="info_wrap">
-    	    <div class="bg bg3"></div>
-    		<div class="info">
-    		<h4 class="title">司法拍卖</h4>
-    		<p class="desc">法院好货 公开抢拍</p>
-    		</div>
-     	</div></a>
+        <div class="info_wrap">
+            <div class="bg bg3"></div>
+            <div class="info">
+            <h4 class="title">司法拍卖</h4>
+            <p class="desc">法院好货 公开抢拍</p>
+            </div>
+        </div></a>
         <a class="item" href="#">   
         <img class="photo" src="./imgs/sp/4.jpg" alt="">
-    	<div class="info_wrap">
-    	    <div class="bg bg4"></div>
-    		<div class="info">
-    		<h4 class="title">司法拍卖</h4>
-    		<p class="desc">法院好货 公开抢拍</p>
-    		</div>
-     	</div></a>
+        <div class="info_wrap">
+            <div class="bg bg4"></div>
+            <div class="info">
+            <h4 class="title">司法拍卖</h4>
+            <p class="desc">法院好货 公开抢拍</p>
+            </div>
+        </div></a>
         <a class="item" href="#">   
         <img class="photo" src="./imgs/sp/5.jpg" alt="">
-    	<div class="info_wrap">
-    	    <div class="bg bg5"></div>
-    		<div class="info">
-    		<h4 class="title">司法拍卖</h4>
-    		<p class="desc">法院好货 公开抢拍</p>
-    		</div>
-     	</div></a>
+        <div class="info_wrap">
+            <div class="bg bg5"></div>
+            <div class="info">
+            <h4 class="title">司法拍卖</h4>
+            <p class="desc">法院好货 公开抢拍</p>
+            </div>
+        </div></a>
         <a class="item" href="#">   
         <img class="photo" src="./imgs/sp/6.jpg" alt="">
-    	<div class="info_wrap">
-    	    <div class="bg bg6"></div>
-    		<div class="info">
-    		<h4 class="title">司法拍卖</h4>
-    		<p class="desc">法院好货 公开抢拍</p>
-    		</div>
-     	</div></a>
+        <div class="info_wrap">
+            <div class="bg bg6"></div>
+            <div class="info">
+            <h4 class="title">司法拍卖</h4>
+            <p class="desc">法院好货 公开抢拍</p>
+            </div>
+        </div></a>
         <a class="item" href="#">   
         <img class="photo" src="./imgs/sp/7.jpg" alt="">
-    	<div class="info_wrap">
-    	    <div class="bg bg7"></div>
-    		<div class="info">
-    		<h4 class="title">司法拍卖</h4>
-    		<p class="desc">法院好货 公开抢拍</p>
-    		</div>
-     	</div></a>
+        <div class="info_wrap">
+            <div class="bg bg7"></div>
+            <div class="info">
+            <h4 class="title">司法拍卖</h4>
+            <p class="desc">法院好货 公开抢拍</p>
+            </div>
+        </div></a>
         <a class="item mr0" href="#">   
         <img class="photo" src="./imgs/sp/8.jpg" alt="">
-    	<div class="info_wrap">
-    	    <div class="bg bg8"></div>
-    		<div class="info">
-    		<h4 class="title">司法拍卖</h4>
-    		<p class="desc">法院好货 公开抢拍</p>
-    		</div>
-     	</div></a>
+        <div class="info_wrap">
+            <div class="bg bg8"></div>
+            <div class="info">
+            <h4 class="title">司法拍卖</h4>
+            <p class="desc">法院好货 公开抢拍</p>
+            </div>
+        </div></a>
     </div>
     <div class="ad_baner_panel">
         <div class="center">
@@ -1877,100 +1995,100 @@
     <div class="more_panel center">
         <div class="more_wrap clearfix">
             <a class="item" href="#">
-	        <img class="photo" src="./imgs/p/11.jpg" alt="">
-			  <p class="title">良品铺子 芒果干108g果脯蜜饯果干休闲零食 新老包装切换中</p>
-			  <p class="price"><i>¥</i><span class="num">18.90</span></p>
-	        </a>
+            <img class="photo" src="./imgs/p/11.jpg" alt="">
+              <p class="title">良品铺子 芒果干108g果脯蜜饯果干休闲零食 新老包装切换中</p>
+              <p class="price"><i>¥</i><span class="num">18.90</span></p>
+            </a>
             <a class="item" href="#"><img class="photo" src="./imgs/p/12.jpg" alt="">
- 			  <p class="title">傲世瓷业 景德镇陶瓷器古典粉彩装饰盘工艺品客厅摆件家居装饰品摆设P888 咏竹</p>
-			  <p class="price"><i>¥</i><span class="num">45.00</span></p>
-	        </a>
-            <a class="item" href="#">
-	        <img class="photo" src="./imgs/p/1.jpg" alt="">
-			  <p class="title">百草味 牛肉干 肉类零食 零食特产肉制品 五香牛肉粒100g/袋</p>
-			  <p class="price"><i>¥</i><span class="num">15.90</span></p>
-			 </a>
-            <a class="item" href="#">
-	        <img class="photo" src="./imgs/p/15.jpg" alt="">
-			  <p class="title"> 艾梵妮【多件套】韩版饰品发饰蝴蝶结发圈头饰发绳皮套头绳扎头发皮筋发卡发夹头花 9件套发圈【包邮】</p>
-			  <p class="price"><i>¥</i><span class="num">108.90</span></p>
-	        </a>
-            <a class="item" href="#">
-            <img class="photo" src="./imgs/p/14.jpg" alt="">
-			  <p class="title"> 集倩2017秋冬睡衣女长袖纯棉开衫翻领休闲可爱家居服套装 日版JQ017 女M(单女士款)</p>
-			  <p class="price"><i>¥</i><span class="num">15.90</span></p>
-	        </a>
-            <a class="item" href="#">
-			  <img class="photo" src="./imgs/p/3.jpg" alt="">
-			  <p class="title"> 浪莎langsha新款吊带背心女 纯棉打底运动女士背心 工字白色 均码</p>
-			  <p class="price"><i>¥</i><span class="num">15.90</span></p>
+              <p class="title">傲世瓷业 景德镇陶瓷器古典粉彩装饰盘工艺品客厅摆件家居装饰品摆设P888 咏竹</p>
+              <p class="price"><i>¥</i><span class="num">45.00</span></p>
             </a>
             <a class="item" href="#">
-	        <img class="photo" src="./imgs/p/4.jpg" alt="">
-			  <p class="title">富安娜（FUANNA）家纺被子 舒暖磨毛冬厚被1.8米床适用（230cm*229cm）</p>
-			  <p class="price"><i>¥</i><span class="num">189.90</span></p>
-	        </a>
-            <a class="item" href="#"><img class="photo" src="./imgs/p/16.jpg" alt="">
- 			  <p class="title">费列罗（Ferrero Rocher）巧克力礼盒装进口金莎榛仁威化中秋情人节结婚礼物 费列罗30颗两层礼盒装【新鲜日期】</p>
-			  <p class="price"><i>¥</i><span class="num">68.00</span></p>
-	        </a>
+            <img class="photo" src="./imgs/p/1.jpg" alt="">
+              <p class="title">百草味 牛肉干 肉类零食 零食特产肉制品 五香牛肉粒100g/袋</p>
+              <p class="price"><i>¥</i><span class="num">15.90</span></p>
+             </a>
             <a class="item" href="#">
-	        <img class="photo" src="./imgs/p/11.jpg" alt="">
-			  <p class="title">良品铺子 芒果干108g果脯蜜饯果干休闲零食 新老包装切换中</p>
-			  <p class="price"><i>¥</i><span class="num">18.90</span></p>
-	        </a>
-            <a class="item" href="#"><img class="photo" src="./imgs/p/12.jpg" alt="">
- 			  <p class="title">傲世瓷业 景德镇陶瓷器古典粉彩装饰盘工艺品客厅摆件家居装饰品摆设P888 咏竹</p>
-			  <p class="price"><i>¥</i><span class="num">45.00</span></p>
-	        </a>
-            <a class="item" href="#">
-	        <img class="photo" src="./imgs/p/1.jpg" alt="">
-			  <p class="title">百草味 牛肉干 肉类零食 零食特产肉制品 五香牛肉粒100g/袋</p>
-			  <p class="price"><i>¥</i><span class="num">15.90</span></p>
-			 </a>
-            <a class="item" href="#">
-	        <img class="photo" src="./imgs/p/15.jpg" alt="">
-			  <p class="title"> 艾梵妮【多件套】韩版饰品发饰蝴蝶结发圈头饰发绳皮套头绳扎头发皮筋发卡发夹头花 9件套发圈【包邮】</p>
-			  <p class="price"><i>¥</i><span class="num">108.90</span></p>
-	        </a>
-            <a class="item" href="#">
-            <img class="photo" src="./imgs/p/14.jpg" alt="">
-			  <p class="title"> 集倩2017秋冬睡衣女长袖纯棉开衫翻领休闲可爱家居服套装 日版JQ017 女M(单女士款)</p>
-			  <p class="price"><i>¥</i><span class="num">15.90</span></p>
-	        </a>
-            <a class="item" href="#">
-			  <img class="photo" src="./imgs/p/3.jpg" alt="">
-			  <p class="title"> 浪莎langsha新款吊带背心女 纯棉打底运动女士背心 工字白色 均码</p>
-			  <p class="price"><i>¥</i><span class="num">15.90</span></p>
+            <img class="photo" src="./imgs/p/15.jpg" alt="">
+              <p class="title"> 艾梵妮【多件套】韩版饰品发饰蝴蝶结发圈头饰发绳皮套头绳扎头发皮筋发卡发夹头花 9件套发圈【包邮】</p>
+              <p class="price"><i>¥</i><span class="num">108.90</span></p>
             </a>
             <a class="item" href="#">
-	        <img class="photo" src="./imgs/p/4.jpg" alt="">
-			  <p class="title">富安娜（FUANNA）家纺被子 舒暖磨毛冬厚被1.8米床适用（230cm*229cm）</p>
-			  <p class="price"><i>¥</i><span class="num">189.90</span></p>
-	        </a>
+            <img class="photo" src="./imgs/p/14.jpg" alt="">
+              <p class="title"> 集倩2017秋冬睡衣女长袖纯棉开衫翻领休闲可爱家居服套装 日版JQ017 女M(单女士款)</p>
+              <p class="price"><i>¥</i><span class="num">15.90</span></p>
+            </a>
+            <a class="item" href="#">
+              <img class="photo" src="./imgs/p/3.jpg" alt="">
+              <p class="title"> 浪莎langsha新款吊带背心女 纯棉打底运动女士背心 工字白色 均码</p>
+              <p class="price"><i>¥</i><span class="num">15.90</span></p>
+            </a>
+            <a class="item" href="#">
+            <img class="photo" src="./imgs/p/4.jpg" alt="">
+              <p class="title">富安娜（FUANNA）家纺被子 舒暖磨毛冬厚被1.8米床适用（230cm*229cm）</p>
+              <p class="price"><i>¥</i><span class="num">189.90</span></p>
+            </a>
             <a class="item" href="#"><img class="photo" src="./imgs/p/16.jpg" alt="">
- 			  <p class="title">费列罗（Ferrero Rocher）巧克力礼盒装进口金莎榛仁威化中秋情人节结婚礼物 费列罗30颗两层礼盒装【新鲜日期】</p>
-			  <p class="price"><i>¥</i><span class="num">68.00</span></p>
-	        </a>
+              <p class="title">费列罗（Ferrero Rocher）巧克力礼盒装进口金莎榛仁威化中秋情人节结婚礼物 费列罗30颗两层礼盒装【新鲜日期】</p>
+              <p class="price"><i>¥</i><span class="num">68.00</span></p>
+            </a>
             <a class="item" href="#">
-	        <img class="photo" src="./imgs/p/11.jpg" alt="">
-			  <p class="title">良品铺子 芒果干108g果脯蜜饯果干休闲零食 新老包装切换中</p>
-			  <p class="price"><i>¥</i><span class="num">18.90</span></p>
-	        </a>
+            <img class="photo" src="./imgs/p/11.jpg" alt="">
+              <p class="title">良品铺子 芒果干108g果脯蜜饯果干休闲零食 新老包装切换中</p>
+              <p class="price"><i>¥</i><span class="num">18.90</span></p>
+            </a>
             <a class="item" href="#"><img class="photo" src="./imgs/p/12.jpg" alt="">
- 			  <p class="title">傲世瓷业 景德镇陶瓷器古典粉彩装饰盘工艺品客厅摆件家居装饰品摆设P888 咏竹</p>
-			  <p class="price"><i>¥</i><span class="num">45.00</span></p>
-	        </a>
+              <p class="title">傲世瓷业 景德镇陶瓷器古典粉彩装饰盘工艺品客厅摆件家居装饰品摆设P888 咏竹</p>
+              <p class="price"><i>¥</i><span class="num">45.00</span></p>
+            </a>
             <a class="item" href="#">
-	        <img class="photo" src="./imgs/p/1.jpg" alt="">
-			  <p class="title">百草味 牛肉干 肉类零食 零食特产肉制品 五香牛肉粒100g/袋</p>
-			  <p class="price"><i>¥</i><span class="num">15.90</span></p>
-			 </a>
+            <img class="photo" src="./imgs/p/1.jpg" alt="">
+              <p class="title">百草味 牛肉干 肉类零食 零食特产肉制品 五香牛肉粒100g/袋</p>
+              <p class="price"><i>¥</i><span class="num">15.90</span></p>
+             </a>
             <a class="item" href="#">
-	        <img class="photo" src="./imgs/p/15.jpg" alt="">
-			  <p class="title"> 艾梵妮【多件套】韩版饰品发饰蝴蝶结发圈头饰发绳皮套头绳扎头发皮筋发卡发夹头花 9件套发圈【包邮】</p>
-			  <p class="price"><i>¥</i><span class="num">108.90</span></p>
-	        </a>
+            <img class="photo" src="./imgs/p/15.jpg" alt="">
+              <p class="title"> 艾梵妮【多件套】韩版饰品发饰蝴蝶结发圈头饰发绳皮套头绳扎头发皮筋发卡发夹头花 9件套发圈【包邮】</p>
+              <p class="price"><i>¥</i><span class="num">108.90</span></p>
+            </a>
+            <a class="item" href="#">
+            <img class="photo" src="./imgs/p/14.jpg" alt="">
+              <p class="title"> 集倩2017秋冬睡衣女长袖纯棉开衫翻领休闲可爱家居服套装 日版JQ017 女M(单女士款)</p>
+              <p class="price"><i>¥</i><span class="num">15.90</span></p>
+            </a>
+            <a class="item" href="#">
+              <img class="photo" src="./imgs/p/3.jpg" alt="">
+              <p class="title"> 浪莎langsha新款吊带背心女 纯棉打底运动女士背心 工字白色 均码</p>
+              <p class="price"><i>¥</i><span class="num">15.90</span></p>
+            </a>
+            <a class="item" href="#">
+            <img class="photo" src="./imgs/p/4.jpg" alt="">
+              <p class="title">富安娜（FUANNA）家纺被子 舒暖磨毛冬厚被1.8米床适用（230cm*229cm）</p>
+              <p class="price"><i>¥</i><span class="num">189.90</span></p>
+            </a>
+            <a class="item" href="#"><img class="photo" src="./imgs/p/16.jpg" alt="">
+              <p class="title">费列罗（Ferrero Rocher）巧克力礼盒装进口金莎榛仁威化中秋情人节结婚礼物 费列罗30颗两层礼盒装【新鲜日期】</p>
+              <p class="price"><i>¥</i><span class="num">68.00</span></p>
+            </a>
+            <a class="item" href="#">
+            <img class="photo" src="./imgs/p/11.jpg" alt="">
+              <p class="title">良品铺子 芒果干108g果脯蜜饯果干休闲零食 新老包装切换中</p>
+              <p class="price"><i>¥</i><span class="num">18.90</span></p>
+            </a>
+            <a class="item" href="#"><img class="photo" src="./imgs/p/12.jpg" alt="">
+              <p class="title">傲世瓷业 景德镇陶瓷器古典粉彩装饰盘工艺品客厅摆件家居装饰品摆设P888 咏竹</p>
+              <p class="price"><i>¥</i><span class="num">45.00</span></p>
+            </a>
+            <a class="item" href="#">
+            <img class="photo" src="./imgs/p/1.jpg" alt="">
+              <p class="title">百草味 牛肉干 肉类零食 零食特产肉制品 五香牛肉粒100g/袋</p>
+              <p class="price"><i>¥</i><span class="num">15.90</span></p>
+             </a>
+            <a class="item" href="#">
+            <img class="photo" src="./imgs/p/15.jpg" alt="">
+              <p class="title"> 艾梵妮【多件套】韩版饰品发饰蝴蝶结发圈头饰发绳皮套头绳扎头发皮筋发卡发夹头花 9件套发圈【包邮】</p>
+              <p class="price"><i>¥</i><span class="num">108.90</span></p>
+            </a>
         </div>
     </div>
     <div class="footer_panel">

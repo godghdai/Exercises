@@ -23,6 +23,10 @@
     height: 28px;
 }
 
+#top_menu .city:hover {
+    z-index: 998;
+}
+
 #top_menu .city:hover .head {
     border: 1px solid #cccccc;
     background: #fff;
@@ -32,7 +36,7 @@
 }
 
 #top_menu .city:hover .detail {
-    display: block;
+    display: block!important;
 }
 
 #top_menu .city .head {
@@ -100,7 +104,7 @@
 
 #top_menu .menus .menu {
     float: left;
- }
+}
 
 #top_menu .menu .head {
     /*ie6会占满一行*/
@@ -117,7 +121,7 @@
 }
 
 #top_menu .menus .line {
-    float:left;
+    float: left;
     overflow: hidden;
     margin: 11px 5px 0;
     width: 1px;
@@ -131,6 +135,7 @@
 
 #top_menu .menu_myjd .detail {
     position: absolute;
+    left: 0;
     top: 30px;
     padding: 10px 0;
     width: 280px;
@@ -157,22 +162,30 @@
     line-height: 24px;
 }
 
+#top_menu .menu_myjd:hover {
+    z-index: 998;
+}
+
 #top_menu .menu_myjd:hover .head {
     position: relative;
     border: 1px solid #cccccc;
     background: #fff;
     border-bottom: none;
     padding-bottom: 1px;
-     z-index: 999;
+    z-index: 999;
 }
 
 #top_menu .menu_myjd:hover .detail {
-    display: block;
+    display: block!important;
 }
 
+#top_menu .menu_service {
+    position: relative;
+}
 
 #top_menu .menu_service .detail {
     position: absolute;
+    left: 0;
     top: 30px;
     width: 170px;
     border: 1px solid #cccccc;
@@ -202,8 +215,12 @@
     width: 100%;
 }
 
+#top_menu .menu_service:hover {
+    z-index: 998;
+}
+
 #top_menu .menu_service:hover .detail {
-    display: block;
+    display: block!important;
 }
 
 #top_menu .menu_service:hover .head {
@@ -212,11 +229,15 @@
     background: #fff;
     border-bottom: none;
     padding-bottom: 1px;
-     z-index: 999;
+    z-index: 999;
 }
 
 #top_menu .menu_links {
     position: relative;
+}
+
+#top_menu .menu_links:hover {
+    z-index: 998;
 }
 
 #top_menu .menu_links:hover .head {
@@ -229,12 +250,12 @@
 }
 
 #top_menu .menu_links:hover .detail {
-    display: block;
+    display: block!important;
 }
 
 #top_menu .menu_links .detail {
     position: absolute;
-    right: -84px;
+    right: -75px;
     top: 30px;
     width: 1188px;
     border: 1px solid #cccccc;
@@ -275,8 +296,17 @@
     position: relative;
 }
 
+#top_menu .menu_tel:hover {
+    z-index: 998;
+}
+
 #top_menu .menu_tel:hover .detail {
-    display: block;
+    display: block!important;
+}
+
+#top_menu .menu_tel:hover .head {
+    position: relative;
+    z-index: 999;
 }
 
 #top_menu .menu_tel .detail {
@@ -368,6 +398,6 @@
 }
 
 #top_menu .detail {
-    z-index: 900;
+    /*z-index: 999;*/
     background: #fff;
 }

@@ -1,0 +1,14 @@
+{
+  "name": "jd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "calendar.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.5"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}

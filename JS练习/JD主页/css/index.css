@@ -267,6 +267,7 @@ img {
     border: 1px solid #f7f7f7;
     background-color: #f7f7f7;
     box-shadow: 2px 0 5px rgba(0, 0, 0, .3);
+    z-index: 9;
 }
 
 .nav_submenus_con {

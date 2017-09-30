@@ -23,6 +23,8 @@
 
 .module .tab_content {
     position: relative;
+    height: 148px;
+    overflow: hidden;
 }
 
 .module .tab_title a {

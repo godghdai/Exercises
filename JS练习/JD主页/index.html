@@ -311,7 +311,7 @@
         </div>
     </div>
     <div class="nav_panel center clearfix">
-        <div class="menus fl">
+        <div class="menus fl" id="main_menus">
             <ul>
                 <li><a href="#">家用电器</a></li>
                 <li>
@@ -471,7 +471,7 @@
                 </ul>
             </div>
         </div>
-        <div class="nav_submenus hide">
+        <div class="nav_submenus hide" id="submenus">
             <div class="nav_submenus_con clearfix">
                 <div class="col1 fl">
                     <div class="head">
@@ -551,6 +551,62 @@
                             <a href="#">其它厨房电器</a>
                         </dd>
                     </dl>
+                      <dl class="submenu clearfix">
+                        <dt class="title"><a href="#">厨房小电<i class="iconfont"></i></a></dt>
+                        <dd class="data clearfix">
+                            <a href="#">电饭煲</a>
+                            <a href="#">微波炉</a>
+                            <a href="#">电烤箱</a>
+                            <a href="#">电磁炉</a>
+                            <a href="#">电陶炉</a>
+                            <a href="#">电压力锅</a>
+                            <a href="#">空气炸锅</a>
+                            <a href="#">豆浆机</a>
+                            <a href="#">咖啡机</a>
+                            <a href="#">面包机</a>
+                            <a href="#">榨汁机/原汁机</a>
+                            <a href="#">料理机</a>
+                            <a href="#">电饼铛</a>
+                            <a href="#">养生壶/煎药壶</a>
+                            <a href="#">酸奶机</a>
+                            <a href="#">煮蛋器</a>
+                            <a href="#">面条机</a>
+                            <a href="#">电水壶/热水瓶</a>
+                            <a href="#">电炖锅</a>
+                            <a href="#">多用途锅</a>
+                            <a href="#">电烧烤炉</a>
+                            <a href="#">电热饭盒</a>
+                            <a href="#">其它厨房电器</a>
+                        </dd>
+                    </dl>
+                      <dl class="submenu clearfix">
+                        <dt class="title"><a href="#">厨房小电<i class="iconfont"></i></a></dt>
+                        <dd class="data clearfix">
+                            <a href="#">电饭煲</a>
+                            <a href="#">微波炉</a>
+                            <a href="#">电烤箱</a>
+                            <a href="#">电磁炉</a>
+                            <a href="#">电陶炉</a>
+                            <a href="#">电压力锅</a>
+                            <a href="#">空气炸锅</a>
+                            <a href="#">豆浆机</a>
+                            <a href="#">咖啡机</a>
+                            <a href="#">面包机</a>
+                            <a href="#">榨汁机/原汁机</a>
+                            <a href="#">料理机</a>
+                            <a href="#">电饼铛</a>
+                            <a href="#">养生壶/煎药壶</a>
+                            <a href="#">酸奶机</a>
+                            <a href="#">煮蛋器</a>
+                            <a href="#">面条机</a>
+                            <a href="#">电水壶/热水瓶</a>
+                            <a href="#">电炖锅</a>
+                            <a href="#">多用途锅</a>
+                            <a href="#">电烧烤炉</a>
+                            <a href="#">电热饭盒</a>
+                            <a href="#">其它厨房电器</a>
+                        </dd>
+                    </dl>
                 </div>
                 <div class="col2 fl">
                     <div class="logos">
@@ -569,7 +625,7 @@
             </div>
         </div>
     </div>
-    <div class="module module_telephone_fare hide">
+    <div class="module module_telephone_fare">
         <div class="head">
             <a class="close iconfont" href="javascript:;"></a>
         </div>
@@ -666,7 +722,7 @@
             </div>
         </div>
     </div>
-    <div class="module module_plane_ticket hide">
+    <div class="module module_plane_ticket">
         <div class="head">
             <a class="close iconfont" href="javascript:;"></a>
         </div>
@@ -679,9 +735,9 @@
             <div class="con_wrap clearfix">
                 <div class="col">
                     <div class="row first">
-                        <input type="radio" name="type" checked="checked" />
+                        <input type="radio" name="plane_ticket_type" checked="checked" />
                         <label class="radiotype" style="margin-right: 11px">单程</label>
-                        <input type="radio" name="type" />
+                        <input type="radio" name="plane_ticket_type" />
                         <label class="radiotype">往返</label>
                     </div>
                     <div class="row">
@@ -710,9 +766,9 @@
                 </div>
                 <div class="col">
                     <div class="row first">
-                        <input type="radio" name="type2" checked="checked" />
+                        <input type="radio" name="plane_ticket_type2" checked="checked" />
                         <label class="radiotype" style="margin-right: 11px">单程</label>
-                        <input type="radio" name="type2" />
+                        <input type="radio" name="plane_ticket_type2" />
                         <label class="radiotype">往返</label>
                     </div>
                     <div class="row">
@@ -748,7 +804,7 @@
             </div>
         </div>
     </div>
-    <div class="module module_hotel hide">
+    <div class="module module_hotel">
         <div class="head">
             <a class="close iconfont" href="javascript:;"></a>
         </div>
@@ -794,7 +850,7 @@
             </div>
         </div>
     </div>
-    <div class="module module_game hide">
+    <div class="module module_game">
         <div class="head">
             <a class="close iconfont" href="javascript:;"></a>
         </div>
@@ -827,9 +883,9 @@
                         <span class="info">￥98.0</span>
                     </div>
                     <div class="row vm">
-                        <input type="radio" name="type2" checked="checked">
+                        <input type="radio" name="game_type2" checked="checked">
                         <label class="radiotype" style="margin-right: 11px">直冲</label>
-                        <input type="radio" name="type2">
+                        <input type="radio" name="game_type2">
                         <label class="radiotype" style="margin-right: 11px">卡密</label>
                     </div>
                     <div class="row">
@@ -859,7 +915,7 @@
                         <span class="info">￥98.0</span>
                     </div>
                     <div class="row vm">
-                        <input type="radio" name="type" checked="checked">
+                        <input type="radio" name="game_type3" checked="checked">
                         <label class="radiotype" style="margin-right: 11px">直冲</label>
                     </div>
                     <div class="row">

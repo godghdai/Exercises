@@ -73,16 +73,26 @@ define(function() {
         "random": random,
         "inherit": inherit,
         "deepCopy": deepCopy,
-        "hasClass":hasClass,
-        "addClass":addClass,
-        "removeClass":removeClass,
-        "toggleClass":toggleClass,
+        "hasClass": hasClass,
+        "addClass": addClass,
+        "removeClass": removeClass,
+        "toggleClass": toggleClass,
         "newId": function(pre) {
             return (pre || "util") + _id++;
         },
         "$$": function(id) {
             return document.getElementById(id);
         },
-        "$": getElementsByClassName
+        "$": getElementsByClassName,
+        "transitionCheck":function() {
+            var thisBody = document.body || document.documentElement,
+                thisStyle = thisBody.style,
+                support = thisStyle.transition !== undefined ||
+                thisStyle.WebkitTransition !== undefined ||
+                thisStyle.MozTransition !== undefined ||
+                thisStyle.MsTransition !== undefined ||
+                thisStyle.OTransition !== undefined;
+            return support;
+        }
     }
 });

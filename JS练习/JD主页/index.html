@@ -452,14 +452,14 @@
                     </ul>
                 </div>
             </div>
-            <div class="tools_wrap">
-                <ul class="tools_con">
-                    <li class="tools_item active"><a href="javascript:void(0)" target="_blank"><i class="ico ico_hf"></i><span class="title">话费</span></a></li>
-                    <li class="tools_item "><a href="javascript:void(0)" target="_blank"><i class="ico ico_jp"></i><span class="title">机票</span> <span class="ico_minus"><span class="info">减</span><i class="arrow"></i></span></a>
+            <div class="tools_wrap" id="toolsPanel">
+                <ul class="tools_con" id="toolsPanelCon">
+                    <li class="tools_item"><a href="javascript:void(0)" target="_blank"><i class="ico ico_hf"></i><span class="title">话费</span></a></li>
+                    <li class="tools_item"><a href="javascript:void(0)" target="_blank"><i class="ico ico_jp"></i><span class="title">机票</span> <span class="ico_minus"><span class="info">减</span><i class="arrow"></i></span></a>
                     </li>
-                    <li class="tools_item active"><a href="javascript:void(0)" target="_blank"><i class="ico ico_jd"></i><span class="title">酒店</span><span class="ico_minus"><span class="info">减</span><i class="arrow"></i></span></a>
+                    <li class="tools_item"><a href="javascript:void(0)" target="_blank"><i class="ico ico_jd"></i><span class="title">酒店</span><span class="ico_minus"><span class="info">减</span><i class="arrow"></i></span></a>
                     </li>
-                    <li class="tools_item active"><a href="javascript:void(0)" target="_blank"><i class="ico ico_yx"></i><span class="title">游戏</span></a></li>
+                    <li class="tools_item"><a href="javascript:void(0)" target="_blank"><i class="ico ico_yx"></i><span class="title">游戏</span></a></li>
                     <li class="tools_item"><a href="#" target="_blank"><i class="ico ico_qyg"></i><span class="title">企业购</span></a></li>
                     <li class="tools_item"><a href="#" target="_blank"><i class="ico ico_jyk"></i><span class="title">加油卡</span></a></li>
                     <li class="tools_item"><a href="#" target="_blank"><i class="ico ico_dyp"></i><span class="title">电影票</span></a></li>
@@ -469,6 +469,318 @@
                     <li class="tools_item"><a href="#" target="_blank"><i class="ico ico_lpk"></i><span class="title">礼品卡</span></a></li>
                     <li class="tools_item"><a href="#" target="_blank"><i class="ico ico_bt"></i><span class="title">白条</span></a></li>
                 </ul>
+                <div class="pop_win_mask"></div>
+                <div class="pop_win">
+                    <div class="pop_wrap">
+                        <div class="module module_telephone_fare">
+                            <div class="head">
+                                <a class="close iconfont" href="javascript:;"></a>
+                            </div>
+                            <div class="tab_title clearfix">
+                                <a class="active" href="javascript:void(0)">话费充值</a>
+                                <a href="javascript:void(0)">流量充值</a>
+                                <a class="" href="javascript:void(0)">陶瓷变更</a>
+                            </div>
+                            <div class="tab_content">
+                                <div class="con_wrap clearfix">
+                                    <div class="col">
+                                        <div class="row">
+                                            <label>号码</label>
+                                            <input class="telephone" type="text" value="请输入手机号" />
+                                        </div>
+                                        <div class="row">
+                                            <label>面值</label>
+                                            <select class="">
+                                                <option value="10">10元</option>
+                                                <option value="20">20元</option>
+                                                <option value="30">30元</option>
+                                                <option value="50">50元</option>
+                                                <option selected="selected" value="100">100元</option>
+                                                <option value="200">200元</option>
+                                                <option value="300">300元</option>
+                                                <option value="500">500元</option>
+                                            </select>
+                                            <span class="info">￥98.0-￥100.0</span>
+                                        </div>
+                                        <div class="row">
+                                            <input class="button" type="button" value="快速充值">
+                                        </div>
+                                        <div class="row">
+                                            <a class="link" href="#"><i class="ico_hot"></i>抢50元话费券</a>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="row">
+                                            <label>号码</label>
+                                            <input class="telephone" type="text" value="请输入手机号" />
+                                        </div>
+                                        <div class="row">
+                                            <label>流量</label>
+                                            <select>
+                                                <option value="10">全国</option>
+                                                <option value="20">省内</option>
+                                            </select>
+                                            <select>
+                                                <option value="50" selected="">50M</option>
+                                                <option value="100">100M</option>
+                                                <option value="200">200M</option>
+                                                <option value="300">300M</option>
+                                                <option value="500">500M</option>
+                                            </select>
+                                        </div>
+                                        <div class="row mt5">
+                                            <span class="info">￥7.5-￥10.0</span>
+                                        </div>
+                                        <div class="row mt5">
+                                            <input class="button" type="button" value="快速充值">
+                                        </div>
+                                        <div class="row">
+                                            <a class="link" href="#"><i class="ico_hot"></i>App Store充值卡</a>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="row">
+                                            <label>号码</label>
+                                            <input class="telephone" type="text" value="请输入手机号" />
+                                        </div>
+                                        <div class="row">
+                                            <label>月费</label>
+                                            <select>
+                                                <option value="5215" _flow="300" _times="50">38元</option>
+                                                <option value="5213" _flow="500" _times="50">48元</option>
+                                                <option value="5211" _flow="500" _times="100">58元</option>
+                                                <option value="5212" _flow="700" _times="220">88元</option>
+                                                <option value="5199" _flow="1024" _times="500" selected="selected">138元</option>
+                                                <option value="5200" _flow="2048" _times="500">158元</option>
+                                                <option value="5201" _flow="2048" _times="1000">238元</option>
+                                                <option value="5202" _flow="3072" _times="1000">268元</option>
+                                                <option value="5203" _flow="3072" _times="2000">338元</option>
+                                                <option value="5204" _flow="6144" _times="4000">588元</option>
+                                            </select>
+                                            <span class="info">500分钟1G流量</span>
+                                        </div>
+                                        <div class="row">
+                                            <input class="button" type="button" value="办理变更">
+                                        </div>
+                                        <div class="row">
+                                            <a class="link" href="#"><i class="ico_hot"></i>a低至18元</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="module module_plane_ticket">
+                            <div class="head">
+                                <a class="close iconfont" href="javascript:;"></a>
+                            </div>
+                            <div class="tab_title clearfix">
+                                <a href="javascript:void(0)">国内机票</a>
+                                <a class="active" href="javascript:void(0)">国际/港澳台</a>
+                                <a class="" href="javascript:void(0)">特惠活动</a>
+                            </div>
+                            <div class="tab_content">
+                                <div class="con_wrap clearfix">
+                                    <div class="col">
+                                        <div class="row first">
+                                            <input type="radio" name="plane_ticket_type" checked="checked" />
+                                            <label class="radiotype" style="margin-right: 11px">单程</label>
+                                            <input type="radio" name="plane_ticket_type" />
+                                            <label class="radiotype">往返</label>
+                                        </div>
+                                        <div class="row">
+                                            <div class="inputwrap">
+                                                <input class="input" type="text" value="" placeholder="城市">
+                                                <span class="title">出发</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="inputwrap">
+                                                <input class="input" type="text" value="" placeholder="城市">
+                                                <span class="title">到达</span>
+                                            </div>
+                                        </div>
+                                        <div class="row mb9">
+                                            <div class="inputwrap">
+                                                <input class="input input2" type="text" value="" placeholder="日期">
+                                                <span class="title">日期</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <input class="button" type="button" value="机票查询">
+                                            <a class="link" href="#">当季热门特惠机票</a>
+                                        </div>
+                                        <span class="ico_change"></span>
+                                    </div>
+                                    <div class="col">
+                                        <div class="row first">
+                                            <input type="radio" name="plane_ticket_type2" checked="checked" />
+                                            <label class="radiotype" style="margin-right: 11px">单程</label>
+                                            <input type="radio" name="plane_ticket_type2" />
+                                            <label class="radiotype">往返</label>
+                                        </div>
+                                        <div class="row">
+                                            <div class="inputwrap">
+                                                <input class="input" type="text" value="" placeholder="城市">
+                                                <span class="title">出发</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="inputwrap">
+                                                <input class="input" type="text" value="" placeholder="城市">
+                                                <span class="title">到达</span>
+                                            </div>
+                                        </div>
+                                        <div class="row mb9">
+                                            <div class="inputwrap">
+                                                <input class="input input2" type="text" value="" placeholder="日期">
+                                                <span class="title">日期</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <input class="button" type="button" value="机票查询">
+                                            <a class="link" href="#">国际机票任性搜 </a>
+                                        </div>
+                                        <span class="ico_change"></span>
+                                    </div>
+                                    <div class="col">
+                                        <div class="ad_con">
+                                            <a href="#"><img src="./imgs/tool/img1.jpg" alt=""></a>
+                                            <a href="#"><img src="./imgs/tool/img2.jpg" alt=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="module module_hotel">
+                            <div class="head">
+                                <a class="close iconfont" href="javascript:;"></a>
+                            </div>
+                            <div class="tab_title clearfix">
+                                <a class="title1 active" href="javascript:void(0)">国内/港澳台</a>
+                                <a class="title2 active" href="javascript:void(0)">促销活动</a>
+                            </div>
+                            <div class="tab_content">
+                                <div class="con_wrap clearfix">
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="inputwrap">
+                                                <input class="input" type="text" value="" placeholder="北京">
+                                                <span class="title">目的地</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="inputwrap">
+                                                <input class="input" type="text" value="" placeholder="2017-09-21">
+                                                <span class="title">入住日期</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="inputwrap">
+                                                <input class="input input2" type="text" value="" placeholder="2017-09-21">
+                                                <span class="title">离店日期</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <input class="input input3" type="text" value="" placeholder="酒店/商圈/地标">
+                                        </div>
+                                        <div class="row">
+                                            <input class="button" type="button" value="酒店查询">
+                                            <a class="link" href="#">订酒店上京东</a>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="ad_con">
+                                            <a href="#"><img src="./imgs/tool/img3.jpg" alt=""></a>
+                                            <a href="#"><img src="./imgs/tool/img4.jpg" alt=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="module module_game">
+                            <div class="head">
+                                <a class="close iconfont" href="javascript:;"></a>
+                            </div>
+                            <div class="tab_title clearfix">
+                                <a class="title active" href="javascript:void(0)">点卡</a>
+                                <a class="title" href="javascript:void(0)">QQ</a>
+                                <a class="title" href="javascript:void(0)">页游</a>
+                            </div>
+                            <div class="tab_content">
+                                <div class="con_wrap clearfix">
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="inputwrap">
+                                                <input class="input" type="text" value="" placeholder="游戏">
+                                                <span class="title">游戏</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label>面值</label>
+                                            <select>
+                                                <option value="10">10元</option>
+                                                <option value="20">20元</option>
+                                                <option value="30">30元</option>
+                                                <option value="50">50元</option>
+                                                <option selected="selected" value="100">100元</option>
+                                                <option value="200">200元</option>
+                                                <option value="300">300元</option>
+                                                <option value="500">500元</option>
+                                            </select>
+                                            <span class="info">￥98.0</span>
+                                        </div>
+                                        <div class="row vm">
+                                            <input type="radio" name="game_type2" checked="checked">
+                                            <label class="radiotype" style="margin-right: 11px">直冲</label>
+                                            <input type="radio" name="game_type2">
+                                            <label class="radiotype" style="margin-right: 11px">卡密</label>
+                                        </div>
+                                        <div class="row">
+                                            <input class="button" type="button" value="快速充值">
+                                            <a class="link" href="#">学生去享8折</a>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="inputwrap">
+                                                <input class="input" type="text" value="" placeholder="游戏">
+                                                <span class="title">游戏</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label>面值</label>
+                                            <select>
+                                                <option value="10">10元</option>
+                                                <option value="20">20元</option>
+                                                <option value="30">30元</option>
+                                                <option value="50">50元</option>
+                                                <option selected="selected" value="100">100元</option>
+                                                <option value="200">200元</option>
+                                                <option value="300">300元</option>
+                                                <option value="500">500元</option>
+                                            </select>
+                                            <span class="info">￥98.0</span>
+                                        </div>
+                                        <div class="row vm">
+                                            <input type="radio" name="game_type3" checked="checked">
+                                            <label class="radiotype" style="margin-right: 11px">直冲</label>
+                                        </div>
+                                        <div class="row">
+                                            <input class="button" type="button" value="快速充值">
+                                            <a class="link" href="#">学生去享8折</a>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="ad_con">
+                                            <a href="#"><img src="./imgs/tool/img5.jpg" alt=""></a>
+                                            <a href="#"><img src="./imgs/tool/img6.jpg" alt=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="nav_submenus hide" id="submenus">
@@ -551,7 +863,7 @@
                             <a href="#">其它厨房电器</a>
                         </dd>
                     </dl>
-                      <dl class="submenu clearfix">
+                    <dl class="submenu clearfix">
                         <dt class="title"><a href="#">厨房小电<i class="iconfont"></i></a></dt>
                         <dd class="data clearfix">
                             <a href="#">电饭煲</a>
@@ -579,7 +891,7 @@
                             <a href="#">其它厨房电器</a>
                         </dd>
                     </dl>
-                      <dl class="submenu clearfix">
+                    <dl class="submenu clearfix">
                         <dt class="title"><a href="#">厨房小电<i class="iconfont"></i></a></dt>
                         <dd class="data clearfix">
                             <a href="#">电饭煲</a>
@@ -621,313 +933,6 @@
                     </div>
                     <a href="#" class="ad"><img src="./imgs/banner/c1.jpg" alt=""></a>
                     <a href="#" class="ad"><img src="./imgs/banner/c2.jpg" alt=""></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="module module_telephone_fare">
-        <div class="head">
-            <a class="close iconfont" href="javascript:;"></a>
-        </div>
-        <div class="tab_title clearfix">
-            <a class="active" href="javascript:void(0)">话费充值</a>
-            <a href="javascript:void(0)">流量充值</a>
-            <a class="" href="javascript:void(0)">陶瓷变更</a>
-        </div>
-        <div class="tab_content">
-            <div class="con_wrap clearfix">
-                <div class="col">
-                    <div class="row">
-                        <label>号码</label>
-                        <input class="telephone" type="text" value="请输入手机号" />
-                    </div>
-                    <div class="row">
-                        <label>面值</label>
-                        <select class="">
-                            <option value="10">10元</option>
-                            <option value="20">20元</option>
-                            <option value="30">30元</option>
-                            <option value="50">50元</option>
-                            <option selected="selected" value="100">100元</option>
-                            <option value="200">200元</option>
-                            <option value="300">300元</option>
-                            <option value="500">500元</option>
-                        </select>
-                        <span class="info">￥98.0-￥100.0</span>
-                    </div>
-                    <div class="row">
-                        <input class="button" type="button" value="快速充值">
-                    </div>
-                    <div class="row">
-                        <a class="link" href="#"><i class="ico_hot"></i>抢50元话费券</a>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="row">
-                        <label>号码</label>
-                        <input class="telephone" type="text" value="请输入手机号" />
-                    </div>
-                    <div class="row">
-                        <label>流量</label>
-                        <select>
-                            <option value="10">全国</option>
-                            <option value="20">省内</option>
-                        </select>
-                        <select>
-                            <option value="50" selected="">50M</option>
-                            <option value="100">100M</option>
-                            <option value="200">200M</option>
-                            <option value="300">300M</option>
-                            <option value="500">500M</option>
-                        </select>
-                    </div>
-                    <div class="row mt5">
-                        <span class="info">￥7.5-￥10.0</span>
-                    </div>
-                    <div class="row mt5">
-                        <input class="button" type="button" value="快速充值">
-                    </div>
-                    <div class="row">
-                        <a class="link" href="#"><i class="ico_hot"></i>App Store充值卡</a>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="row">
-                        <label>号码</label>
-                        <input class="telephone" type="text" value="请输入手机号" />
-                    </div>
-                    <div class="row">
-                        <label>月费</label>
-                        <select>
-                            <option value="5215" _flow="300" _times="50">38元</option>
-                            <option value="5213" _flow="500" _times="50">48元</option>
-                            <option value="5211" _flow="500" _times="100">58元</option>
-                            <option value="5212" _flow="700" _times="220">88元</option>
-                            <option value="5199" _flow="1024" _times="500" selected="selected">138元</option>
-                            <option value="5200" _flow="2048" _times="500">158元</option>
-                            <option value="5201" _flow="2048" _times="1000">238元</option>
-                            <option value="5202" _flow="3072" _times="1000">268元</option>
-                            <option value="5203" _flow="3072" _times="2000">338元</option>
-                            <option value="5204" _flow="6144" _times="4000">588元</option>
-                        </select>
-                        <span class="info">500分钟1G流量</span>
-                    </div>
-                    <div class="row">
-                        <input class="button" type="button" value="办理变更">
-                    </div>
-                    <div class="row">
-                        <a class="link" href="#"><i class="ico_hot"></i>a低至18元</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="module module_plane_ticket">
-        <div class="head">
-            <a class="close iconfont" href="javascript:;"></a>
-        </div>
-        <div class="tab_title clearfix">
-            <a href="javascript:void(0)">国内机票</a>
-            <a class="active" href="javascript:void(0)">国际/港澳台</a>
-            <a class="" href="javascript:void(0)">特惠活动</a>
-        </div>
-        <div class="tab_content">
-            <div class="con_wrap clearfix">
-                <div class="col">
-                    <div class="row first">
-                        <input type="radio" name="plane_ticket_type" checked="checked" />
-                        <label class="radiotype" style="margin-right: 11px">单程</label>
-                        <input type="radio" name="plane_ticket_type" />
-                        <label class="radiotype">往返</label>
-                    </div>
-                    <div class="row">
-                        <div class="inputwrap">
-                            <input class="input" type="text" value="" placeholder="城市">
-                            <span class="title">出发</span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="inputwrap">
-                            <input class="input" type="text" value="" placeholder="城市">
-                            <span class="title">到达</span>
-                        </div>
-                    </div>
-                    <div class="row mb9">
-                        <div class="inputwrap">
-                            <input class="input input2" type="text" value="" placeholder="日期">
-                            <span class="title">日期</span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <input class="button" type="button" value="机票查询">
-                        <a class="link" href="#">当季热门特惠机票</a>
-                    </div>
-                    <span class="ico_change"></span>
-                </div>
-                <div class="col">
-                    <div class="row first">
-                        <input type="radio" name="plane_ticket_type2" checked="checked" />
-                        <label class="radiotype" style="margin-right: 11px">单程</label>
-                        <input type="radio" name="plane_ticket_type2" />
-                        <label class="radiotype">往返</label>
-                    </div>
-                    <div class="row">
-                        <div class="inputwrap">
-                            <input class="input" type="text" value="" placeholder="城市">
-                            <span class="title">出发</span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="inputwrap">
-                            <input class="input" type="text" value="" placeholder="城市">
-                            <span class="title">到达</span>
-                        </div>
-                    </div>
-                    <div class="row mb9">
-                        <div class="inputwrap">
-                            <input class="input input2" type="text" value="" placeholder="日期">
-                            <span class="title">日期</span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <input class="button" type="button" value="机票查询">
-                        <a class="link" href="#">国际机票任性搜 </a>
-                    </div>
-                    <span class="ico_change"></span>
-                </div>
-                <div class="col">
-                    <div class="ad_con">
-                        <a href="#"><img src="./imgs/tool/img1.jpg" alt=""></a>
-                        <a href="#"><img src="./imgs/tool/img2.jpg" alt=""></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="module module_hotel">
-        <div class="head">
-            <a class="close iconfont" href="javascript:;"></a>
-        </div>
-        <div class="tab_title clearfix">
-            <a class="title1 active" href="javascript:void(0)">国内/港澳台</a>
-            <a class="title2 active" href="javascript:void(0)">促销活动</a>
-        </div>
-        <div class="tab_content">
-            <div class="con_wrap clearfix">
-                <div class="col">
-                    <div class="row">
-                        <div class="inputwrap">
-                            <input class="input" type="text" value="" placeholder="北京">
-                            <span class="title">目的地</span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="inputwrap">
-                            <input class="input" type="text" value="" placeholder="2017-09-21">
-                            <span class="title">入住日期</span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="inputwrap">
-                            <input class="input input2" type="text" value="" placeholder="2017-09-21">
-                            <span class="title">离店日期</span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <input class="input input3" type="text" value="" placeholder="酒店/商圈/地标">
-                    </div>
-                    <div class="row">
-                        <input class="button" type="button" value="酒店查询">
-                        <a class="link" href="#">订酒店上京东</a>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="ad_con">
-                        <a href="#"><img src="./imgs/tool/img3.jpg" alt=""></a>
-                        <a href="#"><img src="./imgs/tool/img4.jpg" alt=""></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="module module_game">
-        <div class="head">
-            <a class="close iconfont" href="javascript:;"></a>
-        </div>
-        <div class="tab_title clearfix">
-            <a class="title active" href="javascript:void(0)">点卡</a>
-            <a class="title" href="javascript:void(0)">QQ</a>
-            <a class="title" href="javascript:void(0)">页游</a>
-        </div>
-        <div class="tab_content">
-            <div class="con_wrap clearfix">
-                <div class="col">
-                    <div class="row">
-                        <div class="inputwrap">
-                            <input class="input" type="text" value="" placeholder="游戏">
-                            <span class="title">游戏</span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <label>面值</label>
-                        <select>
-                            <option value="10">10元</option>
-                            <option value="20">20元</option>
-                            <option value="30">30元</option>
-                            <option value="50">50元</option>
-                            <option selected="selected" value="100">100元</option>
-                            <option value="200">200元</option>
-                            <option value="300">300元</option>
-                            <option value="500">500元</option>
-                        </select>
-                        <span class="info">￥98.0</span>
-                    </div>
-                    <div class="row vm">
-                        <input type="radio" name="game_type2" checked="checked">
-                        <label class="radiotype" style="margin-right: 11px">直冲</label>
-                        <input type="radio" name="game_type2">
-                        <label class="radiotype" style="margin-right: 11px">卡密</label>
-                    </div>
-                    <div class="row">
-                        <input class="button" type="button" value="快速充值">
-                        <a class="link" href="#">学生去享8折</a>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="row">
-                        <div class="inputwrap">
-                            <input class="input" type="text" value="" placeholder="游戏">
-                            <span class="title">游戏</span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <label>面值</label>
-                        <select>
-                            <option value="10">10元</option>
-                            <option value="20">20元</option>
-                            <option value="30">30元</option>
-                            <option value="50">50元</option>
-                            <option selected="selected" value="100">100元</option>
-                            <option value="200">200元</option>
-                            <option value="300">300元</option>
-                            <option value="500">500元</option>
-                        </select>
-                        <span class="info">￥98.0</span>
-                    </div>
-                    <div class="row vm">
-                        <input type="radio" name="game_type3" checked="checked">
-                        <label class="radiotype" style="margin-right: 11px">直冲</label>
-                    </div>
-                    <div class="row">
-                        <input class="button" type="button" value="快速充值">
-                        <a class="link" href="#">学生去享8折</a>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="ad_con">
-                        <a href="#"><img src="./imgs/tool/img5.jpg" alt=""></a>
-                        <a href="#"><img src="./imgs/tool/img6.jpg" alt=""></a>
-                    </div>
                 </div>
             </div>
         </div>

@@ -3,7 +3,7 @@
     width: 190px;
     height: 185px;
     background: #fff;
-    margin-bottom: 10px;
+    /*margin-bottom: 10px;*/
 }
 
 .module .head {
@@ -431,4 +431,9 @@
 .module_game .mtb15 {
     margin-top: 15px;
     margin-bottom: 15px;
+}
+
+
+#toolsPanel .pop_wrap{
+    
 }

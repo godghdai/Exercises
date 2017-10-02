@@ -371,6 +371,7 @@ img {
 .nav_panel .tools_wrap {
     position: relative;
     height: 210px;
+    +overflow: hidden;
 }
 
 .nav_panel .tools_con {

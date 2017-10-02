@@ -146,11 +146,15 @@
 .buy_now .product_wrap {
     float: left;
     width: 1000px;
+    height: 100%;
     overflow: hidden;
     position: relative;
 }
 
 .buy_now .product_con {
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 6000px;
 }
 
@@ -252,6 +256,9 @@
     -moz-transform: translateY(-5px);
     -ms-transform: translateY(-5px);
     transform: translateY(-5px);
+}
+.buy_now .product .link:hover .title{
+   color: #c81623;
 }
 
 .buy_now .product .shadow {

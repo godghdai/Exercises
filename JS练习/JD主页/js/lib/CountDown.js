@@ -1,7 +1,7 @@
  define(["Util"], function(Util) {
      function CountDown(config) {
          if (!(this instanceof CountDown)) return new CountDown(config);
-         this.endTime = Date.parse("2017-09-30 00:00:00");
+         this.endTime =null; //Util.ie6?new Date(Date.parse("2017-09-30 00:00:00".replace(/-/g,"/"))).getTime():Date.parse("2017-09-30 00:00:00");
          this.timer = null;
          this.el = null;
          this.nums = null;
@@ -16,11 +16,13 @@
      CountDown.prototype.init = function(config) {
          var el = this.el = Util.$$(config.id || "countDown");
          this.nums = Util.$("num", el);
-         this.endTime = config.endTime||Date.parse("2017-09-29 00:00:00");
+         this.endTime = config.endTime;
      }
      CountDown.prototype.updateUI = function() {
          var now, seconds, day, hour, minute, second;
-         now = Date.now();
+         //now = Date.now();
+         now=new Date().getTime();
+
          seconds = parseInt((this.endTime - now) / 1000);
          if (seconds < 0) {
              clearInterval(this.timer);

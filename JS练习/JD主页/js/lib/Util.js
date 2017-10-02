@@ -56,10 +56,20 @@ define(function() {
 
     function removeClass(obj, cls) {
         if (hasClass(obj, cls)) {
-            var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
-            obj.className = obj.className.replace(reg, '');
+            // var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
+            // obj.className = obj.className.replace(reg, '');
+            var classNameList = obj.className.split(" ");
+            for (var i = 0; i < classNameList.length; i++) {
+                if (classNameList[i] == cls) {
+                    classNameList.splice(i, 1);
+                    break;
+                }
+            }
+            obj.className = classNameList.join(' ');
+
         }
     }
+
 
     function toggleClass(obj, cls) {
         if (hasClass(obj, cls)) {
@@ -84,7 +94,7 @@ define(function() {
             return document.getElementById(id);
         },
         "$": getElementsByClassName,
-        "transitionCheck":function() {
+        "transitionCheck": function() {
             var thisBody = document.body || document.documentElement,
                 thisStyle = thisBody.style,
                 support = thisStyle.transition !== undefined ||
@@ -93,6 +103,7 @@ define(function() {
                 thisStyle.MsTransition !== undefined ||
                 thisStyle.OTransition !== undefined;
             return support;
-        }
+        },
+        "ie6": !-[1, ] && !window.XMLHttpRequest
     }
 });

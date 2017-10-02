@@ -1,5 +1,8 @@
 /*话费 机票 酒店 游戏 模块*/
+
 .module {
+    +position: relative;
+    +overflow: hidden;
     width: 190px;
     height: 185px;
     background: #fff;
@@ -27,6 +30,8 @@
     overflow: hidden;
 }
 
+.module .tab_title {}
+
 .module .tab_title a {
     float: left;
     display: block;
@@ -34,11 +39,15 @@
     color: #666;
     white-space: nowrap;
     height: 21px;
+    +padding-top: 2px;
+    +height: 19px;
 }
 
 .module .tab_title .active {
     color: #fff;
     background: url(../imgs/tool_tab_title.png) center 0 no-repeat;
+    /*ie6下png图片，使用filter:progid:DXImageTransform.Microsoft.AlphaImageLoader，切换样式有问题，换gif*/
+    +background: url(../imgs/tool_tab_title_ie6.gif) center 0 no-repeat;
 }
 
 .module .info {
@@ -72,7 +81,7 @@
 }
 
 .module .ad_con {
-    height: 119px;
+    height: 129px;
 }
 
 .module .ad_con a {
@@ -80,6 +89,8 @@
     display: block;
     width: 79px;
     height: 119px;
+    /*ie6双边距BUG*/
+    +display: inline;
     margin-left: 10px;
     margin-top: 10px;
 }
@@ -91,9 +102,15 @@
 
 
 
+
+
+
+
 /*话费*/
+
 .module_telephone_fare .tab_title {
     padding-left: 8px;
+    +width: 570px;
 }
 
 .module_telephone_fare .tab_title a {
@@ -171,6 +188,8 @@
     vertical-align: -3px;
     margin-right: 3px;
     background: url(../imgs/iframe-hot.png) 0 center no-repeat;
+    +background: url(../imgs/iframe-hot.gif) 0 center no-repeat;
+    +vertical-align: 0;
 }
 
 .module_telephone_fare .mt5 {
@@ -178,7 +197,12 @@
 }
 
 
+
+
+
+
 /*机票*/
+
 .module_plane_ticket .tab_title {
     padding-left: 5px;
 }
@@ -209,6 +233,7 @@
     padding: 0;
     padding-left: 53px;
     height: 21px;
+    line-height: 21px;
     border: 1px solid #cccccc;
 }
 
@@ -221,6 +246,10 @@
 .module_plane_ticket .first label {
     vertical-align: middle;
 }
+
+
+
+
 
 /* WebKit browsers
  Mozilla Firefox 4 to 18
@@ -263,6 +292,8 @@
     text-align: center;
     background: #f5f5f5;
     color: #999;
+    /* ie6 7 1px偏差*/
+    *top: 2px;
 }
 
 .module_plane_ticket .button {
@@ -282,7 +313,12 @@
 
 
 
+
+
+
+
 /*酒店*/
+
 .module_hotel .tab_title {
     padding-left: 10px;
     margin-bottom: 5px;
@@ -309,6 +345,7 @@
     padding: 0;
     padding-left: 73px;
     height: 21px;
+    line-height: 21px;
     border: 1px solid #cccccc;
 }
 
@@ -316,6 +353,7 @@
     width: 168px;
     padding: 0;
     height: 21px;
+    line-height: 21px;
     border: 1px solid #cccccc;
     text-align: center;
 }
@@ -331,6 +369,8 @@
     text-align: center;
     background: #f5f5f5;
     color: #999;
+    /* ie6 7 1px偏差*/
+    *top: 2px;
 }
 
 .module_hotel .con_wrap {
@@ -361,16 +401,22 @@
     position: relative;
 }
 
+
+
+
+
 /*游戏*/
+
 .module_game .tab_title {
     padding-left: 10px;
+    margin-bottom: 5px;
 }
 
 .module_game .tab_title .title {
     padding: 0px 10px;
     line-height: 18px;
+    +line-height: 21px;
     margin-right: 10px;
-    margin-bottom: 10px;
 }
 
 .module_game .con_wrap {
@@ -402,6 +448,8 @@
     color: #999;
     line-height: 21px;
     padding-left: 8px;
+    /* ie6 7 1px偏差*/
+    *top: 2px;
 }
 
 .module_game .tab_content .row {
@@ -431,9 +479,4 @@
 .module_game .mtb15 {
     margin-top: 15px;
     margin-bottom: 15px;
-}
-
-
-#toolsPanel .pop_wrap{
-    
 }

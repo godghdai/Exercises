@@ -84,7 +84,9 @@
     white-space: nowrap;
     color: #999;
 }
-
+.search_panel .serach_words a:hover{
+ color: #c81623;   
+}
 .search_panel .cart_button {
     position: absolute;
     top: 25px;

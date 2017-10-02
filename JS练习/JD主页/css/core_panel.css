@@ -1,4 +1,3 @@
-
 .core_content {
     width: 570px;
     height: 455px;
@@ -161,11 +160,12 @@
     /* ie6 包不住子元素 必需同子元素设置一样position: relative*/
     position: relative;
     width: 568px;
-    -webkit-transition: -webkit-transform .6s cubic-bezier(0, 1.35, .83, .98);
+    height: 100%;
+    /* -webkit-transition: -webkit-transform .6s cubic-bezier(0, 1.35, .83, .98);
     transition: -webkit-transform .6s cubic-bezier(0, 1.35, .83, .98);
     -moz-transition: transform .6s cubic-bezier(0, 1.35, .83, .98), -moz-transform .6s cubic-bezier(0, 1.35, .83, .98);
     transition: transform .6s cubic-bezier(0, 1.35, .83, .98);
-    transition: transform .6s cubic-bezier(0, 1.35, .83, .98), -webkit-transform .6s cubic-bezier(0, 1.35, .83, .98), -moz-transform .6s cubic-bezier(0, 1.35, .83, .98);
+    transition: transform .6s cubic-bezier(0, 1.35, .83, .98), -webkit-transform .6s cubic-bezier(0, 1.35, .83, .98), -moz-transform .6s cubic-bezier(0, 1.35, .83, .98);*/
 }
 
 .core_footer_panel .logos_con {
@@ -292,8 +292,9 @@
     background-color: #ac6f93;
     color: #fff;
 }
+
 .core_panel_style1 .core_content .title {
-   color: #974676;
+    color: #974676;
 }
 
 
@@ -308,6 +309,7 @@
 .core_panel_style2 .core_head .tag {
     background-color: #d36581;
 }
+
 .core_panel_style2 .core_content .title {
     color: #cd375e;
 }
@@ -395,15 +397,22 @@
     width: 1170px;
 }
 
+.core_panel_big .logos_box {
+    padding-left: 15px;
+    overflow: hidden;
+    width: 1155px;
+    height: 100%;
+}
+
 .core_panel_big .logos_wrap {
-    width: 1170px;
+    width: 1155px;
 }
 
 .core_panel_big .logos_con {
-    margin-left: 15px;
+    /* margin-left: 15px;*/
     width: 2280px;
     *width: 2470px;
-    *margin-left: 16px;
+    /* *margin-left: 16px;*/
 }
 
 .core_panel_big .mline {

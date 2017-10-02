@@ -23,32 +23,20 @@
          this.animateTimer = null;
          this.step = 8;
          this.status = "close";
-         this.animateStatus="stop";
+         this.animateStatus = "stop";
          this.init();
          this.initUI();
+         this.initEvent();
      }
 
      ToolsPanel.prototype.init = function(config) {
          var toolsPanel = Util.$$("toolsPanel");
          var toolsPanelCon = this.toolsPanelCon = Util.$$("toolsPanelCon");
-
-         var items = this.items = Util.$("tools_item", toolsPanelCon);
+         this.items = Util.$("tools_item", toolsPanelCon);
          this.pop_wrap = Util.$("pop_wrap", toolsPanel)[0];
          this.pop_win = Util.$("pop_win", toolsPanel)[0];
          this.pop_win_mask = Util.$("pop_win_mask", toolsPanel)[0];
 
-         var self = this;
-         for (var i = 0, length = items.length; i < 4; i++) {
-             items[i]._minus = Util.$("ico_minus", items[i])[0];
-             items[i].index = i;
-             items[i].onmouseover = function() {
-                 self.changeStyle(this);
-                 if (self.status == "close"&&self.animateStatus=="stop") {
-                     self.open();
-                 }
-
-             }
-         }
          this.transitionSupport = Util.transitionCheck();
      }
      ToolsPanel.prototype.initUI = function() {
@@ -65,6 +53,23 @@
              items[i].atag = atag;
          }
          // }
+
+     }
+     ToolsPanel.prototype.initEvent = function() {
+
+         var self = this,
+             items = this.items;
+         for (var i = 0, length = items.length; i < 4; i++) {
+             items[i]._minus = Util.$("ico_minus", items[i])[0];
+             items[i].index = i;
+             items[i].onmouseover = function() {
+                 self.changeStyle(this);
+                 if (self.status == "close" && self.animateStatus == "stop") {
+                     self.open();
+                 }
+
+             }
+         }
 
          var closeButtons = Util.$("close", this.pop_wrap);
          for (var i = 0; i < closeButtons.length; i++) {
@@ -85,7 +90,7 @@
      }
      ToolsPanel.prototype.open = function() {
          this.pop_win_mask.style.display = 'block';
-         this.animateStatus="runing";
+         this.animateStatus = "runing";
          this.animate("open");
      }
      ToolsPanel.prototype.close = function() {
@@ -143,7 +148,7 @@
                  clearInterval(self.animateTimer);
                  self.pop_win_mask.style.display = 'none';
                  self.status = status;
-                 self.animateStatus="stop";
+                 self.animateStatus = "stop";
              }
          }, 10);
      }

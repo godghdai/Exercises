@@ -346,6 +346,7 @@
 }
 
 .module_top .baner_con {
+    +position: relative;
     padding-top: 10px;
     padding-left: 10px;
     width: 368px;

@@ -1,5 +1,11 @@
  define(["Util"], function(Util) {
+     var DefaultConfig = {
+         steps: 20,
+         interval: 2000
+     };
+
      function OpacityBanner(config) {
+         this.config = Util.deepCopy(config, Util.deepCopy(DefaultConfig));
          if (!(this instanceof OpacityBanner)) return new OpacityBanner(config);
          this.cur_index = 4;
          this.banner_con = null;
@@ -10,15 +16,16 @@
          this.animateTimer = null;
          this.autoPlayTimer = null;
          this.step = 0;
-         this.total = config.steps||20;
-         this.interval = config.interval||2000;
+         this.total = this.config.steps;
+         this.interval = this.config.interval;
          this.isHaveButtons = true;
+         this.ie6 = !-[1, ] && !window.XMLHttpRequest;
          this.init(config);
      }
      OpacityBanner.prototype.init = function(config) {
-         var banner_con = this.banner_con =  Util.$$(config.id || "main_banner");
+         var banner_con = this.banner_con = Util.$$(config.id || "main_banner");
          this.cur_index = config.index || 0;
-         this.banners = Util.$(config.itemClass||"item", banner_con);
+         this.banners = Util.$(config.itemClass || "item", banner_con);
          this.circles = Util.$("circle", banner_con);
          this.prev_button = Util.$("prev", banner_con)[0];
          this.next_button = Util.$("next", banner_con)[0];
@@ -28,13 +35,24 @@
      }
      OpacityBanner.prototype.initUI = function() {
          var banners = this.banners;
-         for (var i = 0; i < banners.length; i++) {
-             Util.removeClass(banners[i], "hide");
-             banners[i].style.opacity = 0;
-             banners[i].style.filter = "alpha(opacity=0)";
+         //ie下切换去除动画
+         if (this.ie6) {
+             for (var i = 0; i < banners.length; i++) {
+                 Util.addClass(banners[i], "hide");
+             }
+             Util.removeClass(banners[this.cur_index], "hide");
+
+         } else {
+             for (var i = 0; i < banners.length; i++) {
+                 Util.removeClass(banners[i], "hide");
+                 banners[i].style.opacity = 0;
+                 banners[i].style.filter = "alpha(opacity=0)";
+             }
+             banners[this.cur_index].style.opacity = 1;
+             banners[this.cur_index].style.filter = "alpha(opacity=100)";
          }
-         banners[this.cur_index].style.opacity = 1;
-         banners[this.cur_index].style.filter = "alpha(opacity=100)";
+
+
          for (var i = 0; i < this.circles.length; i++) {
              this.circles[i].index = i;
              Util.removeClass(this.circles[i], "active");
@@ -84,11 +102,23 @@
      OpacityBanner.prototype.focus = function(index) {
          var self = this;
          var banners = this.banners;
+
+         //ie下切换去除动画
+         if (this.ie6) {
+             self.focusCircle(index);
+             Util.removeClass(banners[index], "hide");
+             Util.addClass(banners[this.cur_index], "hide");
+             self.cur_index = index;
+             return;
+         }
+
          banners[this.cur_index].style.zIndex = 2;
          banners[index].style.zIndex = 1;
          banners[index].style.opacity = 0;
          banners[index].style.filter = "alpha(opacity=100)";
          self.focusCircle(index);
+
+
          clearInterval(this.animateTimer);
 
          this.animateTimer = setInterval(function() {

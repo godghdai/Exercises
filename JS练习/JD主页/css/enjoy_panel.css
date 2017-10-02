@@ -1,9 +1,10 @@
 /* 享品质*/
+
 .enjoy_panel {
     height: 530px;
     width: 1185px;
     margin-bottom: 30px;
-} 
+}
 
 .enjoy_panel .left_con {
     float: left;
@@ -195,6 +196,18 @@
     margin-bottom: 10px;
 }
 
+.enjoy_panel .video_panel .head_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 38px;
+    width: 100%;
+    background: rgba(0, 0, 0, .57);
+    +background: #000;
+    /*opacity: .57;*/
+    +filter: alpha(opacity=57);
+    z-index: 9;
+}
 
 .enjoy_panel .video_panel .head {
     display: block;
@@ -204,9 +217,6 @@
     color: #fff;
     height: 38px;
     width: 100%;
-    background: rgba(0, 0, 0, .57);
-    +background: #3a3c3c;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
     z-index: 9;
 }
 
@@ -242,7 +252,6 @@
     background: #000;
     opacity: .37;
     filter: alpha(opacity=37);
-
 }
 
 .enjoy_panel .video_panel .ico_play {
@@ -251,7 +260,7 @@
     top: 50%;
     margin: -33px 0 0 -33px;
     /* ie6偏移 */
-    +margin-left:-43px;
+    +margin-left: -43px;
     display: block;
     width: 65px;
     height: 65px;
@@ -276,13 +285,14 @@
     width: 15px;
     height: 16px;
 }
-.enjoy_panel .video_panel .head .more span{
+
+.enjoy_panel .video_panel .head .more span {
     padding-right: 10px;
 }
 
 .enjoy_panel .video_panel .video {
     position: absolute;
-    left:0;
+    left: 0;
     right: 0;
     width: 100%;
     height: 100%;
@@ -305,8 +315,8 @@
 .enjoy_panel .video_panel .vinfo .ico_tv {
     display: inline-block;
     position: relative;
-    top:5px;
-    +top:2px;
+    top: 5px;
+    +top: 2px;
     background-image: url(../imgs/sprite_entrylive@1x.png);
     background-position: -205px -52px;
     -moz-background-size: 237px 170px;
@@ -329,7 +339,7 @@
     position: absolute;
     top: 145px;
     background: #2d2d2d;
-    background: rgba(0,0,0,.42);
+    background: rgba(0, 0, 0, .42);
     width: 20px;
     height: 48px;
     line-height: 48px;
@@ -338,19 +348,19 @@
     z-index: 9;
 }
 
-.enjoy_panel .video_panel .buttons .prev{
-    left:0;
+.enjoy_panel .video_panel .buttons .prev {
+    left: 0;
 }
 
-.enjoy_panel .video_panel .buttons .next{
-    right:0;
+.enjoy_panel .video_panel .buttons .next {
+    right: 0;
 }
 
-.enjoy_panel .video_panel .circle_con{
+.enjoy_panel .video_panel .circle_con {
     position: absolute;
-    top:326px;
-    left:0;
-    font-size: 0; 
+    top: 326px;
+    left: 0;
+    font-size: 0;
     height: 8px;
     line-height: 8px;
     width: 100%;
@@ -359,17 +369,18 @@
     z-index: 9;
 }
 
-.enjoy_panel .video_panel .circle_con .circle{
+.enjoy_panel .video_panel .circle_con .circle {
     display: inline-block;
-   /* 兼容ie6 ie7*/
+    /* 兼容ie6 ie7*/
     *display: inline;
-    *zoom:1;
+    *zoom: 1;
     margin-right: 8px;
     background: #fff;
     width: 8px;
     height: 8px;
     border-radius: 50%;
 }
-.enjoy_panel .video_panel .circle_con .active{
-   background: #fd3131;  
+
+.enjoy_panel .video_panel .circle_con .active {
+    background: #fd3131;
 }

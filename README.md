@@ -3,6 +3,7 @@
 * 记录成长点滴，进步每一天。
 ------------
 #### 更新日志
+- 2017-10-08 17:45:04 [当当主页](https://github.com/godghdai/Exercises/tree/master/JS%E7%BB%83%E4%B9%A0/%E5%BD%93%E5%BD%93%E4%B8%BB%E9%A1%B5)
 - 2017-09-21 20:07:45 [JD主页](https://github.com/godghdai/Exercises/tree/master/JS%E7%BB%83%E4%B9%A0/JD%E4%B8%BB%E9%A1%B5)
 - 2017-09-14 13:12:23 [当当图片放大效果](https://github.com/godghdai/Exercises/tree/master/JS%E7%BB%83%E4%B9%A0/%E5%BD%93%E5%BD%93%E5%9B%BE%E7%89%87%E6%94%BE%E5%A4%A7%E6%95%88%E6%9E%9C)
 - 2017-09-11 23:12:11 [图片的随机滚动](https://github.com/godghdai/Exercises/tree/master/JS%E7%BB%83%E4%B9%A0/%E5%9B%BE%E7%89%87%E7%9A%84%E9%9A%8F%E6%9C%BA%E6%BB%9A%E5%8A%A8)

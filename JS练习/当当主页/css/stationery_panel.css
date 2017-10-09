@@ -1,0 +1,33 @@
+.stationery_panel {
+    margin-top: 31px;
+    margin-bottom: 30px;
+}
+
+.stationery_panel .head {
+    height: 24px;
+}
+
+.stationery_panel .head .title {
+    float: left;
+    padding-top: 1px;
+    padding-left: 6px;
+    display: block;
+    line-height: 22px;
+    height: 23px;
+    width: 98px;
+    color: #323232;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.stationery_panel .con{
+    margin-top: 7px;
+    margin-right: -10px;
+}
+.stationery_panel .item{
+    float: left;
+    width: 230px;
+    height: 140px;
+    border: 1px solid #e6e6e6;
+    margin-right: 10px;
+}

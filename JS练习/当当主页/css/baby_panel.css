@@ -1,0 +1,104 @@
+.baby_panel {}
+
+.baby_panel_con {
+    border-right: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.baby_panel_con .nav_con {
+    float: left;
+    width: 221px;
+}
+
+.baby_panel_con .west_item_con {
+    width: 220px;
+    height: 194px;
+    border-top: 1px solid #e6e6e6;
+    border-left: 1px solid #e6e6e6;
+}
+
+.baby_panel_con .item_con {
+    float: left;
+    width: 220px;
+    height: 194px;
+    border-top: 1px solid #e6e6e6;
+    border-left: 1px solid #e6e6e6;
+}
+
+.baby_panel_con .banner_con {
+    float: left;
+    width: 314px;
+    height: 389px;
+    border-top: 1px solid #e6e6e6;
+    border-left: 1px solid #e6e6e6;
+    position: relative;
+    overflow: hidden;
+}
+
+.baby_panel_con .west_item_con img,
+.baby_panel_con .item_con img {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.baby_panel .normal_panel_footer {
+    margin-top: -2px;
+}
+
+.baby_panel_con .banner_con .banners_wrap{
+	width: 942px;
+}
+
+.baby_panel_con .banner_con .banner{
+	float: left;
+}
+
+.baby_panel_con .banner_con .button,
+.baby_panel_con .banner_con .arrow_bg,
+.baby_panel_con .banner_con .ico_arrow {
+    width: 30px;
+    height: 43px;
+}
+
+.baby_panel_con .banner_con .button {
+    top: 174px;
+}
+
+.baby_panel_con .banner_con .prev .ico_arrow {
+    background-position: 0 -83px;
+}
+
+.baby_panel_con .banner_con .next .ico_arrow {
+    background-position: -36px -83px;
+}
+
+.baby_panel_con .banner_con .circle_con {
+    position: absolute;
+    bottom: 18px;
+    width: 100%;
+    /*清除 inline-block 3px*/
+    font-size: 0;
+    /*ie6 10像素过高*/
+    +overflow: hidden;
+    height: 12px;
+    text-align: center;
+}
+
+.baby_panel_con .banner_con .circle_con li {
+    display: inline-block;
+    /*兼容ie7*/
+    *zoom: 1;
+    *display: inline;
+    width: 12px;
+    height: 12px;
+    margin: 0 4px;
+    color: #fff;
+    background: #c8c8c8;
+    border-radius: 50%;
+}
+
+.baby_panel_con .banner_con .circle_con .active {
+    background: #ff2832;
+}
+
+

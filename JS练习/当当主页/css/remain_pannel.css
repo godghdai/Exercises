@@ -1,0 +1,103 @@
+.remain_pannel {
+    margin-bottom: 30px;
+}
+
+.remain_pannel .head {
+    height: 40px;
+    background: url(../imgs/remain.png) no-repeat;
+}
+
+.remain_pannel .head_link {
+    float: right;
+    height: 40px;
+    line-height: 40px;
+    color: #fa5c98;
+    font: 14px/40px "Microsoft YaHei";
+}
+
+.remain_pannel .head_link:hover {
+    text-decoration: underline;
+}
+
+.remain_pannel .con {
+    width: 1199px;
+    height: 520px;
+    border-right: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.remain_pannel .big_con {
+    float: left;
+    width: 199px;
+    height: 280px;
+    border-top: 1px solid #e6e6e6;
+    border-left: 1px solid #e6e6e6;
+    +overflow: hidden;
+}
+
+.remain_pannel .big_con .item:hover {
+    width: 195px;
+    height: 276px;
+    border: 3px solid #ff5797;
+    position: relative;
+    margin-top: -1px;
+    margin-left: -1px;
+}
+
+.remain_pannel .smail_con {
+    float: left;
+    width: 199px;
+    height: 238px;
+    border-top: 1px solid #e6e6e6;
+    border-left: 1px solid #e6e6e6;
+    +overflow: hidden;
+}
+
+.remain_pannel .smail_con .item:hover {
+    width: 195px;
+    height: 234px;
+    border: 3px solid #ff5797;
+    position: relative;
+    margin-top: -1px;
+    margin-left: -1px;
+}
+
+.remain_pannel .item:hover img {
+    margin-top: -2px;
+    margin-left: -2px;
+}
+
+.remain_pannel .item {
+    display: block;
+    overflow: hidden;
+}
+
+.remain_pannel .logo_link_wrap {
+    width: 200px;
+    height: 238px;
+}
+
+.remain_pannel .logo_link {
+    float: left;
+    display: block;
+    position: relative;
+    width: 99px;
+    height: 119px;
+    border-right: 1px dotted #e6e6e6;
+    border-bottom: 1px dotted #e6e6e6;
+    background: #f9f9f9;
+}
+
+.remain_pannel .logo_link img {
+    position: absolute;
+    left: 10px;
+    top: 34px;
+    width: 80px;
+    height: 50px;
+}
+
+.remain_pannel .w198 {
+	+position: relative;
+    width: 198px;
+    overflow: hidden;
+}

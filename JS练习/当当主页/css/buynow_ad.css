@@ -1,0 +1,242 @@
+.buynow_ad {
+    height: 498px;
+    margin-bottom: 30px;
+}
+
+.buynow_ad .buynow {
+    float: left;
+    width: 996px;
+    height: 498px;
+}
+
+.buynow .products {
+    width: 995px;
+    height: 454px;
+    border: 1px solid #e6e6e6;
+    border-right: none;
+    overflow: hidden;
+}
+
+.buynow .product {
+    display: block;
+    float: left;
+    width: 198px;
+    height: 227px;
+    border-right: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.buynow .product .photo_wrap {
+    position: relative;
+    margin: 10px auto 0 auto;
+    width: 150px;
+    height: 163px;
+}
+
+.buynow .product .progress_wrap {
+    position: relative;
+    width: 150px;
+    height: 8px;
+    +overflow: hidden;
+}
+
+.buynow .product .progress_wrap .bg {
+    background: #ffb7b7;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.buynow .product .progress_wrap .progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fc2c3a;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.buynow .product .info_wrap {
+    position: absolute;
+    bottom: 0;
+    left: 38px;
+    width: 76px;
+    height: 20px;
+}
+
+.buynow .product .info_wrap .bg {
+    width: 100%;
+    height: 100%;
+    background: #fe8d91;
+    border-radius: 10px;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+
+.buynow .product .info_wrap .info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial;
+    color: #fff;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 10px;
+}
+
+.buynow .product h3 {
+    padding: 0 9px;
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 27px;
+    height: 27px;
+}
+
+.buynow .product .price {
+    color: #ff2832;
+    padding: 0 9px;
+    margin: auto;
+    overflow: hidden;
+    line-height: 20px;
+    height: 20px;
+    font-family: Arial;
+}
+
+.buynow .product .price .new {
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+.buynow .product .price .old {
+    font-size: 12px;
+    color: #969696;
+    margin-left: 5px;
+    text-decoration: line-through;
+}
+
+.buynow_ad .head {
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 2px solid #3c3c3c;
+    +overflow: hidden;
+}
+
+.buynow_ad .head .sessions {
+    float: right;
+}
+
+.buynow_ad .head .session {
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 62px;
+}
+
+.buynow_ad .head .session:hover {
+    +position: relative;
+    +line-height: 39px;
+    height: 39px;
+    border-bottom: 3px solid #ff2832;
+}
+
+.buynow_ad .head .sessions .active {
+    color: #ff2832;
+}
+
+.buynow_ad .buynow_title_con {
+    float: left;
+}
+
+.buynow_ad .buynow_title_con .title_bg {
+    float: left;
+    width: 64px;
+    height: 39px;
+    background: url(../imgs/buyow_title.png) no-repeat;
+}
+
+.buynow_ad .buynow_title_con .clock_con {
+    float: left;
+    padding-left: 14px;
+    margin-left: 19px;
+    height: 39px;
+    line-height: 33px;
+    *line-height: 31px;
+    width: 117px;
+    background: url(../imgs/clock.png) no-repeat;
+    font-size: 0;
+}
+
+.buynow_ad .buynow_title_con .clock_con span {
+    padding-left: 21px;
+    *padding-left: 20px;
+    font-size: 14px;
+}
+
+.buynow_ad .ad {
+    float: left;
+    height: 100%;
+    width: 204px;
+    overflow: hidden;
+}
+
+.buynow_ad .ad .head {
+    border-bottom: 2px solid #ff2832;
+}
+
+.buynow_ad .ad .head .west {
+    float: left;
+    color: #ff2832;
+    font: 20px "Microsoft YaHei", Simsun;
+    cursor: pointer;
+    padding-left: 8px;
+    width: 120px;
+    line-height: 40px;
+    height: 40px;
+}
+
+.buynow_ad .ad .head .circle_con {
+    margin-top: 19px;
+    float: right;
+}
+
+.buynow_ad .ad .head .circle {
+    float: left;
+    width: 8px;
+    height: 8px;
+    background: #c8c8c8;
+    border-radius: 4px;
+    margin-right: 6px;
+    +overflow: hidden;
+}
+
+.buynow_ad .ad .head .active {
+    background: #ff2832;
+}
+
+.buynow_ad .ad .link {
+    display: block;
+    width: 203px;
+    height: 113px;
+    border-bottom: 1px solid #e6e6e6;
+    border-right: 1px solid #e6e6e6;
+}
+
+.buynow_ad .ad .link:hover img {
+    -webkit-transform: translateX(-5px);
+    -ms-transform: translateX(-5px);
+    -o-transform: translateX(-5px);
+    transform: translateX(-5px);
+}
+
+.buynow_ad .ad .link img {
+    width: 202px;
+    height: 113px;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    transition: all .3s ease;
+}

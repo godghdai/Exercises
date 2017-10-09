@@ -6,6 +6,10 @@
     <title>当当</title>
 </head>
 <link href="css/index.css" rel="stylesheet" type="text/css">
+<link href="css/buynow_ad.css" rel="stylesheet" type="text/css">
+<link href="css/remain_pannel.css" rel="stylesheet" type="text/css">
+<link href="css/book_panel.css" rel="stylesheet" type="text/css">
+<link href="css/clothes_panel.css" rel="stylesheet" type="text/css">
 <!--[if IE 6]>
 <script src="./js/DD_belatedPNG_0.0.8a.js" mce_src="DD_belatedPNG_0.0.8a.js"></script>
 <script type="text/javascript">DD_belatedPNG.fix('.ico_arrow,.fix_png');</script>
@@ -188,8 +192,16 @@
     <div class="buynow_ad center">
         <div class="buynow">
             <div class="head">
+                <div class="buynow_title_con clearfix">
+                    <div class="title_bg"></div>
+                    <div class="clock_con">
+                        <span sec="h">06</span>
+                        <span sec="m">49</span>
+                        <span sec="s">24</span>
+                    </div>
+                </div>
                 <div class="sessions clearfix">
-                    <a class="session" href="#">00:00场</a>
+                    <a class="session active" href="#">00:00场</a>
                     <a class="session" href="#">10:00场</a>
                     <a class="session" href="#">12:00场</a>
                     <a class="session" href="#">17:00场</a>
@@ -350,7 +362,13 @@
             </div>
         </div>
         <div class="ad">
-            <div class="head">厂商周</div>
+            <div class="head">
+                <div class="west">厂商周</div>
+                <ul class="circle_con">
+                    <li class="circle"></li>
+                    <li class="circle active"></li>
+                </ul>
+            </div>
             <div class="banners">
                 <div class="banner">
                     <a class="link" href="#"><img src="./imgs/tab/1.jpg" alt=""></a>
@@ -359,6 +377,32 @@
                     <a class="link" href="#"><img src="./imgs/tab/4.jpg" alt=""></a>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="remain_pannel center">
+        <div class="head">
+            <a class="head_link" href="#" target="_blank" title="每天10点上新">每天10点上新</a>
+        </div>
+        <div class="con">
+            <div class="big_con w198"><a href="#"><img src="./imgs/rem/left.jpg" alt=""/></a></div>
+            <div class="big_con"><a class="item" href="#"><img src="./imgs/rem/1.jpg" alt=""/></a></div>
+            <div class="big_con"><a class="item" href="#"><img src="./imgs/rem/2.jpg" alt=""/></a></div>
+            <div class="big_con"><a class="item" href="#"><img src="./imgs/rem/3.jpg" alt=""/></a></div>
+            <div class="big_con"><a class="item" href="#"><img src="./imgs/rem/4.jpg" alt=""/></a></div>
+            <div class="big_con"><a class="item" href="#"><img src="./imgs/rem/5.jpg" alt=""/></a></div>
+            <div class="smail_con w198">
+                <div class="logo_link_wrap">
+                    <a class="logo_link" href="#"><img src="./imgs/rem/b1.jpg" alt=""/></a>
+                    <a class="logo_link" href="#"><img src="./imgs/rem/b2.jpg" alt=""/></a>
+                    <a class="logo_link" href="#"><img src="./imgs/rem/b3.jpg" alt=""/></a>
+                    <a class="logo_link" href="#"><img src="./imgs/rem/b4.jpg" alt=""/></a>
+                </div>
+            </div>
+            <div class="smail_con"><a class="item" href="#"><img src="./imgs/rem/6.jpg" alt=""/></a></div>
+            <div class="smail_con"><a class="item" href="#"><img src="./imgs/rem/7.jpg" alt=""/></a></div>
+            <div class="smail_con"><a class="item" href="#"><img src="./imgs/rem/8.jpg" alt=""/></a></div>
+            <div class="smail_con"><a class="item" href="#"><img src="./imgs/rem/9.jpg" alt=""/></a></div>
+            <div class="smail_con"><a class="item" href="#"><img src="./imgs/rem/10.jpg" alt=""/></a></div>
         </div>
     </div>
     <div class="book_panel center clearfix">
@@ -383,7 +427,7 @@
                 <div class="left_tab_content">
                     <div class="left_west_nav">
                         <a href="#"><img src="./imgs/ebook/m1/b1.jpg" alt=""/></a>
-                        <ul class="tags clearfix">
+                        <ul class="tags clearfix fix_png">
                             <li><a href="#" target="_blank">童书</a></li>
                             <li><a href="#" target="_blank">中小学教辅</a></li>
                             <li><a href="#" target="_blank">外语</a></li>
@@ -400,12 +444,12 @@
                     </div>
                     <div class="left_baner base_banner">
                         <div class="banners">
-                        <div class="banners_wrap clearfix">
-                        	<a class="banner" href="#"><img src="./imgs/ebook/m1/bs1.jpg" alt=""></a>
-                        	<a class="banner" href="#"><img src="./imgs/ebook/m1/bs2.jpg" alt=""></a>
-                        	<a class="banner" href="#"><img src="./imgs/ebook/m1/bs3.jpg" alt=""></a>
-                        	<a class="banner" href="#"><img src="./imgs/ebook/m1/bs4.jpg" alt=""></a>
-                        </div>
+                            <div class="banners_wrap clearfix">
+                                <a class="banner" href="#"><img src="./imgs/ebook/m1/bs1.jpg" alt=""></a>
+                                <a class="banner" href="#"><img src="./imgs/ebook/m1/bs2.jpg" alt=""></a>
+                                <a class="banner" href="#"><img src="./imgs/ebook/m1/bs3.jpg" alt=""></a>
+                                <a class="banner" href="#"><img src="./imgs/ebook/m1/bs4.jpg" alt=""></a>
+                            </div>
                         </div>
                         <ul class="circle_con">
                             <li></li>
@@ -418,56 +462,282 @@
                     </div>
                     <div class="left_product">
                         <a class="photo_wrap" href="#"><img class="photo" src="./imgs/ebook/m1/1.jpg" alt=""/></a>
-						<p class="title">
-						<a title="大学与大师：清华校长梅贻琦传（全二册，签名版）" href="#" target="_blank">大学与大师：清华校长梅贻琦传（全二册，签名版）</a>
+                        <p class="title">
+                            <a title="大学与大师：清华校长梅贻琦传（全二册，签名版）" href="#" target="_blank">大学与大师：清华校长梅贻琦传（全二册，签名版）</a>
                         </p>
                         <p class="price"><span class="new">¥98.50</span><span class="old">¥124.80</span></p>
-                        
                     </div>
                     <div class="left_product">
-                    <a class="photo_wrap" href="#"><img class="photo" src="./imgs/ebook/m1/2.jpg" alt=""/></a>
-						<p class="title">
-						<a title="陪孩子读古诗词（精装，4册套装，含配乐朗诵）（9.25—10.9领券下单，立减30元，抢完为止）" href="#" target="_blank">陪孩子读古诗词（精装，4册套装，含配乐朗诵）（9.25—10.9领券下单，立减30元，抢完为止）</a>
+                        <a class="photo_wrap" href="#"><img class="photo" src="./imgs/ebook/m1/2.jpg" alt=""/></a>
+                        <p class="title">
+                            <a title="陪孩子读古诗词（精装，4册套装，含配乐朗诵）（9.25—10.9领券下单，立减30元，抢完为止）" href="#" target="_blank">陪孩子读古诗词（精装，4册套装，含配乐朗诵）（9.25—10.9领券下单，立减30元，抢完为止）</a>
                         </p>
                         <p class="price"><span class="new">¥109.32</span><span class="old">¥199.20</span></p>
-                      
                     </div>
                     <div class="left_product pl1"><a href="#"> <a class="photo_wrap" href="#"><img class="photo" src="./imgs/ebook/m1/3.jpg" alt=""/></a>
-						<p class="title">
-						<a title="一禅小和尚（当当专享番外故事+预售期间购买《一禅小和尚》赠从未问世的绝版全角色高清壁纸电子版！）" href="#" target="_blank">一禅小和尚（当当专享番外故事+预售期间购买《一禅小和尚》赠从未问世的绝版全角色高清壁纸电子版！）</a>
+                        <p class="title">
+                            <a title="一禅小和尚（当当专享番外故事+预售期间购买《一禅小和尚》赠从未问世的绝版全角色高清壁纸电子版！）" href="#" target="_blank">一禅小和尚（当当专享番外故事+预售期间购买《一禅小和尚》赠从未问世的绝版全角色高清壁纸电子版！）</a>
                         </p>
                         <p class="price"><span class="new">¥54.80</span><span class="old">¥59.80</span></p>
-                        
                     </div>
                     <div class="left_product pl1"><a href="#"> <a class="photo_wrap" href="#"><img class="photo" src="./imgs/ebook/m1/4.jpg" alt=""/></a>
-						<p class="title">
-						<a title="故宫日历2018 中文版" href="#" target="_blank">故宫日历2018 中文版</a>
+                        <p class="title">
+                            <a title="故宫日历2018 中文版" href="#" target="_blank">故宫日历2018 中文版</a>
                         </p>
                         <p class="price"><span class="new">¥54.70</span><span class="old">¥76.00</span></p>
-                       
                     </div>
                     <div class="left_product"> <a class="photo_wrap" href="#"><img class="photo" src="./imgs/ebook/m1/5.jpg" alt=""/></a>
-						<p class="title">
-						<a title="价值为纲：华为公司财经管理纲要（团购，请致电010-57993149）" href="#" target="_blank">价值为纲：华为公司财经管理纲要（团购，请致电010-57993149）</a>
+                        <p class="title">
+                            <a title="价值为纲：华为公司财经管理纲要（团购，请致电010-57993149）" href="#" target="_blank">价值为纲：华为公司财经管理纲要（团购，请致电010-57993149）</a>
                         </p>
                         <p class="price"><span class="new">¥53.70</span><span class="old">¥68.00</span></p>
-                  
                     </div>
                     <div class="left_product"> <a class="photo_wrap" href="#"><img class="photo" src="./imgs/ebook/m1/6.jpg" alt=""/></a>
-						<p class="title">
-						<a title="大学与大师：清华校长梅贻琦传（全二册，签名版）" href="#" target="_blank">大学与大师：清华校长梅贻琦传（全二册，签名版）</a>
+                        <p class="title">
+                            <a title="大学与大师：清华校长梅贻琦传（全二册，签名版）" href="#" target="_blank">大学与大师：清华校长梅贻琦传（全二册，签名版）</a>
                         </p>
                         <p class="price"><span class="new">¥98.50</span><span class="old">¥124.80</span></p>
-                       
                     </div>
                 </div>
             </div>
         </div>
         <div class="right">
-            <div class="right_head"></div>
+            <div class="right_head">
+                <a class="title active" href="#" target="_blank">图书畅销榜</a>
+                <a class="title" href="#" target="_blank">童书新书榜</a>
+            </div>
+            <ul class="right_booklist">
+                <li class="right_book clearfix ">
+                    <span class="num">1</span>
+                    <div class="content">
+                        <h3 class="b_title"><a href="#" target="_blank">人间失格</a></h3>
+                        <div class="detail">
+                            <a class="photo_wrap" href="#" target="_blank"><img  class="photo" src="./imgs/ebook/top1/1.jpg" alt=""/></a>
+                            <p class="desc">
+                                <a class="d_desc" href="#" target="_blank"><span class="d_title">人间失格</span>超燃！“丧文化”流行，《人间失格》成了现象级畅销书，创当当3天销售50000+册的奇迹！收录作者绝
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="right_book clearfix">
+                    <span class="num">2</span>
+                    <div class="content">
+                        <h3 class="b_title"><a href="#" target="_blank">解忧杂货店</a></h3>
+                        <div class="detail">
+                            <a class="photo_wrap" href="#" target="_blank"><img  class="photo" src="./imgs/ebook/top1/2.jpg" alt=""/></a>
+                            <p class="desc">
+                                <a class="d_desc" href="#" target="_blank"><span class="d_title">解忧杂货店</span>《白夜行》后东野圭吾备受欢迎作品：不是推理小说，却更扣人心弦。王俊凯、迪丽热巴、董子健等
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="right_book clearfix">
+                    <span class="num">3</span>
+                    <div class="content">
+                        <h3 class="b_title"><a href="#" target="_blank">我喜欢生命本来的样子(周国平经典散文作品集)</a></h3>
+                        <div class="detail">
+                            <a class="photo_wrap" href="#" target="_blank"><img  class="photo" src="./imgs/ebook/top1/3.jpg" alt=""/></a>
+                            <p class="desc">
+                                <a class="d_desc" href="#" target="_blank"><span class="d_title">我喜欢生命本来的样子(周国平经典散文作品集)</span>影响和改变万千年轻人对人生的思考和生活的态度！裸书脊精装
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="right_book clearfix">
+                    <span class="num">4</span>
+                    <div class="content">
+                        <h3 class="b_title"><a href="#" target="_blank">追风筝的人</a></h3>
+                        <div class="detail">
+                            <a class="photo_wrap" href="#" target="_blank"><img  class="photo" src="./imgs/ebook/top1/4.jpg" alt=""/></a>
+                            <p class="desc">
+                                <a class="d_desc" href="#" target="_blank"><span class="d_title">追风筝的人</span>
+									中文版，快乐大本营高圆圆感动推荐，奥巴马送给女儿的新年礼物。为你，千千万万遍！
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="right_book clearfix">
+                    <span class="num">5</span>
+                    <div class="content">
+                        <h3 class="b_title"><a href="#" target="_blank">白夜行（东野圭吾推理小说无冕之王。全新精装典藏版。）</a></h3>
+                        <div class="detail">
+                            <a class="photo_wrap" href="#" target="_blank"><img  class="photo" src="./imgs/ebook/top1/5.jpg" alt=""/></a>
+                            <p class="desc">
+                                <a class="d_desc" href="#" target="_blank"><span class="d_title">白夜行（东野圭吾推理小说无冕之王。全新精装典藏版。）</span></a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="right_book clearfix">
+                    <span class="num">6</span>
+                    <div class="content">
+                        <h3 class="b_title"><a href="#" target="_blank">神奇校车·图画书版（全11册）</a></h3>
+                        <div class="detail">
+                            <a class="photo_wrap" href="#" target="_blank"><img  class="photo" src="./imgs/ebook/top1/6.jpg" alt=""/></a>
+                            <p class="desc">
+                                <a class="d_desc" href="#" target="_blank"><span class="d_title">神奇校车·图画书版（全11册）</span>美国Scholastic学子出版社金牌畅销系列，备受小科学迷热爱推崇的科普童书！
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="right_book clearfix">
+                    <span class="num">7</span>
+                    <div class="content">
+                        <h3 class="b_title"><a href="#" target="_blank">天才在左疯子在右（完整版）</a></h3>
+                        <div class="detail">
+                            <a class="photo_wrap" href="#" target="_blank"><img  class="photo" src="./imgs/ebook/top1/7.jpg" alt=""/></a>
+                            <p class="desc">
+                                <a class="d_desc" href="#" target="_blank"><span class="d_title">天才在左疯子在右（完整版）</span>上市12个月，销量突破200万册，长期盘踞各大畅销书排行榜。看高智商疯子如何调
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="right_book clearfix">
+                    <span class="num">8</span>
+                    <div class="content">
+                        <h3 class="b_title"><a href="#" target="_blank">婴幼儿睡眠全书:小土教你守护安睡宝贝（汇集众多中国妈妈实践经验，一本中国妈妈自己的宝宝睡眠书。万千妈妈倾力推荐）</a></h3>
+                        <div class="detail">
+                            <a class="photo_wrap" href="#" target="_blank"><img  class="photo" src="./imgs/ebook/top1/8.jpg" alt=""/></a>
+                            <p class="desc">
+                                <a class="d_desc" href="#" target="_blank"><span class="d_title"></span>婴幼儿睡眠全书:小土教你守护安睡宝贝（汇集众多中国妈妈实践经验，一本中国妈妈自己的宝宝睡眠书。万千妈妈倾力推荐）
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="right_book clearfix">
+                    <span class="num">9</span>
+                    <div class="content">
+                        <h3 class="b_title"><a href="#" target="_blank">人间词话（近代极富盛名的词话著作，集编、校、释、评于一体，赏读于一书）</a></h3>
+                        <div class="detail">
+                            <a class="photo_wrap" href="#" target="_blank"><img  class="photo" src="./imgs/ebook/top1/9.jpg" alt=""/></a>
+                            <p class="desc">
+                                <a class="d_desc" href="#" target="_blank"><span class="d_title">人间词话（近代极富盛名的词话著作，集编、校、释、评于一体，赏读于一书）</span>
+                                当当网此版本销量遥遥领先！中
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="right_book clearfix last active">
+                    <span class="num">10</span>
+                    <div class="content">
+                        <h3 class="b_title"><a href="#" target="_blank">摆渡人（如果命运是一条孤独的河流，谁会是你灵魂的摆渡人？）</a></h3>
+                        <div class="detail">
+                            <a class="photo_wrap" href="#" target="_blank"><img  class="photo" src="./imgs/ebook/top1/10.jpg" alt=""/></a>
+                            <p class="desc">
+                                <a class="d_desc" href="#" target="_blank"><span class="d_title">摆渡人（如果命运是一条孤独的河流，谁会是你灵魂的摆渡人？）</span>畅销欧美33个国家，荣获多项图书大奖。如果
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
-    <div id="footer">
+    <div class="clothes_panel center">
+        <div class="head clearfix">
+            <div class="links_con">
+                <a href="#" target="_blank">服装</a>
+            </div>
+            <div class="titles_con">
+                <a href="javascript:void(0);" class="title active">服装鞋包</a>
+                <a href="javascript:void(0);" class="title">运动潮流</a>
+                <a href="javascript:void(0);" class="title">女装男装内衣</a>
+                <a href="javascript:void(0);" class="title">童装童鞋</a>
+                <a href="javascript:void(0);" class="title">鞋靴箱包</a>
+            </div>
+        </div>
+        <div class="tab_contents">
+            <div class="content clearfix">
+                <div class="west_con">
+                    <a class="big_link" href="#"><img src="./imgs/clothes/m1/1.jpg" alt=""></a>
+                    <ul class="tags clearfix fix_png">
+                        <li><a href="#" target="_blank">跑步鞋</a></li>
+                        <li><a href="#" target="_blank">皮肤风衣</a></li>
+                        <li><a href="#" target="_blank">速干衣</a></li>
+                        <li><a href="#" target="_blank">户外装备</a></li>
+                        <li><a href="#" target="_blank">运动服装</a></li>
+                        <li><a href="#" target="_blank">连衣裙</a></li>
+                        <li><a href="#" target="_blank">短袖T恤</a></li>
+                        <li><a href="#" target="_blank">衬衫雪纺衫</a></li>
+                        <li><a href="#" target="_blank">男士衬衫</a></li>
+                        <li><a href="#" target="_blank">男士T恤</a></li>
+                        <li><a href="#" target="_blank">丝袜</a></li>
+                        <li><a href="#" target="_blank">童装</a></li>
+                        <li><a href="#" target="_blank">童鞋</a></li>
+                        <li><a href="#" target="_blank">婴儿服饰</a></li>
+                        <li><a href="#" target="_blank">珠宝饰品</a></li>
+                        <li><a href="#" target="_blank">女鞋</a></li>
+                        <li><a href="#" target="_blank">男鞋</a></li>
+                        <li><a href="#" target="_blank">手表</a></li>
+                    </ul>
+                </div>
+                <div class="center_banner base_banner">
+                    <div class="banners">
+                        <div class="banners_wrap clearfix">
+                            <a class="banner" href="#"><img src="./imgs/clothes/m1/b1.jpg" alt=""></a>
+                            <a class="banner" href="#"><img src="./imgs/clothes/m1/b2.jpg" alt=""></a>
+                            <a class="banner" href="#"><img src="./imgs/clothes/m1/b3.jpg" alt=""></a>
+                            <a class="banner" href="#"><img src="./imgs/clothes/m1/b4.jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <ul class="circle_con">
+                        <li></li>
+                        <li class="active"></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <a href="javascript:void(0);" class="button prev"><i class="arrow_bg"></i><i class="ico_arrow"></i></a>
+                    <a href="javascript:void(0);" class="button next"><i class="arrow_bg"></i><i class="ico_arrow"></i></a>
+                </div>
+                <div class="big_con"><a class="big_link" href="#"><img src="./imgs/clothes/m1/2.jpg" alt=""></a></div>
+                <div class="big_con"><a class="big_link" href="#"><img src="./imgs/clothes/m1/3.jpg" alt=""></a></div>
+                <div class="big_con"><a class="big_link" href="#"><img src="./imgs/clothes/m1/4.jpg" alt=""></a></div>
+                <div class="smail_con"><a class="smail_link" href="#"><img src="./imgs/clothes/m1/5.jpg" alt=""></a></div>
+                <div class="smail_con"><a class="smail_link" href="#"><img src="./imgs/clothes/m1/6.jpg" alt=""></a></div>
+                <div class="smail_con"><a class="smail_link" href="#"><img src="./imgs/clothes/m1/7.jpg" alt=""></a></div>
+                <div class="smail_con"><a class="smail_link" href="#"><img src="./imgs/clothes/m1/8.jpg" alt=""></a></div>
+                <div class="smail_con"><a class="smail_link" href="#"><img src="./imgs/clothes/m1/9.jpg" alt=""></a></div>
+            </div>
+        </div>
+        <div class="footer base_banner">
+            <div class="links_wrap">
+                <ul class="links_con clearfix">
+                    <li><a href="#" target="_blank"><img src="./imgs/clothes/1.png" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="./imgs/clothes/2.jpg" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="./imgs/clothes/3.jpg" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="./imgs/clothes/4.jpg" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="./imgs/clothes/5.jpg" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="./imgs/clothes/6.jpg" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="./imgs/clothes/7.jpg" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="./imgs/clothes/8.png" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="./imgs/clothes/9.jpg" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="./imgs/clothes/10.jpg" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="./imgs/clothes/11.jpg" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="./imgs/clothes/12.jpg" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="./imgs/clothes/13.jpg" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="./imgs/clothes/14.jpg" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="./imgs/clothes/15.jpg" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="./imgs/clothes/16.jpg" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="./imgs/clothes/17.jpg" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="./imgs/clothes/18.jpg" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="./imgs/clothes/19.jpg" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="./imgs/clothes/20.jpg" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="./imgs/clothes/21.jpg" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="./imgs/clothes/22.jpg" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="./imgs/clothes/23.jpg" alt=""></a></li>
+                </ul>
+            </div>
+            <a href="javascript:void(0);" class="button prev"><i class="arrow_bg"></i><i class="ico_arrow"></i></a>
+            <a href="javascript:void(0);" class="button next"><i class="arrow_bg"></i><i class="ico_arrow"></i></a>
+        </div>
     </div>
 </body>
 

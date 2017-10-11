@@ -95,6 +95,27 @@ img {
 
 #head_north .area {}
 
+#head_north .area .menu {
+    padding: 4px 22px 0 9px;
+}
+
+#head_north .area .ico_arrow_down {
+    display: block;
+    width: 7px;
+    height: 4px;
+    background: url(../imgs/head_sprite.png) no-repeat -74px -316px;
+    vertical-align: middle;
+}
+#head_north .area .ico_arrow_up {
+    display: inline-block;
+    width: 7px;
+    height: 4px;
+    background: url(../imgs/head_sprite.png) no-repeat -74px -332px;
+    vertical-align: middle;
+}
+
+
+
 #head_north .info {}
 
 #head_north .menus li {
@@ -459,6 +480,3 @@ img {
 .nav_right .right_banner .next .ico_arrow {
     background-position: -36px -83px;
 }
-
-
-

@@ -1,0 +1,64 @@
+   .product_list_panel .head {
+       height: 34px;
+       color: #ff2832;
+       font: bold 20px "Microsoft YaHei";
+       border-bottom: 2px solid #ff3228;
+       padding-left: 5px;
+       background-color: white;
+   }
+
+   .product_list_panel .con_wrap {
+       border: 1px solid #e6e6e6;
+       width: 1198px;
+       margin: 10px auto 0;
+       overflow: hidden;
+       padding: 10px 0 15px;
+       background: url(../imgs/guanggao02.png) no-repeat right bottom;
+   }
+
+   .product_list_panel .con {
+       padding-left: 5px;
+       width: 1188px;
+   }
+
+   .product_list_panel .product {
+       float: left;
+       width: 190px;
+       height: 258px;
+       padding: 4px 3px 7px;
+       border: 1px solid #fff;
+   }
+
+   .product_list_panel .product:hover {
+       border: 1px solid #efefef;
+       box-shadow: 0 0 4px #ddd;
+       position: relative;
+   }
+
+   .product_list_panel .photo_wrap {
+       display: block;
+       width: 190px;
+       height: 190px;
+       overflow: hidden;
+       margin: 0 auto;
+   }
+
+   .product_list_panel .photo_wrap img {
+       width: 190px;
+       height: 190px;
+   }
+
+   .product_list_panel .product .title {
+       width: 190px;
+       height: 32px;
+       line-height: 16px;
+       padding: 8px 0 0;
+       margin-bottom: 5px;
+       overflow: hidden;
+   }
+
+   .product_list_panel .product .price {
+       font: 18px Arial;
+       color: #ff2832;
+       position: relative;
+   }

@@ -8,6 +8,8 @@
 .baby_panel_con .nav_con {
     float: left;
     width: 221px;
+    /*ie6 li之间有间隔*/
+    +vertical-align: top;
 }
 
 .baby_panel_con .west_item_con {

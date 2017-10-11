@@ -1,0 +1,6 @@
+.flex-div{
+	display: flex;
+	transition: all 0.5m;
+	border-radius: 5px;
+
+}

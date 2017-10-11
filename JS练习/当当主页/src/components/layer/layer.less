@@ -1,0 +1,19 @@
+.layer{
+	width:600px;
+	heigth:200px;
+    background:yellow;
+    .div{
+		width:400px;
+		height:100px;
+ 		background:red;
+	}
+	 &:extend(.inline);
+	 &:hover {
+      background-color: white
+    }
+}
+
+
+.inline {
+  color: red;
+}

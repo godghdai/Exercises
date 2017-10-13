@@ -3,6 +3,8 @@
 .book_panel {
     height: 499px;
     margin-bottom: 30px;
+    *position: relative;
+    overflow: hidden;
 }
 
 .book_panel .left {
@@ -358,3 +360,14 @@
     color: #ff2832;
     text-decoration: underline;
 }
+
+.book_panel .network_product .photo_wrap{
+    display: block;
+    width: 166px;
+    height: 220px;
+}
+
+.book_panel .network_product .photo_wrap img{
+    width: 166px;
+    height: 220px;
+}  

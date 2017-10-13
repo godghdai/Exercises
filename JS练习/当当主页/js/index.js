@@ -1,104 +1,123 @@
-function removeClass(obj, sClass) {
+// import {Util} from './lib/Util';
+require('./lib/Polyfill');
+var Util = require('./lib/Util');
+var Tab = require('./lib/Tab');
+var BookTopTabPanel = require('./lib/BookTopTabPanel');
+var TabWithBannerPanel = require('./lib/TabWithBannerPanel');
+var ScrollBanner = require('./lib/ScrollBanner');
+var CountDown = require('./lib/CountDown');
+var MainBanner = require('./lib/MainBanner');
 
-    if (!obj.className) return;
-
-    var aClass = obj.className.split(' ');
-
-    for (var i = 0; i < aClass.length; i++) {
-        if (aClass[i] === sClass) {
-            aClass.splice(i, 1);
-            obj.className = aClass.join(' ');
-            return;
-        }
-    }
-
-}
-
-function addClass(obj, sClass) {
-
-    if (!obj.className) {
-        obj.className = sClass;
-        return;
-    }
-
-    var aClass = obj.className.split(' ');
-
-    for (var i = 0; i < aClass.length; i++) {
-        if (aClass[i] === sClass) return;
-    }
-
-    obj.className += ' ' + sClass;
-
-}
-
-function getByClass(sClass, parent) {
-
-    var aEles = (parent || document).getElementsByTagName('*');
-    var arr = [];
-
-    for (var i = 0; i < aEles.length; i++) {
-
-        var aClass = aEles[i].className.split(' ');
-
-        for (var j = 0; j < aClass.length; j++) {
-
-            if (aClass[j] == sClass) {
-
-                arr.push(aEles[i]);
-                break;
-
-            }
-
-        }
-
-    }
-
-    return arr;
-
-}
-
-function hasClass(obj, sClass) {
-
-    if (!obj.className) return false;
-
-    var aClass = obj.className.split(' ');
-
-    for (var i = 0; i < aClass.length; i++) {
-
-        if (aClass[i] === sClass) return true;
-
-    }
-
-    return false;
-}
+require('../css/index');
+require('../css/buynow_ad');
+require('../css/remain_panel');
+require('../css/book_panel');
+require('../css/clothes_panel');
+require('../css/normal_panel');
+require('../css/baby_panel');
+require('../css/stationery_panel');
+require('../css/product_list_panel');
+require('../css/footer_panel');
 
 
 window.onload = function() {
-    getByClass("top_menu_area")[0].onmouseover = function() {
-        addClass(this, "area_active");
-    }
-    getByClass("top_menu_area")[0].onmouseout = function() {
-        removeClass(this, "area_active");
-    }
-    getByClass("top_menu_mydd")[0].onmouseover = function() {
-        addClass(this, "active");
-    }
-    getByClass("top_menu_mydd")[0].onmouseout = function() {
-        removeClass(this, "active");
-    }
-    getByClass("top_menu_buy")[0].onmouseover = function() {
-        addClass(this, "active");
-    }
-    getByClass("top_menu_buy")[0].onmouseout = function() {
-        removeClass(this, "active");
-    }
+    Util.$("top_menu_area").onmouseover = function() {
+        Util.addClass(this, "area_active");
+    };
 
-    getByClass("top_menu_service")[0].onmouseover = function() {
-        addClass(this, "active");
-    }
-    getByClass("top_menu_service")[0].onmouseout = function() {
-        removeClass(this, "active");
-    }
+    Util.$("top_menu_area").onmouseout = function() {
+        Util.removeClass(this, "area_active");
+    };
+
+    ["top_menu_mydd", "top_menu_buy", "top_menu_service"].forEach(function(className) {
+        Util.$(className).onmouseover = function() {
+            Util.addClass(this, "active");
+        }
+        Util.$(className).onmouseout = function() {
+            Util.removeClass(this, "active");
+        }
+    })
+
+    MainBanner.init().autoPlay();
+    new CountDown({ "id": "countDown",endTime: new Date().getTime() + 5 * 60 * 60 * 1000 }).start();
+
+    new Tab({
+        "con": "note_tabpanel",
+        "contents": "content",
+        "interval": 3500,
+        "autoPlay": true
+    });
+
+    new Tab({
+        "con": "buynow_tabpanel",
+        "titles": "circle",
+        "contents": "banner",
+        "interval": 3000,
+        "autoPlay": true
+    });
+
+    new BookTopTabPanel({
+        "con": "book_panel_right_tab_panel",
+        "head": "right_head",
+        "contents": "right_booklist"
+    });
+
+
+    new ScrollBanner({
+        "itemWidth": 202,
+        "bannerID": "navScroolBanner",
+        "wrapClassName": "banners_wrap",
+        "itemClassName": "banner",
+        "easeFun": "linear",
+        "steps": 30,
+        "autoPlay": true
+    });
+
+
+    new TabWithBannerPanel({
+        "con": "book_panel_left_tab_panel",
+        "head": "titles_con",
+        "contents": "left_tab_content",
+        "bannerConfig": {
+            "className": "left_baner",
+            "itemWidth": 335
+        }
+    });
+
+    new TabWithBannerPanel({
+        "con": "clothes_tab_panel",
+        "head": "titles_con",
+        "contents": "content",
+        "bannerConfig": {
+            "className": "center_banner",
+            "itemWidth": 383
+        }
+    });
+
+
+    new ScrollBanner({
+        "itemWidth": 119,
+        "pageNum": 10,
+        "bannerID": "clothes_footer_banner",
+        "wrapClassName": "links_wrap",
+        "itemClassName": "link",
+        "easeFun": "easeOutBack",
+        "steps": 60,
+        "interval": 2500,
+        "autoPlay": true
+    });
+
+    new ScrollBanner({
+        "itemWidth": 314,
+        "bannerID": "baby_panel_banner",
+        "wrapClassName": "banners_wrap",
+        "itemClassName": "banner",
+        "steps": 60,
+        "interval": 2500,
+        "autoPlay": true
+    });
+
+
 
 
 

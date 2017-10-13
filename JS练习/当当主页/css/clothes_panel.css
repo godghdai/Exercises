@@ -1,5 +1,6 @@
 .clothes_panel{
     height: 634px;
+    overflow: hidden;
 }
 
 .clothes_panel .head {
@@ -57,6 +58,9 @@
 
 .clothes_panel .tab_contents{
     margin-top: 10px;
+    height: 523px;
+    *position: relative;
+    overflow: hidden;
 }
 
 .clothes_panel .content{ 
@@ -107,7 +111,13 @@
     border-left: 1px solid #e6e6e6;
     overflow: hidden;
 }
-
+.clothes_panel .banners{
+    position: relative;
+    width: 383px;
+}
+.clothes_panel .banner{
+    float: left;
+}
 .clothes_panel .center_banner .button,
 .clothes_panel .center_banner .arrow_bg,
 .clothes_panel .center_banner .ico_arrow {

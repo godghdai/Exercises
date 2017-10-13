@@ -420,9 +420,16 @@ img {
 }
 
 .nav_center .center_banner .banners {
+    position: relative;
     height: 326px;
     overflow: hidden;
 }
+.nav_center .center_banner .banner {
+    position: absolute;
+    top:0;
+    left:0;
+}
+
 
 .nav_center .center_banner .button,
 .nav_center .center_banner .arrow_bg,
@@ -433,6 +440,7 @@ img {
 
 .nav_center .center_banner .button {
     top: 122px;
+    z-index: 4;
 }
 
 .nav_center .center_banner .prev .ico_arrow {
@@ -454,6 +462,7 @@ img {
     +overflow: hidden;
     height: 20px;
     text-align: center;
+    z-index: 4;
 }
 
 .nav_center .center_banner .circle_con li {
@@ -470,6 +479,7 @@ img {
     background: #646464;
     -moz-border-radius: 10px;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .nav_center .center_banner .circle_con .active {
@@ -491,7 +501,11 @@ img {
     height: 160px;
     overflow: hidden;
 }
-
+.nav_center .footer_banner .banner{
+    position: absolute;
+    top:0;
+    left:0;
+}
 
 .nav_center .footer_banner .button,
 .nav_center .footer_banner .arrow_bg,
@@ -502,6 +516,7 @@ img {
 
 .nav_center .footer_banner .button {
     top: 65px;
+    z-index: 4;
 }
 
 .nav_center .footer_banner .prev .ico_arrow {
@@ -580,7 +595,7 @@ img {
     width: 99px;
     height: 28px;
     line-height: 28px;
-    cursor: default;
+    cursor: pointer;
     font-size: 14px;
     text-align: center;
     color: #646464;
@@ -623,6 +638,7 @@ img {
 }
 
 .nav_right .right_banner .banners {
+    position: relative;
     height: 119px;
     width: 202px;
     overflow: hidden;
@@ -654,4 +670,33 @@ img {
 
 .nav_right .right_banner .next .ico_arrow {
     background-position: -36px -83px;
+}
+
+.nav_right .right_banner .circle_con {
+    position: absolute;
+    bottom: 6px;
+    width: 100%;
+    /*清除 inline-block 3px*/
+    font-size: 0;
+    /*ie6 10像素过高*/
+    +overflow: hidden;
+    height: 8px;
+    text-align: center;
+}
+
+.nav_right .right_banner .circle_con li {
+    display: inline-block;
+    /*兼容ie7*/
+    *zoom: 1;
+    *display: inline;
+    width: 8px;
+    height: 8px;
+    margin-right: 6px;
+    background: #c8c8c8;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.nav_right .right_banner .circle_con .active {
+    background: #5e5e5e;
 }

@@ -11,8 +11,8 @@
         <link rel="shortcut icon" href="./imgs/favicon.ico" />
         <link rel="bookmark" href="./imgs/favicon.ico" type="image/x-icon" 　/>
     </head>
-    <link href="dist/all.css" rel="stylesheet" type="text/css">
-    <!-- <link href="css/index.css" rel="stylesheet" type="text/css">
+     <link href="dist/all.css" rel="stylesheet" type="text/css"> 
+<!--     <link href="css/index.css" rel="stylesheet" type="text/css">
     <link href="css/buynow_ad.css" rel="stylesheet" type="text/css">
     <link href="css/remain_panel.css" rel="stylesheet" type="text/css">
     <link href="css/book_panel.css" rel="stylesheet" type="text/css">
@@ -21,8 +21,7 @@
     <link href="css/baby_panel.css" rel="stylesheet" type="text/css">
     <link href="css/stationery_panel.css" rel="stylesheet" type="text/css">
     <link href="css/product_list_panel.css" rel="stylesheet" type="text/css">
-    <link href="css/footer_panel.css" rel="stylesheet" type="text/css">
-    -->
+    <link href="css/footer_panel.css" rel="stylesheet" type="text/css"> -->
     <!--[if IE 6]>
 <script src="./js/DD_belatedPNG_0.0.8a.js" mce_src="DD_belatedPNG_0.0.8a.js"></script>
 <script type="text/javascript">DD_belatedPNG.fix('.ico_arrow,.fix_png,.remain_pannel .logo_link img,.footer .links_con img,.normal_panel_footer img');</script>
@@ -114,7 +113,57 @@
                 </div>
             </div>
             <div id="head_center" class="center">
-                <a href="#"><img src="./imgs/logo.jpg" alt=""></a>
+                <a class="logo" href="#"><img src="./imgs/logo.jpg" alt=""></a>
+                <div class="search_panel clearfix">
+                    <div class="search_panel_west">
+                        <div class="search_west_center">
+                            <form action="#" method="GET">
+                                <span class="tip">母婴满200减100</span>
+                                <input class="keyword" type="text" />
+                                <span class="dropdownbutton" id="dropdownbutton">全部分类<i class="ico_arrow"></i></span>
+                                <input type="hidden" value="母婴满200减100" />
+                                <input class="submitbuton" type="button"><i class="ico_search"></i></input>
+                            </form>
+                            <div class="category_pop_win" id="category_pop_win">
+                                <a href="javascript:void(0); "><span >全部分类</span></a>
+                                <a href="javascript:void(0); "><span>尾品汇</span></a>
+                                <a href="javascript:void(0); "><span>图书</span></a>
+                                <a href="javascript:void(0); "><span>电子书</span></a>
+                                <a href="javascript:void(0); "><span>音像</span></a>
+                                <a href="javascript:void(0); "><span>影视</span></a>
+                                <a href="javascript:void(0); "><span>时尚美妆</span></a>
+                                <a href="javascript:void(0); "><span>母婴用品</span></a>
+                                <a href="javascript:void(0); "><span>玩具</span></a>
+                                <a href="javascript:void(0); "><span>孕婴服饰</span></a>
+                                <a href="javascript:void(0); "><span>童装童鞋</span></a>
+                                <a href="javascript:void(0); "><span>家居日用</span></a>
+                                <a href="javascript:void(0); "><span>家具装饰</span></a>
+                                <a href="javascript:void(0); "><span>服装</span></a>
+                                <a href="javascript:void(0); "><span>鞋</span></a>
+                                <a href="javascript:void(0); "><span>箱包皮具</span></a>
+                                <a href="javascript:void(0); "><span>手表饰品</span></a>
+                                <a href="javascript:void(0); "><span>运动户外</span></a>
+                                <a href="javascript:void(0); "><span>汽车用品</span></a>
+                                <a href="javascript:void(0); "><span>食品</span></a>
+                                <a href="javascript:void(0); "><span>手机通讯</span></a>
+                                <a href="javascript:void(0); "><span>数码影音</span></a>
+                                <a href="javascript:void(0); "><span>电脑办公</span></a>
+                                <a href="javascript:void(0); "><span>大家电</span></a>
+                                <a href="javascript:void(0); "><span>家用电器</span></a>
+                            </div>
+                        </div>
+                        <div class="search_west_footer clearfix">
+                            <p class="search_footer_hotwords">热搜: <a href="#" target="_blank">女装嗨购</a><a href="#" target="_blank ">当当优品</a><a href="# " target="_blank">摆渡人2</a><a href="# " target="_blank ">母婴日</a><a href="# " target="_blank ">神奇的喷嚏</a><a href="# " target="_blank ">尾品汇</a>
+                            </p>
+                            <a class="search_footer_searchlink" href="#" target="_blank">高级搜索</a>
+                        </div>
+                    </div>
+                    <div class="search_panel_east">
+                        <i class="ico_cart"></i>
+                        <a class="cart" href="javascript:void(0);">购物车<span class="total">0</span></a>
+                        <a class="order" href="javascript:void(0);">我的订单</a>
+                    </div>
+                </div>
             </div>
             <div id="head_bottom" class="center">
                 <div class="left fl">
@@ -139,7 +188,7 @@
         <div id="nav" class="center clearfix">
             <div class="nav_menus fl">
                 <ul class="menus_con">
-                    <li class="active">
+                    <li >
                         <a href="#" target="_blank">图书</a>、<a href="#" target="_blank">童书</a>
                     </li>
                     <li>
@@ -187,6 +236,76 @@
                         <a href="#" target="_blank">当当礼品卡</a>、<a href="#" target="_blank">生活服务</a>
                     </li>
                 </ul>
+                <div class="nav_menu_detail clearfix center">
+                    <div class="tags">
+                        <a href="#">鞋靴馆</a>
+                        <a href="#">箱包馆</a>
+                        <a href="#">海外轻奢</a>
+                    </div>
+                    <ul class="links">
+                        <li class="clearfix">
+                            <h3><a href="#">女鞋</a></h3>
+                            <p>
+                                <a href="#">单鞋</a><a href="#">平底鞋</a><a href="#">低跟鞋</a><a href="#">高跟鞋</a><a href="#">小白鞋</a><a href="#">帆布鞋</a><a href="#">乐福鞋</a><a href="#">布洛克</a><a href="#">松糕鞋</a><a href="#">豆豆鞋</a><a href="#">休闲鞋</a><a href="#">坡跟鞋</a><a href="#">鱼嘴鞋</a><a href="#">凉鞋</a><a href="#">内增高</a><a href="#">防水台</a><a href="#">拖鞋/凉拖</a><a href="#">人字拖</a><a href="#">女靴</a><a href="#">妈妈鞋</a><a href="#">布鞋/绣花鞋</a><a href="#">雨鞋/雨靴</a></p>
+                        </li>
+                        <li class="clearfix">
+                            <h3><a href="#">男鞋</a></h3>
+                            <p>
+                                <a href="#">商务休闲</a><a href="#">户外休闲</a><a href="#">正装皮鞋</a><a href="#">布洛克</a><a href="#">乐福鞋</a><a href="#">网面鞋</a><a href="#">板鞋</a><a href="#">豆豆鞋</a><a href="#">内增高</a><a href="#">帆布鞋</a><a href="#">凉鞋</a><a href="#">拖鞋/人字拖</a><a href="#">男靴</a><a href="#">传统布鞋</a>
+                            </p>
+                        </li>
+                        <li class="clearfix">
+                            <h3><a href="#">童鞋</a></h3>
+                            <p>
+                                <a href="#">运动/户外鞋</a><a href="#">休闲鞋</a><a href="#">帆布鞋/板鞋</a><a href="#">皮鞋</a><a href="#">凉鞋</a><a href="#">学步鞋</a><a href="#">舞蹈鞋</a><a href="#">亲子鞋</a><a href="#">拖鞋/洞洞鞋</a><a href="#">棉鞋</a><a href="#">靴子/雪地靴</a>
+                            </p>
+                        </li>
+                        <li class="clearfix">
+                            <h3><a href="#">女包</a></h3>
+                            <p>
+                                <a href="#">单肩包</a><a href="#">手提包</a><a href="#">斜挎包</a><a href="#">双肩包</a><a href="#">真皮包</a><a href="#">钱包/腰包/卡包/钥匙包</a><a href="#">手拿/晚宴包</a><a href="#">链条包</a>
+                            </p>
+                        </li>
+                        <li class="clearfix">
+                            <h3><a href="#">男包</a></h3>
+                            <p>
+                                <a href="#">单肩/斜跨包</a><a href="#">商务公文包</a><a href="#">双肩包</a><a href="#">手提包</a><a href="#">手拿包</a><a href="#">腰包/胸包</a><a href="#">钱包</a><a href="#">真皮包</a>
+                            </p>
+                        </li>
+                        <li class="clearfix">
+                            <h3><a href="#">功能箱包</a></h3>
+                            <p>
+                                <a href="#">旅行箱/拉杆箱</a><a href="#">旅行包/拉杆包</a><a href="#">电脑包</a><a href="#">登山包</a><a href="#">书包</a><a href="#">妈咪包</a>
+                            </p>
+                        </li>
+                        <li class="clearfix">
+                            <h3><a href="#">皮具配件</a></h3>
+                            <p>
+                                <a href="#">皮带腰带</a><a href="#">皮具礼盒</a><a href="#">女士钱包</a><a href="#">男士钱包</a><a href="#">钥匙包</a><a href="#">名片夹</a>
+                            </p>
+                        </li>
+                        <li class="clearfix">
+                            <h3><a href="#">奢侈品</a></h3>
+                            <p>
+                                <a href="#">女包</a><a href="#">男包</a><a href="#">配饰</a>
+                            </p>
+                        </li>
+                    </ul>
+                    <div class="baners">
+                        <a class="" href="#"><img src="./imgs/menu/m1/1.jpg"/></a>
+                        <a class="" href="#"><img src="./imgs/menu/m1/2.jpg"/></a>
+                        <a class="" href="#"><img src="./imgs/menu/m1/3.jpg"/></a>
+                        <a class="" href="#"><img src="./imgs/menu/m1/4.jpg"/></a>
+                        <a class="" href="#"><img src="./imgs/menu/m1/5.jpg"/></a>
+                        <a class="" href="#"><img src="./imgs/menu/m1/6.jpg"/></a>
+                        <a class="" href="#"><img src="./imgs/menu/m1/7.jpg"/></a>
+                        <a class="" href="#"><img src="./imgs/menu/m1/8.jpg"/></a>
+                        <a class="" href="#"><img src="./imgs/menu/m1/9.jpg"/></a>
+                        <a class="" href="#"><img src="./imgs/menu/m1/10.jpg"/></a>
+                        <a class="" href="#"><img src="./imgs/menu/m1/11.jpg"/></a>
+                        <a class="" href="#"><img src="./imgs/menu/m1/12.jpg"/></a>
+                    </div>
+                </div>
             </div>
             <div class="nav_center fl">
                 <div class="center_banner base_banner" id="mainBanner">
@@ -254,11 +373,11 @@
                 </div>
                 <div class="right_banner base_banner" id="navScroolBanner">
                     <div class="banners">
-                        <div class="banners_wrap clearfix">
-                            <a class="banner" href="#"><img src="./imgs/banner/s1.jpg" alt=""></a>
-                            <a class="banner" href="#"><img src="./imgs/banner/s2.jpg" alt=""></a>
-                            <a class="banner" href="#"><img src="./imgs/banner/s3.jpg" alt=""></a>
-                        </div>
+                        <ul class="banners_wrap clearfix">
+                            <li class="banner"><a href="#"><img src="./imgs/banner/s1.jpg" alt=""></a></li>
+                            <li class="banner"><a href="#"><img src="./imgs/banner/s2.jpg" alt=""></a></li>
+                            <li class="banner"><a href="#"><img src="./imgs/banner/s3.jpg" alt=""></a></li>
+                        </ul>
                     </div>
                     <ul class="circle_con">
                         <li></li>
@@ -532,12 +651,12 @@
                             </div>
                             <div class="left_baner base_banner">
                                 <div class="banners">
-                                    <div class="banners_wrap clearfix">
-                                        <a class="banner" href="#"><img src="./imgs/ebook/m1/bs1.jpg" alt=""></a>
-                                        <a class="banner" href="#"><img src="./imgs/ebook/m1/bs2.jpg" alt=""></a>
-                                        <a class="banner" href="#"><img src="./imgs/ebook/m1/bs3.jpg" alt=""></a>
-                                        <a class="banner" href="#"><img src="./imgs/ebook/m1/bs4.jpg" alt=""></a>
-                                    </div>
+                                    <ul class="banners_wrap clearfix">
+                                        <li class="banner"><a href="#"><img src="./imgs/ebook/m1/bs1.jpg" alt=""></a></li>
+                                        <li class="banner"><a href="#"><img src="./imgs/ebook/m1/bs2.jpg" alt=""></a></li>
+                                        <li class="banner"><a href="#"><img src="./imgs/ebook/m1/bs3.jpg" alt=""></a></li>
+                                        <li class="banner"><a href="#"><img src="./imgs/ebook/m1/bs4.jpg" alt=""></a></li>
+                                    </ul>
                                 </div>
                                 <ul class="circle_con">
                                     <li></li>
@@ -607,12 +726,12 @@
                             </div>
                             <div class="left_baner base_banner">
                                 <div class="banners">
-                                    <div class="banners_wrap clearfix">
-                                        <a class="banner" href="#"><img src="./imgs/ebook/m2/bs1.jpg" alt=""></a>
-                                        <a class="banner" href="#"><img src="./imgs/ebook/m2/bs2.jpg" alt=""></a>
-                                        <a class="banner" href="#"><img src="./imgs/ebook/m2/bs3.jpg" alt=""></a>
-                                        <a class="banner" href="#"><img src="./imgs/ebook/m2/bs4.jpg" alt=""></a>
-                                    </div>
+                                    <ul class="banners_wrap clearfix">
+                                        <li class="banner"><a href="#"><img src="./imgs/ebook/m2/bs1.jpg" alt=""></a></li>
+                                        <li class="banner"><a href="#"><img src="./imgs/ebook/m2/bs2.jpg" alt=""></a></li>
+                                        <li class="banner"><a href="#"><img src="./imgs/ebook/m2/bs3.jpg" alt=""></a></li>
+                                        <li class="banner"><a href="#"><img src="./imgs/ebook/m2/bs4.jpg" alt=""></a></li>
+                                    </ul>
                                 </div>
                                 <ul class="circle_con">
                                     <li></li>
@@ -682,12 +801,12 @@
                             </div>
                             <div class="left_baner base_banner">
                                 <div class="banners">
-                                    <div class="banners_wrap clearfix">
-                                        <a class="banner" href="#"><img src="./imgs/ebook/m3/bs1.jpg" alt=""></a>
-                                        <a class="banner" href="#"><img src="./imgs/ebook/m3/bs2.jpg" alt=""></a>
-                                        <a class="banner" href="#"><img src="./imgs/ebook/m3/bs3.jpg" alt=""></a>
-                                        <a class="banner" href="#"><img src="./imgs/ebook/m3/bs4.jpg" alt=""></a>
-                                    </div>
+                                    <ul class="banners_wrap clearfix">
+                                        <li class="banner"><a href="#"><img src="./imgs/ebook/m3/bs1.jpg" alt=""></a></li>
+                                        <li class="banner"><a href="#"><img src="./imgs/ebook/m3/bs2.jpg" alt=""></a></li>
+                                        <li class="banner"><a href="#"><img src="./imgs/ebook/m3/bs3.jpg" alt=""></a></li>
+                                        <li class="banner"><a href="#"><img src="./imgs/ebook/m3/bs4.jpg" alt=""></a></li>
+                                    </ul>
                                 </div>
                                 <ul class="circle_con">
                                     <li></li>
@@ -754,11 +873,11 @@
                             </div>
                             <div class="left_baner base_banner">
                                 <div class="banners">
-                                    <div class="banners_wrap clearfix">
-                                        <a class="banner" href="#"><img src="./imgs/ebook/m4/bs1.jpg" alt=""></a>
-                                        <a class="banner" href="#"><img src="./imgs/ebook/m4/bs2.jpg" alt=""></a>
-                                        <a class="banner" href="#"><img src="./imgs/ebook/m4/bs3.jpg" alt=""></a>
-                                    </div>
+                                    <ul class="banners_wrap clearfix">
+                                        <li class="banner"><a href="#"><img src="./imgs/ebook/m4/bs1.jpg" alt=""></a></li>
+                                        <li class="banner"><a href="#"><img src="./imgs/ebook/m4/bs2.jpg" alt=""></a></li>
+                                        <li class="banner"><a href="#"><img src="./imgs/ebook/m4/bs3.jpg" alt=""></a></li>
+                                    </ul>
                                 </div>
                                 <ul class="circle_con">
                                     <li></li>
@@ -823,10 +942,10 @@
                             </div>
                             <div class="left_baner base_banner">
                                 <div class="banners">
-                                    <div class="banners_wrap clearfix">
-                                        <a class="banner" href="#"><img src="./imgs/ebook/m5/bs1.jpg" alt=""></a>
-                                        <a class="banner" href="#"><img src="./imgs/ebook/m5/bs2.jpg" alt=""></a>
-                                    </div>
+                                    <ul class="banners_wrap clearfix">
+                                        <li class="banner"><a href="#"><img src="./imgs/ebook/m5/bs1.jpg" alt=""></a></li>
+                                        <li class="banner"><a href="#"><img src="./imgs/ebook/m5/bs2.jpg" alt=""></a></li>
+                                    </ul>
                                 </div>
                                 <ul class="circle_con">
                                     <li></li>

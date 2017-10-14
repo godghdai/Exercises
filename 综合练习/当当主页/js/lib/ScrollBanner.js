@@ -114,7 +114,7 @@ ScrollBanner.prototype.initEvent = function() {
         self.next();
     }
 
-    this.autoPlay();
+    if (this.isAutoPlay) this.autoPlay();
 
 
 }
@@ -199,11 +199,9 @@ ScrollBanner.prototype.animate = function(_from, _to) {
     }, 10);
 }
 ScrollBanner.prototype.stopPlay = function() {
-    if (!this.isAutoPlay) return;
     clearInterval(this.autoPlayTimer);
 }
 ScrollBanner.prototype.autoPlay = function() {
-    if (!this.isAutoPlay) return;
     var self = this;
     this.autoPlayTimer = setInterval(function() {
         //self.QueueOpt.push("next");

@@ -1,5 +1,3 @@
-
-
 .book_panel {
     height: 499px;
     margin-bottom: 30px;
@@ -118,6 +116,12 @@
     border-top: 1px solid #e6e6e6;
     border-left: 1px solid #e6e6e6;
     overflow: hidden;
+}
+
+.book_panel .left_baner .banners {
+    position: relative;
+    width: 335px;
+    height: 220px;
 }
 
 .book_panel .left_baner .banners_wrap {
@@ -349,9 +353,11 @@
     color: #ff3228;
     font-weight: bold;
 }
-.book_panel .right_booklist .last .content{
-	border-bottom: 0;
+
+.book_panel .right_booklist .last .content {
+    border-bottom: 0;
 }
+
 .book_panel .right_head a:hover {
     text-decoration: underline;
 }
@@ -361,13 +367,13 @@
     text-decoration: underline;
 }
 
-.book_panel .network_product .photo_wrap{
+.book_panel .network_product .photo_wrap {
     display: block;
     width: 166px;
     height: 220px;
 }
 
-.book_panel .network_product .photo_wrap img{
+.book_panel .network_product .photo_wrap img {
     width: 166px;
     height: 220px;
-}  
+}

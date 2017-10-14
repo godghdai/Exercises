@@ -21,6 +21,8 @@ require('../css/footer_panel');
 
 
 window.onload = function() {
+
+
     Util.$("top_menu_area").onmouseover = function() {
         Util.addClass(this, "area_active");
     };
@@ -38,8 +40,29 @@ window.onload = function() {
         }
     })
 
+    var menus_con = Util.$("nav_menus");
+    var menus = Util.$("menus_con", menus_con).getElementsByTagName("li");
+    var menusDetail = Util.$("nav_menu_detail", menus_con);
+    for (var i = 0; i < menus.length; i++) {
+        menus[i].index = i;
+        menus[i].onmouseover = function() {
+            Util.addClass(this, "active");
+        }
+        menus[i].onmouseout = function() {
+            Util.removeClass(this, "active");
+        }
+    }
+    menus_con.onmouseover = function() {
+        menusDetail.style.display = 'block';
+    }
+    menus_con.onmouseout = function() {
+        menusDetail.style.display = 'none';
+    }
+
+
+
     MainBanner.init().autoPlay();
-    new CountDown({ "id": "countDown",endTime: new Date().getTime() + 5 * 60 * 60 * 1000 }).start();
+    new CountDown({ "id": "countDown", endTime: new Date().getTime() + 5 * 60 * 60 * 1000 }).start();
 
     new Tab({
         "con": "note_tabpanel",

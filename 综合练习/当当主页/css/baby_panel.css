@@ -47,6 +47,12 @@
     margin-top: -2px;
 }
 
+.baby_panel_con .banners{
+    position: relative;
+    width: 314px;
+    height: 389px;
+}
+
 .baby_panel_con .banner_con .banners_wrap{
 	width: 942px;
 }

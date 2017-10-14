@@ -1,4 +1,4 @@
-.clothes_panel{
+.clothes_panel {
     height: 634px;
     overflow: hidden;
 }
@@ -56,19 +56,19 @@
     font-weight: bold;
 }
 
-.clothes_panel .tab_contents{
+.clothes_panel .tab_contents {
     margin-top: 10px;
     height: 523px;
     *position: relative;
     overflow: hidden;
 }
 
-.clothes_panel .content{ 
+.clothes_panel .content {
     border-right: 1px solid #e6e6e6;
     border-bottom: 1px solid #e6e6e6;
 }
 
-.clothes_panel .west_con{
+.clothes_panel .west_con {
     float: left;
     position: relative;
     width: 238px;
@@ -102,7 +102,7 @@
     text-decoration: underline;
 }
 
-.clothes_panel .center_banner{
+.clothes_panel .center_banner {
     float: left;
     position: relative;
     width: 383px;
@@ -111,13 +111,16 @@
     border-left: 1px solid #e6e6e6;
     overflow: hidden;
 }
-.clothes_panel .banners{
+
+.clothes_panel .banners {
     position: relative;
     width: 383px;
 }
-.clothes_panel .banner{
+
+.clothes_panel .banner {
     float: left;
 }
+
 .clothes_panel .center_banner .button,
 .clothes_panel .center_banner .arrow_bg,
 .clothes_panel .center_banner .ico_arrow {
@@ -165,7 +168,7 @@
     background: #5e5e5e;
 }
 
-.clothes_panel .footer{
+.clothes_panel .footer {
     position: relative;
     width: 1198px;
     height: 53px;
@@ -173,14 +176,24 @@
     margin-top: -1px;
     overflow: hidden;
 }
-.clothes_panel .footer .links_wrap{
+
+.clothes_panel .footer .links_con {
+    position: relative;
+    padding-left: 8px;
+    width: 1190px;
+    height: 53px;
+}
+
+.clothes_panel .footer .links_wrap {
     width: 3000px;
 }
-.clothes_panel .footer .links_con img{
+
+.clothes_panel .footer .links_con img {
     width: 110px;
     height: 50px;
 }
-.clothes_panel .footer li{
+
+.clothes_panel .footer li {
     float: left;
     width: 110px;
     height: 50px;
@@ -207,7 +220,7 @@
 }
 
 
-.clothes_panel .big_con{
+.clothes_panel .big_con {
     float: left;
     width: 191px;
     height: 340px;
@@ -216,7 +229,7 @@
     overflow: hidden;
 }
 
-.clothes_panel .smail_con{
+.clothes_panel .smail_con {
     float: left;
     width: 191px;
     height: 180px;
@@ -224,5 +237,3 @@
     border-left: 1px solid #e6e6e6;
     overflow: hidden;
 }
-
-

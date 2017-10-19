@@ -1,0 +1,26 @@
+{
+  "name": "typescript_demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^14.4.0",
+    "glob": "^7.1.2",
+    "gulp": "^3.9.1",
+    "gulp-batch": "^1.0.5",
+    "gulp-concat": "^2.6.1",
+    "gulp-filter": "^5.0.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sourcemap": "^1.0.1",
+    "gulp-typescript": "^3.2.2",
+    "gulp-watch": "^4.3.11",
+    "tsify": "^3.0.3",
+    "typescript": "^2.5.3",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}

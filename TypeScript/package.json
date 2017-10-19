@@ -18,9 +18,11 @@
     "gulp-plumber": "^1.1.0",
     "gulp-sourcemap": "^1.0.1",
     "gulp-typescript": "^3.2.2",
+    "gulp-util": "^3.0.8",
     "gulp-watch": "^4.3.11",
     "tsify": "^3.0.3",
     "typescript": "^2.5.3",
-    "vinyl-source-stream": "^1.1.0"
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.9.0"
   }
 }

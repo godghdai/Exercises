@@ -1,0 +1,64 @@
+1. 检查Javascript
+2. 编译Sass(less)文件
+3. 合并JS
+4. 压缩并重命名合并后的js
+5. 自动刷新页面功能
+npm  install gulp-jshint --save-dev        jshint 安装失败问题: 解决方案: npm install --save-dev jshint gulp-jshint
+npm  install gulp-sass  --save-dev         编译sass文件
+npm  install gulp-concat  --save-dev       合并js
+npm  install gulp-uglify --save-dev        通过UglifyJS来压缩JS文件.
+npm  install gulp-rename  --save-dev       重命名文件的插件，当要把一个文件存储为不同版本时可以使用。比如在需要一个style.css同时你有需要一个style.min.css
+npm  install gulp-autoprefixer --save-dev  使用Autoprefixer来补全浏览器兼容的css。
+gulp-minify-css                            压缩css,最终是调用clean-css 参考：http://www.ydcss.com/archives/41
+gulp-gzip        压缩zip
+gulp-imagemin    压缩png/jpg/git/svg 格式图片文件
+gulp-util        gulp常用的工具库  在安装gulp时默认已经安装，可以直接使用
+gulp-clean  清理档案
+
+
+
+
+//引入gulp，项目文件中安装的gulp的引入方式 
+var gulp = require('gulp');
+//引入组件
+var jshint = require("gulp-jshint");
+var gutil = require("gulp-util");
+var sass = require("gulp-sass");
+var concat = require("gulp-concat");
+var uglify = require("gulp-uglify");
+var rename = require("gulp-rename");
+var path = require("path");
+//var webpack = require("webpack");
+//var WebpackDevServer = require("webpack-dev-server"); 
+//var webpackConfig = require("./webpack.config.js");
+//也可以是某个特定目录下(比如:config)的文件、 
+var del = require("del"); //你也许会想要在编译文件之前删除一些文件 
+gulp.task('clean', function(cb) { return del(['build/**/*'], cb); });
+//检查脚本 
+gulp.task('lint', function() {
+    gulp.src('./src/javascript/**/*.js')
+        .pipe(jshint()).pipe(jshint.reporter('default'));
+});
+//编译sass //sass 任务会编译scss/目录下的scss文件，并把编译完成的css文件保存到/css目录中 
+gulp.task('sass', function() {
+    gulp.src("./src/scss/**/*.scss")
+        .pipe(sass({ outputStyle: 'compact' }))
+        .pipe(gulp.dest("./build/css"));
+});
+//合并，压缩文件 //scipts 任务会合并js 目录下的所有js文件并输出到dist目录中，然后gulp会重命名。压缩合并的文件，也输出到dist/目录 
+gulp.task('scripts', function() {
+    gulp.src('./src/javascript/**/*.js')
+        .pipe(concat('all.js'))
+        .pipe(gulp.dest('./dest'))
+        .pipe(rename("all.min.js"))
+        .pipe(uglify())
+        .pipe(gulp.dest("./build"))
+});
+//这时，我们创建了一个基于其他任务的default任务。 //使用.run()方法关联和运行我们上面定义的任务，使用.watch() 方法去坚挺制定目录的文件变化,当有文件变化时，会运行回调定义的其他任务。
+gulp.task('default', function() { //将你的默认的任务代码放在这里 
+    gulp.run('lint', 'sass', 'scripts');
+    //监听文件变化 
+    gulp.watch("", function() {
+        gulp.run('lint', 'sass', 'scripts');
+    });
+});

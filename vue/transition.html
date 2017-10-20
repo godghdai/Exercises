@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>transition</title>
+</head>
+<style>
+ul{
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+	float: left;
+	margin-right: 10px;
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s ease;
+}
+.fade-enter, .fade-leave-active {
+  opacity: 0
+}
+.photos_wrap{
+	position: relative;
+	width: 200px;
+	height: 200px;
+	border: 1px solid red;
+    overflow: hidden;
+}
+.child-view {
+  position: absolute;
+  transition: all 0.5s cubic-bezier(.55,0,.1,1);
+}
+.slide-left-enter, .slide-right-leave-active {
+  opacity: 0;
+  -webkit-transform: translate(200px, 0);
+  transform: translate(200px, 0);
+}
+.slide-left-leave-active, .slide-right-enter {
+  opacity: 0;
+  -webkit-transform: translate(-200px, 0);
+  transform: translate(-200px, 0);
+}
+</style
+<body>
+    <div id="app">
+    </div>
+    <script src="./lib/vue.js"></script>
+    <script src="./lib/vue-router.js"></script>
+    <script type="text/javascript">
+
+  	Vue.use(VueRouter)
+
+		const Home = {
+		  template: `
+		    <div class="home">
+		      <p>home</p>
+		    </div>
+		  `
+		}
+
+		const Photos = {
+		  data () {
+		    return {
+		      transitionName: 'slide-left'
+		    }
+		  },
+		  // dynamically set transition based on route change
+		  watch: {
+		    '$route' (to, from) {
+		      const toDepth = to.path.split('/').length
+		      const fromDepth = from.path.split('/').length
+		      this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
+		    }
+		  },
+		  template: `
+		    <div class="photos_wrap">
+		      <transition :name="transitionName">
+		        <router-view class="child-view"></router-view>
+		      </transition>
+		    </div>
+		  `
+		}
+
+		const Photo1 = { template: '<div class="photo1"><img src="./imgs/1.jpg"></img></div>' }
+		const Photo2 = { template: '<div class="photo2"><img src="./imgs/2.jpg"></img></div>' }
+		const Photo3 = { template: '<div class="photo3"><img src="./imgs/3.jpg"></img></div>' }
+
+		const router = new VueRouter({
+		  mode: 'hash',
+		  routes: [
+		    { path: '/', component: Home },
+		    { path: '/photos', component: Photos,
+		      children: [
+		        { path: '', component: Photo1 },
+		        { path: 'Photo2', component: Photo2 },
+		        { path: 'Photo3', component: Photo3 }
+		      ]
+		    }
+		  ]
+		})
+
+		new Vue({
+		  router,
+		  template: `
+		    <div id="app">
+		      <h1>Transitions</h1>
+		      <ul>
+		        <li><router-link to="/">home</router-link></li>
+		        <li><router-link to="/photos">photos</router-link></li>
+		        <li><router-link to="/photos/photo2">photo2</router-link></li>
+		        <li><router-link to="/photos/photo3">photo3</router-link></li>
+		      </ul>
+		      <transition name="fade" mode="out-in">
+		        <router-view class="view"></router-view>
+		      </transition>
+		    </div>
+		  `
+		}).$mount('#app')
+    </script>
+</body>
+
+</html>

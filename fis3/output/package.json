@@ -1,0 +1,35 @@
+{
+  "name": "default",
+  "version": "1.0.0",
+  "description": "Default template for fis scaffold",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "fis3 release -d ./output",
+    "start": "fis3 release -wL",
+    "release":"fis3 release production -d ./output "
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fis-scaffold/default.git"
+  },
+  "keywords": [
+    "fis",
+    "scaffold"
+  ],
+  "author": "fex",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/fis-scaffold/default/issues"
+  },
+  "homepage": "https://github.com/fis-scaffold/default",
+  "dependencies": {},
+  "devDependencies": {
+    "fis-optimizer-html-minifier": "0.0.9",
+    "fis-parser-babel-6.x": "^6.24.1",
+    "fis-parser-less-2.x": "^0.1.4",
+    "fis3": "^3.4.36",
+    "fis3-parser-typescript": "^1.2.0",
+    "fis3-preprocessor-autoprefixer": "^0.1.1"
+  }
+}

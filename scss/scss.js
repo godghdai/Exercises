@@ -48,7 +48,7 @@ watchObservable.subscribe(name => {
             ext: '.css'
         });
 
-        await mzfs.writeFile(destPath, css).then(err => {
+        await mzfs.writeFile(destPath, f_css).then(err => {
             //console.log('save !!')
         });
 

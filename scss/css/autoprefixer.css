@@ -9,9 +9,9 @@
 .box {
   -webkit-transition-property: width;
   transition-property: width;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
+  -webkit-transition-duration: 12s;
+          transition-duration: 12s;
   -webkit-transition-timing-function: linear;
           transition-timing-function: linear;
-  -webkit-transition-delay: 2s;
-          transition-delay: 2s; }
+  -webkit-transition-delay: 15s;
+          transition-delay: 15s; }

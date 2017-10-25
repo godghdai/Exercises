@@ -1,13 +1,12 @@
 .div {
-    display: flex; 
+    display: flex;
     border: 1px solid red;
     transition: width 2s;
 }
 
-.box{
-	transition-property: width;
-	transition-duration: 1s;
-	transition-timing-function: linear;
-	transition-delay: 2s;
+.box {
+    transition-property: width;
+    transition-duration: 12s;
+    transition-timing-function: linear;
+    transition-delay: 15s;
 }
-

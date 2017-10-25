@@ -12,6 +12,7 @@
   "dependencies": {
     "autoprefixer": "^7.1.6",
     "fs-extra": "^4.0.2",
+    "glob": "^7.1.2",
     "mz": "^2.7.0",
     "node-sass": "^4.5.3",
     "node-watch": "^0.5.5",

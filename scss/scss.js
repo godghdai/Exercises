@@ -1,15 +1,67 @@
 const watch = require('node-watch');
-const fs = require('fs');
+const fs = require('fs-extra');
 const postcss = require('postcss');
-const precss = require('precss');
-const syntax = require('postcss-scss');
 const autoprefixer = require('autoprefixer');
 const path = require('path');
 const mzfs = require('mz/fs');
 const Rx = require('rxjs');
 const sass = require('node-sass');
+const glob = require("glob");
 
-const watchObservable=Rx.Observable.create(observer => {
+Rx.Observable.create(observer => {
+    let watcher = watch('./scss', { recursive: true });
+    watcher.on('change', function(evt, name) {
+        observer.next(name);
+    });
+    watcher.on('error', function(err) {
+        observer.error(err);
+    });
+}).subscribe(sassToCss);
+
+function sassToCss(name) {
+    Rx.Observable.create(observer => {
+        sass.render({
+            file: path.resolve(__dirname, name)
+        }, function(err, result) {
+            if (err) return observer.error(err);
+            observer.next(result.css.toString());
+            observer.complete();
+        });
+    }).flatMap(txt => {
+        return Rx.Observable.fromPromise(
+            postcss([autoprefixer]).process(txt).then(result => {
+                result.warnings().forEach(warn => console.warn(warn.toString()));
+                return result.css;
+            }).catch(err => {
+                if (err) console.log(err);
+                return txt;
+            })
+        );
+    }).subscribe(css => {
+        console.log(css);
+        let destPath = path.format({
+            dir: path.resolve(__dirname, "css"),
+            name: path.basename(name, '.scss'),
+            ext: '.css'
+        });
+        mzfs.writeFile(destPath, css).then(err => {
+            if (err) console.log(err);
+        })
+    })
+}
+
+glob("./scss/**/*.scss", {}, function(er, files) {
+    const dir = path.resolve(__dirname, "css");
+    fs.ensureDir(dir, err => {
+        console.log(err)
+        files.forEach(sassToCss);
+    })
+})
+
+
+/*
+
+const watchObservable = Rx.Observable.create(observer => {
     let watcher = watch('./scss', { recursive: true });
     watcher.on('change', function(evt, name) {
         observer.next(name);
@@ -63,62 +115,4 @@ watchObservable.subscribe(name => {
 
 });
 
-
-
-
-return;
-
-
-Rx.Observable.create(observer => {
-    let watcher = watch('./scss', { recursive: true });
-    watcher.on('change', function(evt, name) {
-        observer.next(name);
-    });
-    watcher.on('error', function(err) {
-        observer.error(err);
-    });
-}).flatMap(name => {
-    //let readFileAsObservable = Rx.Observable.bindNodeCallback(fs.readFile);
-    //return readFileAsObservable(path.resolve(__dirname, name), 'utf8');
-    return Rx.Observable.fromPromise(
-        mzfs.readFile(path.resolve(__dirname, name))
-        .then(scss => {
-            return {
-                "name": name,
-                "scss": scss
-            };
-        }).catch(err => {
-            console.log(err);
-        })
-    );
-
-}).flatMap(({ name, scss }) => {
-    return Rx.Observable.fromPromise(
-        postcss([precss, autoprefixer])
-        .process(scss, {
-            parser: syntax
-        }).then(result => {
-            return {
-                "name": name,
-                "css": result.css
-            }
-        }).catch(err => {
-            console.log(err);
-            return {
-                "name": "",
-            }
-        })
-    );
-}).subscribe(({ name, css }) => {
-    if (name == "") return;
-    let destPath = path.format({
-        dir: path.resolve(__dirname, "css"),
-        name: path.basename(name, '.scss'),
-        ext: '.css'
-    });
-    mzfs.writeFile(destPath, css).then(err => {
-        console.log('save !!')
-    });
-
-});
-
+*/

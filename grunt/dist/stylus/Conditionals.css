@@ -1,0 +1,8 @@
+#logo:hover {
+  opacity: 0.5;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+}
+body {
+  padding: 10px 5px;
+  margin: 10px 5px;
+}

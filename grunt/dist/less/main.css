@@ -1,0 +1,97 @@
+/*混合*/
+.border {
+  border: solid 5px pink;
+}
+.box {
+  width: 100px;
+  border: solid 5px pink;
+}
+.box2 {
+  border: solid 30px yellow;
+  border: solid 10px black;
+}
+.box3 {
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+}
+.arrow3 {
+  border-width: 100px;
+  border-color: transparent #ccc transparent transparent;
+  border-style: dashed solid dashed dashed;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: fixed;
+}
+.box_02 {
+  width: 310px;
+  color: #c2c2c2;
+}
+/*嵌套*/
+.list {
+  width: 200px;
+  padding: 5px;
+}
+.list li {
+  float: left;
+  height: 30px;
+  margin: 2px;
+}
+.list a {
+  float: left;
+}
+.list a .ico {
+  display: block;
+  width: 10px;
+  height: 10px;
+}
+.list a:hover {
+  color: red;
+}
+.list span {
+  float: right;
+}
+.arguments {
+  border: 30px #ccc solid;
+  width: -webkit-calc(270px);
+  width: -moz-calc(270px);
+  width: calc(270px);
+  width: -webkit-calc(300px-30px);
+  width: -moz-calc(300px-30px);
+  width: calc(300px-30px);
+}
+.test_important {
+  -webkit-border-radius: 5px !important;
+  border-radius: 5px !important;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
+.title {
+  height: 62px;
+  line-height: 62px;
+  border-top: solid 1px #fff;
+}
+.title h3 {
+  font: 22px/62px "微软雅黑";
+}
+.title_nav {
+  float: right;
+}
+.title_nav img {
+  width: 57px;
+  height: 57px;
+}
+.title_nav .user,
+.title_nav .click,
+.title_nav .hot {
+  float: left;
+}
+.title_nav .user {
+  color: red;
+}

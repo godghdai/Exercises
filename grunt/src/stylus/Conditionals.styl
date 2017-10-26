@@ -1,0 +1,18 @@
+support-for-ie = true
+
+opacity(n)
+  opacity n
+  if support-for-ie
+    filter unquote('progid:DXImageTransform.Microsoft.Alpha(Opacity=' + round(n * 100) + ')')
+
+#logo
+  &:hover
+    opacity 0.5
+
+box(x, y, margin = false)
+  padding y x
+  if margin
+    margin y x
+
+body
+  box(5px, 10px, true)

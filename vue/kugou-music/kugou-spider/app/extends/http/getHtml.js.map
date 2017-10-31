@@ -1,0 +1,29 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\..\\src\\extends\\http\\getHtml.js"
+    ],
+    "names": [
+        "fetch",
+        "require",
+        "cheerio",
+        "getHtml",
+        "url",
+        "process",
+        "data",
+        "then",
+        "res",
+        "text",
+        "console",
+        "log",
+        "$",
+        "load",
+        "module",
+        "exports"
+    ],
+    "mappings": "AAAA,MAAMA,QAAQC,QAAQ,YAAR,CAAd;AACA,MAAMC,UAAUD,QAAQ,SAAR,CAAhB;;AAEA,SAASE,OAAT,CAAiBC,GAAjB,EAAsBC,OAAtB,EAA+B;AAC7BA,YAAUA,WAAW,UAASC,IAAT,EAAe;AAAE,WAAOA,IAAP;AAAc,GAApD;AACA,SAAON,MAAMI,GAAN,EACJG,IADI,CACC,UAASC,GAAT,EAAc;AAClB,WAAOA,IAAIC,IAAJ,EAAP;AACD,GAHI,EAGFF,IAHE,CAGGE,QAAQ;AACdC,YAAQC,GAAR,CAAYF,IAAZ;AACA,QAAIG,IAAIV,QAAQW,IAAR,CAAaJ,IAAb,CAAR;AACA,WAAOJ,QAAQO,CAAR,CAAP;AACD,GAPI,CAAP;AAQD;AACDE,OAAOC,OAAP,GAAiBZ,OAAjB",
+    "file": "..\\..\\..\\src\\extends\\http\\getHtml.js",
+    "sourcesContent": [
+        "const fetch = require('node-fetch');\nconst cheerio = require('cheerio');\n\nfunction getHtml(url, process) {\n  process = process || function(data) { return data; };\n  return fetch(url)\n    .then(function(res) {\n      return res.text();\n    }).then(text => {\n      console.log(text)\n      let $ = cheerio.load(text);\n      return process($);\n    });\n}\nmodule.exports = getHtml;\n"
+    ]
+}

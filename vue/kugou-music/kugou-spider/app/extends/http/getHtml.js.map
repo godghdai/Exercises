@@ -11,19 +11,18 @@
         "url",
         "process",
         "data",
+        "headers",
         "then",
         "res",
         "text",
-        "console",
-        "log",
         "$",
         "load",
         "module",
         "exports"
     ],
-    "mappings": "AAAA,MAAMA,QAAQC,QAAQ,YAAR,CAAd;AACA,MAAMC,UAAUD,QAAQ,SAAR,CAAhB;;AAEA,SAASE,OAAT,CAAiBC,GAAjB,EAAsBC,OAAtB,EAA+B;AAC7BA,YAAUA,WAAW,UAASC,IAAT,EAAe;AAAE,WAAOA,IAAP;AAAc,GAApD;AACA,SAAON,MAAMI,GAAN,EACJG,IADI,CACC,UAASC,GAAT,EAAc;AAClB,WAAOA,IAAIC,IAAJ,EAAP;AACD,GAHI,EAGFF,IAHE,CAGGE,QAAQ;AACdC,YAAQC,GAAR,CAAYF,IAAZ;AACA,QAAIG,IAAIV,QAAQW,IAAR,CAAaJ,IAAb,CAAR;AACA,WAAOJ,QAAQO,CAAR,CAAP;AACD,GAPI,CAAP;AAQD;AACDE,OAAOC,OAAP,GAAiBZ,OAAjB",
+    "mappings": "AAAA,MAAMA,QAAQC,QAAQ,YAAR,CAAd;AACA,MAAMC,UAAUD,QAAQ,SAAR,CAAhB;;AAEA,SAASE,OAAT,CAAiBC,GAAjB,EAAsBC,OAAtB,EAA+B;AAC3BA,cAAUA,WAAW,UAASC,IAAT,EAAe;AAChC,eAAOA,IAAP;AACH,KAFD;AAGA,WAAON,MAAMI,GAAN,EAAW;AACdG,iBAAS;AACL,0BAAc;AADT;AADK,KAAX,EAIJC,IAJI,CAIC,UAASC,GAAT,EAAc;AAClB,eAAOA,IAAIC,IAAJ,EAAP;AACH,KANM,EAMJF,IANI,CAMCE,QAAQ;AACZ,YAAIC,IAAIT,QAAQU,IAAR,CAAaF,IAAb,CAAR;AACA,eAAOL,QAAQM,CAAR,CAAP;AACH,KATM,CAAP;AAUH;AACDE,OAAOC,OAAP,GAAiBX,OAAjB",
     "file": "..\\..\\..\\src\\extends\\http\\getHtml.js",
     "sourcesContent": [
-        "const fetch = require('node-fetch');\nconst cheerio = require('cheerio');\n\nfunction getHtml(url, process) {\n  process = process || function(data) { return data; };\n  return fetch(url)\n    .then(function(res) {\n      return res.text();\n    }).then(text => {\n      console.log(text)\n      let $ = cheerio.load(text);\n      return process($);\n    });\n}\nmodule.exports = getHtml;\n"
+        "const fetch = require('node-fetch');\nconst cheerio = require('cheerio');\n\nfunction getHtml(url, process) {\n    process = process || function(data) {\n        return data;\n    };\n    return fetch(url, {\n        headers: {\n            \"User-Agent\": \"Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1\"\n        }\n    }).then(function(res) {\n        return res.text();\n    }).then(text => {\n        let $ = cheerio.load(text);\n        return process($);\n    });\n}\nmodule.exports = getHtml;"
     ]
 }

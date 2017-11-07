@@ -1,20 +1,19 @@
 #### Exercises
-* Òµ¾«ÓÚÇÚ»ÄÓÚæÒ£¬ĞĞ³ÉÓÚË¼»ÙÓÚËæ£¬ÌìµÀ³êÇÚ£¬ÇÚÄÜ²¹×¾¡£
-* ¼ÇÂ¼³É³¤µãµÎ£¬½ø²½Ã¿Ò»Ìì¡£
-* Ï£Íû¶ÔÇ°¶Ë³õÑ§ÕßµÄÓĞËù°ïÖú£¬»¶Ó­Star...
+* ä¸šç²¾äºå‹¤è’äºå¬‰ï¼Œè¡Œæˆäºæ€æ¯äºéšï¼Œå¤©é“é…¬å‹¤ï¼Œå‹¤èƒ½è¡¥æ‹™ã€‚
+* è®°å½•æˆé•¿ç‚¹æ»´ï¼Œè¿›æ­¥æ¯ä¸€å¤©ã€‚
 ------------
-#### ¸üĞÂÈÕÖ¾
-- 2017-10-14 18:01:03 [µ±µ±Ö÷Ò³Íê³É](https://github.com/godghdai/Exercises/tree/master/%E7%BB%BC%E5%90%88%E7%BB%83%E4%B9%A0/%E5%BD%93%E5%BD%93%E4%B8%BB%E9%A1%B5)
-- 2017-10-08 17:45:04 [µ±µ±Ö÷Ò³](https://github.com/godghdai/Exercises/tree/master/%E7%BB%BC%E5%90%88%E7%BB%83%E4%B9%A0/%E5%BD%93%E5%BD%93%E4%B8%BB%E9%A1%B5)
-- 2017-09-21 20:07:45 [JDÖ÷Ò³](https://github.com/godghdai/Exercises/tree/master/%E7%BB%BC%E5%90%88%E7%BB%83%E4%B9%A0/JD%E4%B8%BB%E9%A1%B5)
-- 2017-09-14 13:12:23 [µ±µ±Í¼Æ¬·Å´óĞ§¹û](https://github.com/godghdai/Exercises/tree/master/%E7%BB%BC%E5%90%88%E7%BB%83%E4%B9%A0/%E5%BD%93%E5%BD%93%E5%9B%BE%E7%89%87%E6%94%BE%E5%A4%A7%E6%95%88%E6%9E%9C)
-- 2017-09-11 23:12:11 [Í¼Æ¬µÄËæ»ú¹ö¶¯](https://github.com/godghdai/Exercises/tree/master/JS%E7%BB%83%E4%B9%A0/%E5%9B%BE%E7%89%87%E7%9A%84%E9%9A%8F%E6%9C%BA%E6%BB%9A%E5%8A%A8)
-- 2017-09-09 18:30:27 [Ê±¼äµ¹¼ÆÊ±](https://github.com/godghdai/Exercises/tree/master/JS%E7%BB%83%E4%B9%A0/%E6%97%B6%E9%97%B4%E5%80%92%E8%AE%A1%E6%97%B6)
-- 2017-09-08 11:28:16 [JDÓÒ²àĞü¸¡²Ëµ¥CSS3,JS)](https://github.com/godghdai/Exercises/tree/master/%E7%BB%BC%E5%90%88%E7%BB%83%E4%B9%A0/JD%E5%8F%B3%E4%BE%A7%E6%82%AC%E6%B5%AE%E8%8F%9C%E5%8D%95)
-- 2017-09-06 02:38:22 [KugouÂÖ²¥¹ã¸æ](https://github.com/godghdai/Exercises/tree/master/%E7%BB%BC%E5%90%88%E7%BB%83%E4%B9%A0/Kugou%E8%BD%AE%E6%92%AD%E5%B9%BF%E5%91%8A)
-- 2017-09-02 10:48:53 [Î¨Æ·»áÂÖ²¥ºá·ù¹ã¸æ](https://github.com/godghdai/Exercises/tree/master/JS%E7%BB%83%E4%B9%A0/%E5%94%AF%E5%93%81%E4%BC%9A%E8%BD%AE%E6%92%AD%E6%A8%AA%E5%B9%85%E5%B9%BF%E5%91%8A)
-- 2017-08-29 08:01:26 [´øËõÂÔÍ¼µÄÍ¼Æ¬ÎŞ·ìÇĞ»»Ğ§¹û](https://github.com/godghdai/Exercises/tree/master/%E7%BB%BC%E5%90%88%E7%BB%83%E4%B9%A0/%E5%B8%A6%E7%BC%A9%E7%95%A5%E5%9B%BE%E7%9A%84%E5%9B%BE%E7%89%87%E6%97%A0%E7%BC%9D%E5%88%87%E6%8D%A2%E6%95%88%E6%9E%9C)
-- 2017-08-25 12:55:45 [ÕÕÆ¬Ç½£¨ÍÏ×§¼Ó×Ô¶¯²¹Î»¶¯»­£©](https://github.com/godghdai/Exercises/tree/master/JS%E7%BB%83%E4%B9%A0/%E7%85%A7%E7%89%87%E5%A2%99 "ÕÕÆ¬Ç½£¨ÍÏ×§¼Ó×Ô¶¯²¹Î»¶¯»­£©")
-- 2017-08-21 14:11:21 [ËÑºüÊÓÆµ¼ÇÂ¼Æ¬ÁĞ±íÕ¹Ê¾](https://github.com/godghdai/Exercises/tree/master/JS%E7%BB%83%E4%B9%A0/%E6%90%9C%E7%8B%90%E8%A7%86%E9%A2%91%E8%AE%B0%E5%BD%95%E7%89%87%E5%88%97%E8%A1%A8%E5%B1%95%E7%A4%BA)
-- 2017-08-13 22:45:33 [ÕıÏÒ¼°Ô²ÖÜÔË¶¯](https://github.com/godghdai/Exercises/tree/master/JS%E7%BB%83%E4%B9%A0/%E6%AD%A3%E5%BC%A6%E5%8F%8A%E5%9C%86%E5%91%A8%E8%BF%90%E5%8A%A8 "ÕıÏÒ¼°Ô²ÖÜÔË¶¯")
+#### æ›´æ–°æ—¥å¿—
+- 2017-10-14 18:01:03 [å½“å½“ä¸»é¡µå®Œæˆ](https://github.com/godghdai/Exercises/tree/master/%E7%BB%BC%E5%90%88%E7%BB%83%E4%B9%A0/%E5%BD%93%E5%BD%93%E4%B8%BB%E9%A1%B5)
+- 2017-10-08 17:45:04 [å½“å½“ä¸»é¡µ](https://github.com/godghdai/Exercises/tree/master/%E7%BB%BC%E5%90%88%E7%BB%83%E4%B9%A0/%E5%BD%93%E5%BD%93%E4%B8%BB%E9%A1%B5)
+- 2017-09-21 20:07:45 [JDä¸»é¡µ](https://github.com/godghdai/Exercises/tree/master/%E7%BB%BC%E5%90%88%E7%BB%83%E4%B9%A0/JD%E4%B8%BB%E9%A1%B5)
+- 2017-09-14 13:12:23 [å½“å½“å›¾ç‰‡æ”¾å¤§æ•ˆæœ](https://github.com/godghdai/Exercises/tree/master/%E7%BB%BC%E5%90%88%E7%BB%83%E4%B9%A0/%E5%BD%93%E5%BD%93%E5%9B%BE%E7%89%87%E6%94%BE%E5%A4%A7%E6%95%88%E6%9E%9C)
+- 2017-09-11 23:12:11 [å›¾ç‰‡çš„éšæœºæ»šåŠ¨](https://github.com/godghdai/Exercises/tree/master/JS%E7%BB%83%E4%B9%A0/%E5%9B%BE%E7%89%87%E7%9A%84%E9%9A%8F%E6%9C%BA%E6%BB%9A%E5%8A%A8)
+- 2017-09-09 18:30:27 [æ—¶é—´å€’è®¡æ—¶](https://github.com/godghdai/Exercises/tree/master/JS%E7%BB%83%E4%B9%A0/%E6%97%B6%E9%97%B4%E5%80%92%E8%AE%A1%E6%97%B6)
+- 2017-09-08 11:28:16 [JDå³ä¾§æ‚¬æµ®èœå•CSS3,JS)](https://github.com/godghdai/Exercises/tree/master/%E7%BB%BC%E5%90%88%E7%BB%83%E4%B9%A0/JD%E5%8F%B3%E4%BE%A7%E6%82%AC%E6%B5%AE%E8%8F%9C%E5%8D%95)
+- 2017-09-06 02:38:22 [Kugouè½®æ’­å¹¿å‘Š](https://github.com/godghdai/Exercises/tree/master/%E7%BB%BC%E5%90%88%E7%BB%83%E4%B9%A0/Kugou%E8%BD%AE%E6%92%AD%E5%B9%BF%E5%91%8A)
+- 2017-09-02 10:48:53 [å”¯å“ä¼šè½®æ’­æ¨ªå¹…å¹¿å‘Š](https://github.com/godghdai/Exercises/tree/master/JS%E7%BB%83%E4%B9%A0/%E5%94%AF%E5%93%81%E4%BC%9A%E8%BD%AE%E6%92%AD%E6%A8%AA%E5%B9%85%E5%B9%BF%E5%91%8A)
+- 2017-08-29 08:01:26 [å¸¦ç¼©ç•¥å›¾çš„å›¾ç‰‡æ— ç¼åˆ‡æ¢æ•ˆæœ](https://github.com/godghdai/Exercises/tree/master/%E7%BB%BC%E5%90%88%E7%BB%83%E4%B9%A0/%E5%B8%A6%E7%BC%A9%E7%95%A5%E5%9B%BE%E7%9A%84%E5%9B%BE%E7%89%87%E6%97%A0%E7%BC%9D%E5%88%87%E6%8D%A2%E6%95%88%E6%9E%9C)
+- 2017-08-25 12:55:45 [ç…§ç‰‡å¢™ï¼ˆæ‹–æ‹½åŠ è‡ªåŠ¨è¡¥ä½åŠ¨ç”»ï¼‰](https://github.com/godghdai/Exercises/tree/master/JS%E7%BB%83%E4%B9%A0/%E7%85%A7%E7%89%87%E5%A2%99 "ç…§ç‰‡å¢™ï¼ˆæ‹–æ‹½åŠ è‡ªåŠ¨è¡¥ä½åŠ¨ç”»ï¼‰")
+- 2017-08-21 14:11:21 [æœç‹è§†é¢‘è®°å½•ç‰‡åˆ—è¡¨å±•ç¤º](https://github.com/godghdai/Exercises/tree/master/JS%E7%BB%83%E4%B9%A0/%E6%90%9C%E7%8B%90%E8%A7%86%E9%A2%91%E8%AE%B0%E5%BD%95%E7%89%87%E5%88%97%E8%A1%A8%E5%B1%95%E7%A4%BA)
+- 2017-08-13 22:45:33 [æ­£å¼¦åŠåœ†å‘¨è¿åŠ¨](https://github.com/godghdai/Exercises/tree/master/JS%E7%BB%83%E4%B9%A0/%E6%AD%A3%E5%BC%A6%E5%8F%8A%E5%9C%86%E5%91%A8%E8%BF%90%E5%8A%A8 "æ­£å¼¦åŠåœ†å‘¨è¿åŠ¨")
 

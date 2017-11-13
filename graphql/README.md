@@ -1,0 +1,7 @@
+#### Exercises
+* sequelize + mockjs + graphql + cheerio + ramda
+* 业精于勤荒于嬉，行成于思毁于随，天道酬勤，勤能补拙。
+* 记录成长点滴，进步每一天。
+------------
+
+

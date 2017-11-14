@@ -1,9 +1,12 @@
 const express = require('express');
 const graphqlHTTP = require('express-graphql');
 const R = require('ramda');
+const opn = require('opn');
+
 const {
     GraphQLString,
     GraphQLObjectType,
+    GraphQLInputObjectType,
     GraphQLInt,
     GraphQLSchema,
     GraphQLEnumType,
@@ -19,23 +22,23 @@ const StudentType = new GraphQLObjectType({
     fields: () => ({
         id: {
             type: new GraphQLNonNull(GraphQLString),
-            description: 'The id of the Student.',
+            description: '学生ID',
         },
         name: {
             type: GraphQLString,
-            description: 'The name of the Student.',
+            description: '姓名',
         },
         card: {
             type: GraphQLString,
-            description: 'The card of the Student.',
+            description: '身份证号',
         },
         address: {
             type: GraphQLString,
-            description: 'The address of the Student.',
+            description: '住址',
         },
         tel: {
             type: GraphQLString,
-            description: 'The tel of the Student.',
+            description: '电话',
         },
     })
 });
@@ -45,20 +48,28 @@ const ClassType = new GraphQLObjectType({
     fields: () => ({
         id: {
             type: new GraphQLNonNull(GraphQLString),
-            description: 'The id of the School.',
+            description: '班级ID',
         },
         name: {
             type: GraphQLString,
-            description: 'The name of the human.',
+            description: '班级名称',
         },
         students: {
             type: new GraphQLList(StudentType),
+            description: '班级学生列表',
             args: {
-                schoolId: {
+                page: {
                     type: GraphQLInt,
+                    description: '页',
+                },
+                limit: {
+                    type: GraphQLInt,
+                    description: '每页条目数',
                 }
             },
-            async resolve(root, { schoolId }) {
+            async resolve(root, { page, limit }) {
+                limit = limit || 5;
+                offset = (page || 0) * limit;
                 var result = await studentModel.findAll({
                     attributes: ['id', 'name', 'card', 'address'],
                     where: {
@@ -66,8 +77,8 @@ const ClassType = new GraphQLObjectType({
                             [Op.eq]: root.id
                         }
                     },
-                    offset: 0,
-                    limit: 5
+                    offset: offset,
+                    limit: limit
                 });
                 return R.project(['id', 'name', 'card', 'address'], result);
             }
@@ -82,20 +93,28 @@ const SchoolType = new GraphQLObjectType({
     fields: () => ({
         id: {
             type: new GraphQLNonNull(GraphQLString),
-            description: 'The id of the School.',
+            description: '学校ID',
         },
         name: {
             type: GraphQLString,
-            description: 'The name of the human.',
+            description: '学校名称',
         },
         students: {
             type: new GraphQLList(StudentType),
+            description: '学校学生列表',
             args: {
-                schoolId: {
+                page: {
                     type: GraphQLInt,
+                    description: '页',
+                },
+                limit: {
+                    type: GraphQLInt,
+                    description: '每页条目数',
                 }
             },
-            async resolve(root, { schoolId }) {
+            async resolve(root, { page, limit }) {
+                limit = limit || 5;
+                offset = (page || 0) * limit;
                 var result = await studentModel.findAll({
                     attributes: ['id', 'name', 'card', 'address'],
                     where: {
@@ -103,8 +122,8 @@ const SchoolType = new GraphQLObjectType({
                             [Op.eq]: root.id
                         }
                     },
-                    offset: 0,
-                    limit: 5
+                    offset: offset,
+                    limit: limit
                 });
                 return R.project(['id', 'name', 'card', 'address'], result);
             }
@@ -112,11 +131,18 @@ const SchoolType = new GraphQLObjectType({
         classes: {
             type: new GraphQLList(ClassType),
             args: {
-                schoolId: {
+                page: {
                     type: GraphQLInt,
+                    description: '页',
+                },
+                limit: {
+                    type: GraphQLInt,
+                    description: '每页条目数',
                 }
             },
-            async resolve(root, { schoolId }) {
+            async resolve(root, { page, limit }) {
+                limit = limit || 5;
+                offset = (page || 0) * limit;
                 var result = await classesModel.findAll({
                     attributes: ['id', 'name'],
                     where: {
@@ -124,8 +150,8 @@ const SchoolType = new GraphQLObjectType({
                             [Op.eq]: root.id
                         }
                     },
-                    offset: 0,
-                    limit: 5
+                    offset: offset,
+                    limit: limit
                 });
                 return R.project(['id', 'name'], result);
             }
@@ -138,13 +164,25 @@ const queryType = new GraphQLObjectType({
     fields: () => ({
         schoolList: {
             type: new GraphQLList(SchoolType),
+            description: '学校列表',
             args: {
                 name: {
                     type: GraphQLString,
+                    description: '学校名称',
+                },
+                page: {
+                    type: GraphQLInt,
+                    description: '页',
+                },
+                limit: {
+                    type: GraphQLInt,
+                    description: '每页条目数',
                 }
             },
-            async resolve(root, { name }) {
-
+            async resolve(root, { name, page, limit }) {
+                name = name || "";
+                limit = limit || 5;
+                offset = (page || 0) * limit;
                 var result = await schoolModel.findAll({
                     attributes: ['id', 'name'],
                     where: {
@@ -153,23 +191,41 @@ const queryType = new GraphQLObjectType({
                         }
                     },
                     offset: 0,
-                    limit: 5
+                    limit: limit
                 });
                 return R.project(['id', 'name'], result);
             },
         },
         studentList: {
             type: new GraphQLList(SchoolType),
+            description: '学生列表',
             args: {
                 name: {
                     type: GraphQLString,
+                    description: '学校名称',
+                },
+                page: {
+                    type: GraphQLInt,
+                    description: '页',
+                },
+                limit: {
+                    type: GraphQLInt,
+                    description: '每页条目数',
                 }
             },
-            async resolve(root, { offset,limit }) {
+            async resolve(root, { name, page, limit }) {
+                name = name || "";
+                limit = limit || 5;
+                offset = (page || 0) * limit;
                 var result = await studentModel.findAll({
                     attributes: ['id', 'name', 'card', 'address'],
-                    offset: 0,
-                    limit: 5
+                    where: {
+                        name: {
+                            [Op.like]: `%${name}%`
+                        }
+                    },
+                    offset: offset,
+                    limit: limit
                 });
                 return R.project(['id', 'name', 'card', 'address'], result);
             }
@@ -177,8 +233,66 @@ const queryType = new GraphQLObjectType({
 
     })
 });
+
+
+
+
+
+
+
+var ClassInputObject = new GraphQLInputObjectType({
+    name: 'ClassInput',
+    fields: {
+        schoolId: {
+            type: new GraphQLNonNull(GraphQLInt),
+            description: '学校ID'
+        },
+        name: {
+            type: new GraphQLNonNull(GraphQLString),
+            description: '班级名称'
+        }
+    }
+});
+
+
+const mutationType = new GraphQLObjectType({
+    name: 'Mutation',
+    description: 'The root Mutation type',
+    fields: {
+        createClass: {
+            type: ClassType,
+            description: '创建班级',
+            args: {
+                ClassInput: { 
+                    type: ClassInputObject
+               },
+            },
+            resolve: (root, {ClassInput}) => {
+                return classesModel.create(ClassInput);
+               /*
+               return new Promise(function(resolve, reject) {
+                    setTimeout(() => {
+                        resolve({
+                            id: "1",
+                            name: "testschool:css" 
+                        })
+                    }, 100)
+                })*/
+               
+               // return createVideo(args)
+            }
+        }
+    }
+});
+
+
+
+
+
+
 const schema2 = new GraphQLSchema({
-    query: queryType
+    query: queryType,
+    mutation: mutationType
 });
 
 var app = express();
@@ -192,4 +306,44 @@ app.use('/graphql', graphqlHTTP({
 }));
 app.listen(4000, () => {
     console.log('Running a GraphQL API server at localhost:4000/graphql');
+    //opn('http://localhost:4000/graphql', {app: ['chrome', '--incognito']});
 });
+
+/*
+{
+  schoolList(limit: 2, page: 1) {
+    id
+    name
+    students(limit: 2) {
+      id
+      name
+      address
+    }
+    classes(limit: 1) {
+      id
+      name
+      students(limit: 2) {
+        id
+        name
+      }
+    }
+  }
+  studentList(limit: 2,name:"李") {
+    id
+    name
+  }
+}
+
+
+mutation class {
+  createClass(ClassInput:{
+    schoolId:12,
+    name:"tests"
+  }){
+    id
+    name
+  }
+}
+
+
+*/

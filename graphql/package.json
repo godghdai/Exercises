@@ -5,26 +5,27 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "async": "^2.6.0",
+    "cheerio": "^1.0.0-rc.2",
     "express": "^4.16.2",
     "express-graphql": "^0.6.11",
     "graphql": "^0.11.7",
     "mockjs": "^1.0.1-beta3",
+    "mz": "^2.7.0",
+    "node-fetch": "^1.7.3",
+    "nodemon": "^1.12.1",
+    "opn": "^5.1.0",
     "ramda": "^0.25.0",
     "rxjs": "^5.5.2",
     "sequelize": "^4.22.5",
     "sqlite3": "^3.1.13",
     "superagent": "^3.8.1",
-    "superagent-proxy": "^1.0.2",
-    "cheerio": "^1.0.0-rc.2",
-    "mz": "^2.7.0",
-    "node-fetch": "^1.7.3"
+    "superagent-proxy": "^1.0.2"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }

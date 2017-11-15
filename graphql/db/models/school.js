@@ -1,16 +1,17 @@
-const Sequelize = require('sequelize');
+const mixin = require('mixin-deep');
+const hooks = require('./hooks');
 module.exports = (sequelize, DataTypes) => {
   return sequelize.define("school", {
   	id: {
         primaryKey: true,
-        type: Sequelize.INTEGER,
+        type: DataTypes.INTEGER,
         autoIncrement: true
     },
-    name: Sequelize.STRING(50),
+    name: DataTypes.STRING(50),
     flag: {
-         type:Sequelize.INTEGER,
+         type:DataTypes.INTEGER,
          allowNull: true, 
          defaultValue: 0
      }
-  })
+  },mixin({},hooks))
 }

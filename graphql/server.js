@@ -12,10 +12,12 @@ const {
     GraphQLEnumType,
     GraphQLInterfaceType,
     GraphQLList,
-    GraphQLNonNull
+    GraphQLNonNull,
+    GraphQLID
 } = require('graphql');
 
 const { schoolModel, classesModel, studentModel, Op } = require('./db');
+const DataLoader = require('dataloader');
 
 const StudentType = new GraphQLObjectType({
     name: 'StudentType',
@@ -190,7 +192,7 @@ const queryType = new GraphQLObjectType({
                             [Op.like]: `%${name}%`
                         }
                     },
-                    offset: 0,
+                    offset: offset,
                     limit: limit
                 });
                 return R.project(['id', 'name'], result);

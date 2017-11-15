@@ -1,21 +1,21 @@
-const Sequelize = require('sequelize');
+const mixin = require('mixin-deep');
 module.exports = (sequelize, DataTypes) => {
     return sequelize.define('codes', {
         timestamps: false,
         tableName: 'codes',
         code: {
             unique: true,
-            type: Sequelize.STRING
+            type: DataTypes.STRING
         },
         title: {
-            type: Sequelize.STRING
+            type: DataTypes.STRING
         },
         lev: {
-            type: Sequelize.INTEGER
+            type: DataTypes.INTEGER
         },
         id: {
             primaryKey: true,
-            type: Sequelize.INTEGER,
+            type: DataTypes.INTEGER,
             autoIncrement: true
         }
     });

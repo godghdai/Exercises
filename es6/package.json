@@ -1,0 +1,29 @@
+{
+  "name": "babel_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "dev": "nodemon -w src --exec \"babel-node src --presets env \"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d dist --source-maps",
+    "build2": "babel src -d dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "nodemon": "^1.14.12",
+    "rimraf": "^2.6.2"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.26.0",
+    "koa": "^2.5.0",
+    "koa-router": "^7.4.0"
+  }
+}

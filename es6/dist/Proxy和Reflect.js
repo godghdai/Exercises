@@ -19,38 +19,35 @@ var _keys2 = _interopRequireDefault(_keys);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 {
-  var obj = {
+  let obj = {
     time: '2017-03-11',
     name: 'net',
     _r: 123
   };
 
-  var monitor = new Proxy(obj, {
+  let monitor = new Proxy(obj, {
     // 拦截对象属性的读取
-    get: function get(target, key) {
+    get(target, key) {
       return target[key].replace('2017', '2018');
     },
-
     // 拦截对象设置属性
-    set: function set(target, key, value) {
+    set(target, key, value) {
       if (key === 'name') {
         return target[key] = value;
       } else {
         return target[key];
       }
     },
-
     // 拦截key in object操作
-    has: function has(target, key) {
+    has(target, key) {
       if (key === 'name') {
         return target[key];
       } else {
         return false;
       }
     },
-
     // 拦截delete
-    deleteProperty: function deleteProperty(target, key) {
+    deleteProperty(target, key) {
       if (key.indexOf('_') > -1) {
         delete target[key];
         return true;
@@ -58,12 +55,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
         return target[key];
       }
     },
-
     // 拦截Object.keys,Object.getOwnPropertySymbols,Object.getOwnPropertyNames
-    ownKeys: function ownKeys(target) {
-      return (0, _keys2.default)(target).filter(function (item) {
-        return item != 'time';
-      });
+    ownKeys(target) {
+      return (0, _keys2.default)(target).filter(item => item != 'time');
     }
   });
 
@@ -84,15 +78,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 }
 
 {
-  var _obj = {
+  let obj = {
     time: '2017-03-11',
     name: 'net',
     _r: 123
   };
 
-  console.log('Reflect get', (0, _get2.default)(_obj, 'time'));
-  (0, _set2.default)(_obj, 'name', 'mukewang');
-  console.log(_obj);
-  console.log('has', (0, _has2.default)(_obj, 'name'));
+  console.log('Reflect get', (0, _get2.default)(obj, 'time'));
+  (0, _set2.default)(obj, 'name', 'mukewang');
+  console.log(obj);
+  console.log('has', (0, _has2.default)(obj, 'name'));
 }
-//# sourceMappingURL=Proxy和Reflect.js.map

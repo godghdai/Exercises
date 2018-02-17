@@ -8,7 +8,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 {
   // 基本定义
-  var ajax = function ajax(callback) {
+  let ajax = function (callback) {
     console.log('执行');
     setTimeout(function () {
       callback && callback.call();
@@ -20,7 +20,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 }
 
 {
-  var _ajax = function _ajax() {
+  let ajax = function () {
     console.log('执行2');
     return new _promise2.default(function (resolve, reject) {
       setTimeout(function () {
@@ -29,13 +29,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     });
   };
 
-  _ajax().then(function () {
+  ajax().then(function () {
     console.log('promise', 'timeout2');
   });
 }
 
 {
-  var _ajax2 = function _ajax2() {
+  let ajax = function () {
     console.log('执行3');
     return new _promise2.default(function (resolve, reject) {
       setTimeout(function () {
@@ -44,7 +44,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     });
   };
 
-  _ajax2().then(function () {
+  ajax().then(function () {
     return new _promise2.default(function (resolve, reject) {
       setTimeout(function () {
         resolve();
@@ -56,7 +56,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 }
 
 {
-  var _ajax3 = function _ajax3(num) {
+  let ajax = function (num) {
     console.log('执行4');
     return new _promise2.default(function (resolve, reject) {
       if (num > 5) {
@@ -67,16 +67,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     });
   };
 
-  _ajax3(6).then(function () {
+  ajax(6).then(function () {
     console.log('log', 6);
   }).catch(function (err) {
     console.log('catch', err);
   });
 
-  _ajax3(3).then(function () {
+  ajax(3).then(function () {
     console.log('log', 3);
   }).catch(function (err) {
     console.log('catch', err);
   });
 }
-//# sourceMappingURL=Promise.js.map

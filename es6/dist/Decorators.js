@@ -4,14 +4,6 @@ var _getOwnPropertyDescriptor = require('babel-runtime/core-js/object/get-own-pr
 
 var _getOwnPropertyDescriptor2 = _interopRequireDefault(_getOwnPropertyDescriptor);
 
-var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = require('babel-runtime/helpers/createClass');
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) {
@@ -46,27 +38,19 @@ function _applyDecoratedDescriptor(target, property, decorators, descriptor, con
 {
   var _desc, _value, _class;
 
-  var readonly = function readonly(target, name, descriptor) {
+  let readonly = function (target, name, descriptor) {
     descriptor.writable = false;
     return descriptor;
   };
 
-  var Test = (_class = function () {
-    function Test() {
-      (0, _classCallCheck3.default)(this, Test);
+  let Test = (_class = class Test {
+    time() {
+      return '2017-03-11';
     }
-
-    (0, _createClass3.default)(Test, [{
-      key: 'time',
-      value: function time() {
-        return '2017-03-11';
-      }
-    }]);
-    return Test;
-  }(), (_applyDecoratedDescriptor(_class.prototype, 'time', [readonly], (0, _getOwnPropertyDescriptor2.default)(_class.prototype, 'time'), _class.prototype)), _class);
+  }, (_applyDecoratedDescriptor(_class.prototype, 'time', [readonly], (0, _getOwnPropertyDescriptor2.default)(_class.prototype, 'time'), _class.prototype)), _class);
 
 
-  var test = new Test();
+  let test = new Test();
 
   // test.time=function(){
   //   console.log('reset time');
@@ -78,15 +62,12 @@ function _applyDecoratedDescriptor(target, property, decorators, descriptor, con
 {
   var _class2;
 
-  var typename = function typename(target, name, descriptor) {
+  let typename = function (target, name, descriptor) {
     target.myname = 'hello';
   };
 
-  var _Test = typename(_class2 = function _Test() {
-    (0, _classCallCheck3.default)(this, _Test);
-  }) || _class2;
+  let Test = typename(_class2 = class Test {}) || _class2;
 
-  console.log('类修饰符', _Test.myname);
+  console.log('类修饰符', Test.myname);
   // 第三方库修饰器的js库：core-decorators; npm install core-decorators
 }
-//# sourceMappingURL=Decorators.js.map

@@ -5,13 +5,13 @@ function test() {
   //   console.log(i);
   // }
   // console.log(i);
-  var a = 1;
+  let a = 1;
   // let a = 2;
 }
 
 function last() {
-  var PI = 3.1415926;
-  var k = {
+  const PI = 3.1415926;
+  const k = {
     a: 1
   };
   k.b = 3;
@@ -20,4 +20,3 @@ function last() {
 
 // test();
 last();
-//# sourceMappingURL=let.const命令.js.map

@@ -1,13 +1,12 @@
 {
-  "name": "babel_test",
+  "name": "es6",
   "version": "1.0.0",
   "description": "",
   "main": "test.js",
   "scripts": {
     "dev": "nodemon -w src --exec \"babel-node src --presets env \"",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src -d dist --source-maps",
-    "build2": "babel src -d dist"
+    "build2": "babel src -d dist --source-maps",
+    "build": "rimraf ./dist && babel src -d dist"
   },
   "author": "",
   "license": "ISC",
@@ -23,7 +22,6 @@
   },
   "dependencies": {
     "babel-runtime": "^6.26.0",
-    "koa": "^2.5.0",
-    "koa-router": "^7.4.0"
+    "cross-env": "^5.1.3"
   }
 }

@@ -39,8 +39,8 @@ var _isFinite2 = _interopRequireDefault(_isFinite);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 {
-  console.log('B', 503);
-  console.log(503);
+  console.log('B', 0B111110111);
+  console.log(0o767);
 }
 
 {
@@ -81,4 +81,3 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   console.log('-1', (0, _cbrt2.default)(-1));
   console.log('8', (0, _cbrt2.default)(8));
 }
-//# sourceMappingURL=数值扩展.js.map

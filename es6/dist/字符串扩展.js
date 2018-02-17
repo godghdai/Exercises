@@ -4,39 +4,28 @@ var _raw = require('babel-runtime/core-js/string/raw');
 
 var _raw2 = _interopRequireDefault(_raw);
 
-var _taggedTemplateLiteral2 = require('babel-runtime/helpers/taggedTemplateLiteral');
-
-var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);
-
-var _getIterator2 = require('babel-runtime/core-js/get-iterator');
-
-var _getIterator3 = _interopRequireDefault(_getIterator2);
-
 var _fromCodePoint = require('babel-runtime/core-js/string/from-code-point');
 
 var _fromCodePoint2 = _interopRequireDefault(_fromCodePoint);
 
-var _templateObject = (0, _taggedTemplateLiteral3.default)(['i am ', ',', ''], ['i am ', ',', '']),
-    _templateObject2 = (0, _taggedTemplateLiteral3.default)(['Hi\n', ''], ['Hi\\n', '']);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 {
-  console.log('a', 'a');
-  console.log('s', '\u20BB7');
+  console.log('a', `\u0061`);
+  console.log('s', `\u20BB7`);
 
-  console.log('s', '\uD842\uDFB7');
+  console.log('s', `\u{20BB7}`);
 }
 
 {
-  var s = '𠮷';
+  let s = '𠮷';
   console.log('length', s.length);
   console.log('0', s.charAt(0));
   console.log('1', s.charAt(1));
   console.log('at0', s.charCodeAt(0));
   console.log('at1', s.charCodeAt(1));
 
-  var s1 = '𠮷a';
+  let s1 = '𠮷a';
   console.log('length', s1.length);
   console.log('code0', s1.codePointAt(0));
   console.log('code0', s1.codePointAt(0).toString(16));
@@ -50,52 +39,31 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 }
 
 {
-  var str = '\uD842\uDFB7abc';
-  for (var i = 0; i < str.length; i++) {
+  let str = '\u{20bb7}abc';
+  for (let i = 0; i < str.length; i++) {
     console.log('es5', str[i]);
   }
-  var _iteratorNormalCompletion = true;
-  var _didIteratorError = false;
-  var _iteratorError = undefined;
-
-  try {
-    for (var _iterator = (0, _getIterator3.default)(str), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-      var code = _step.value;
-
-      console.log('es6', code);
-    }
-  } catch (err) {
-    _didIteratorError = true;
-    _iteratorError = err;
-  } finally {
-    try {
-      if (!_iteratorNormalCompletion && _iterator.return) {
-        _iterator.return();
-      }
-    } finally {
-      if (_didIteratorError) {
-        throw _iteratorError;
-      }
-    }
+  for (let code of str) {
+    console.log('es6', code);
   }
 }
 
 {
-  var _str = "string";
-  console.log('includes', _str.includes("c"));
-  console.log('start', _str.startsWith('str'));
-  console.log('end', _str.endsWith('ng'));
+  let str = "string";
+  console.log('includes', str.includes("c"));
+  console.log('start', str.startsWith('str'));
+  console.log('end', str.endsWith('ng'));
 }
 
 {
-  var _str2 = "abc";
-  console.log(_str2.repeat(2));
+  let str = "abc";
+  console.log(str.repeat(2));
 }
 
 {
-  var name = "list";
-  var info = "hello world";
-  var m = 'i am ' + name + ',' + info;
+  let name = "list";
+  let info = "hello world";
+  let m = `i am ${name},${info}`;
   console.log(m);
 }
 
@@ -105,20 +73,18 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 }
 
 {
-  var abc = function abc(s, v1, v2) {
-    console.log(s, v1, v2);
-    return s + v1 + v2;
-  };
-
-  var user = {
+  let user = {
     name: 'list',
     info: 'hello world'
   };
-  console.log(abc(_templateObject, user.name, user.info));
+  console.log(abc`i am ${user.name},${user.info}`);
+  function abc(s, v1, v2) {
+    console.log(s, v1, v2);
+    return s + v1 + v2;
+  }
 }
 
 {
-  console.log((0, _raw2.default)(_templateObject2, 1 + 2));
-  console.log('Hi\n' + (1 + 2));
+  console.log(_raw2.default`Hi\n${1 + 2}`);
+  console.log(`Hi\n${1 + 2}`);
 }
-//# sourceMappingURL=字符串扩展.js.map
